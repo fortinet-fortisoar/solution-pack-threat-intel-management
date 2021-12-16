@@ -1,0 +1,22 @@
+{
+    "@context": "\/api\/3\/contexts\/Role",
+    "@id": "\/api\/3\/roles\/aada6692-fbf4-4a02-a580-f8a200962365",
+    "@type": "Role",
+    "description": "Responsible for Incident Investigation and other remediation and containment related tasks.",
+    "name": "T2 Analyst",
+    "modulePermissions": {
+        "40": {
+            "@id": "\/api\/3\/module_permissions\/e1704cee-7e10-426e-b61e-94b05f074121",
+            "@type": "ModulePermission",
+            "canCreate": true,
+            "canExecute": true,
+            "canRead": true,
+            "canUpdate": true,
+            "canDelete": false,
+            "fieldPermissions": [],
+            "module": "threat_intel_feeds",
+            "uuid": "e1704cee-7e10-426e-b61e-94b05f074121"
+        }
+    },
+    "uuid": "aada6692-fbf4-4a02-a580-f8a200962365"
+}

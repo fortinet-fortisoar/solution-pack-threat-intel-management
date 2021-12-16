@@ -1,0 +1,48 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "grid",
+                                "config": {
+                                    "wid": "f39b51c5-4dff-4010-a6cc-38c6f44e17ac",
+                                    "module": "threat_intel_feeds",
+                                    "columns": [
+                                        "type",
+                                        "value",
+                                        "reputation",
+                                        "source",
+                                        "confidence",
+                                        "validUntil"
+                                    ],
+                                    "expandableCol": [],
+                                    "relationshipField": [],
+                                    "checkboxStatus": false,
+                                    "editableFields": false,
+                                    "actionButtons": [],
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    }
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "66793c08-d055-4326-9780-4222d9b3cfe8",
+                "_collapsed": false
+            }
+        ],
+        "wid": "5fa4b5f2-60e3-47b0-be98-1f7d163265c6"
+    },
+    "uuid": "modules-threat_intel_feeds-list"
+}

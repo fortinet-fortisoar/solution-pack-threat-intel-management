@@ -1,0 +1,15 @@
+{
+    "name": "threatIntel",
+    "version": "1.0.0",
+    "label": "Threat Intel Management",
+    "description": "FortiSOAR Solution Pack Around Threat Intelligence Management",
+    "category": [],
+    "dependencies": [],
+    "publisher": "Fortinet",
+    "certified": "true",
+    "type": "multiContent",
+    "supportInfo": "support@fortinet.com",
+    "help":"https://github.com/fortinet-fortisoar/solution-pack-threat-intel/blob/develop/README.md",
+    "tags": [],
+    "fsrMinCompatibility": "7.2.0"
+}

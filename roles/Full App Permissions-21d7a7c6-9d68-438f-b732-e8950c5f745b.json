@@ -1,0 +1,22 @@
+{
+    "@context": "\/api\/3\/contexts\/Role",
+    "@id": "\/api\/3\/roles\/21d7a7c6-9d68-438f-b732-e8950c5f745b",
+    "@type": "Role",
+    "description": "Essentially the root user, use carefully",
+    "name": "Full App Permissions",
+    "modulePermissions": {
+        "1": {
+            "@id": "\/api\/3\/module_permissions\/26003baf-7512-3f82-b6d7-136a6b5f6df6",
+            "@type": "ModulePermission",
+            "canCreate": true,
+            "canExecute": false,
+            "canRead": true,
+            "canUpdate": true,
+            "canDelete": true,
+            "fieldPermissions": [],
+            "module": "threat_intel_feeds",
+            "uuid": "26003baf-7512-3f82-b6d7-136a6b5f6df6"
+        }
+    },
+    "uuid": "21d7a7c6-9d68-438f-b732-e8950c5f745b"
+}
