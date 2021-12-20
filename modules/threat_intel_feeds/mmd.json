@@ -991,6 +991,45 @@
             "descriptions": {
                 "singular": "Collection"
             }
+        },
+        {
+            "type": "string",
+            "name": "sourceId",
+            "length": null,
+            "orderIndex": 1,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": false,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "sattrib": "/api/3/staging_model_metadatas/f11d681a-58e5-4b53-adb6-085f6462593e",
+            "uuid": "8c10b3e0-2c23-473d-a784-48a9f5d882ef",
+            "displayName": "{{ sourceId }}",
+            "descriptions": {
+                "singular": "sourceId"
+            }
         }
     ],
     "system": false,
