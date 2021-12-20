@@ -1,7 +1,4 @@
 {
-    "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/f11d681a-58e5-4b53-adb6-085f6462593e",
-    "@type": "StagingModelMetadata",
     "type": "threat_intel_feeds",
     "parentType": null,
     "tableName": "threat_intel_feeds",
@@ -15,7 +12,7 @@
         {
             "threat_intel_feeds_unique": {
                 "columns": [
-                    "type",
+                    "typeOfFeed",
                     "value",
                     "source"
                 ]
@@ -26,12 +23,10 @@
     "writable": true,
     "attributes": [
         {
-            "@id": "\/api\/3\/attribute_metadatas\/7eea36b7-4a26-429e-8c78-420f22ca4c80",
-            "@type": "AttributeMetadata",
             "type": "picklists",
-            "name": "type",
+            "name": "typeOfFeed",
             "length": null,
-            "orderIndex": 5,
+            "orderIndex": 1,
             "formType": "picklist",
             "dataSource": {
                 "model": "picklists",
@@ -110,7 +105,7 @@
             "peerReplicable": true,
             "system": true,
             "encrypted": false,
-            "gridColumn": true,
+            "gridColumn": false,
             "collection": false,
             "inversedField": null,
             "ownsRelationship": false,
@@ -136,16 +131,14 @@
             "identifier": null,
             "unique": false,
             "recommend": false,
-            "sattrib": "\/api\/3\/staging_model_metadatas\/f11d681a-58e5-4b53-adb6-085f6462593e",
-            "uuid": "7eea36b7-4a26-429e-8c78-420f22ca4c80",
-            "displayName": "{{ type }}",
+            "sattrib": "/api/3/staging_model_metadatas/f11d681a-58e5-4b53-adb6-085f6462593e",
+            "uuid": "de900a6b-aed1-43a9-8973-7606b196cef6",
+            "displayName": "{{ typeOfFeed }}",
             "descriptions": {
-                "singular": "Type"
+                "singular": "typeOfFeed"
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/a7a248db-13d5-43d1-9aa4-2e07660e88e5",
-            "@type": "AttributeMetadata",
             "type": "string",
             "name": "value",
             "length": null,
@@ -190,8 +183,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/f84c9243-462d-44b1-be91-210df878bcc0",
-            "@type": "AttributeMetadata",
             "type": "string",
             "name": "sourceData",
             "length": null,
@@ -236,8 +227,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/4a21f62d-fb14-4cf7-9874-3e96e89cf915",
-            "@type": "AttributeMetadata",
             "type": "picklists",
             "name": "reputation",
             "length": null,
@@ -322,8 +311,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/56a576df-37c9-4f10-9b99-45113734464a",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "validFrom",
             "length": null,
@@ -368,8 +355,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/54a86d71-9c1b-47f5-839a-6ec6bdd76aec",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "validUntil",
             "length": null,
@@ -414,8 +399,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/5de6ed04-43a0-40ca-95e9-dd2410431066",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "expiresOn",
             "length": null,
@@ -460,8 +443,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/1818a54e-1712-4623-9701-aa8194883ce8",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "created",
             "length": null,
@@ -506,8 +487,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/94b4e523-1655-4040-b28d-65da16e76711",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "modified",
             "length": null,
@@ -552,8 +531,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/fca49026-cc9e-4131-9ece-303826a4fe1a",
-            "@type": "AttributeMetadata",
             "type": "threat_intel_feeds",
             "name": "relatedThreatIntelFeeds",
             "length": null,
@@ -596,8 +573,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/8aae140f-838d-4dae-9d9e-44cee3cae911",
-            "@type": "AttributeMetadata",
             "type": "string",
             "name": "source",
             "length": null,
@@ -642,8 +617,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/d2667026-2c20-40eb-ae4c-17ba9bd31c9c",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "confidence",
             "length": null,
@@ -689,8 +662,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/984f577d-037b-4302-916f-c696f22d320b",
-            "@type": "AttributeMetadata",
             "type": "picklists",
             "name": "tLP",
             "length": null,
@@ -767,8 +738,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/f4ea6416-42a1-4c69-a488-282d64c46376",
-            "@type": "AttributeMetadata",
             "type": "string",
             "name": "description",
             "length": null,
@@ -813,8 +782,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/1073aa79-e057-4d08-ad77-59a754370705",
-            "@type": "AttributeMetadata",
             "type": "integer",
             "name": "lastSeen",
             "length": null,
@@ -859,8 +826,6 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/a537d342-e3e1-43b0-bec9-76849435c3b1",
-            "@type": "AttributeMetadata",
             "type": "indicators",
             "name": "indicators",
             "length": null,
@@ -896,9 +861,139 @@
             "descriptions": {
                 "singular": "Indicator"
             }
+        },
+        {
+            "type": "string",
+            "name": "pattern",
+            "length": null,
+            "orderIndex": 1,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": true,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "sattrib": "/api/3/staging_model_metadatas/f11d681a-58e5-4b53-adb6-085f6462593e",
+            "uuid": "d28d355c-f779-4cc1-bff6-12fdbab388e1",
+            "displayName": "{{ pattern }}",
+            "descriptions": {
+                "singular": "Pattern"
+            }
+        },
+        {
+            "type": "object",
+            "name": "label",
+            "length": null,
+            "orderIndex": 3,
+            "formType": "object",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": true,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "sattrib": "/api/3/staging_model_metadatas/f11d681a-58e5-4b53-adb6-085f6462593e",
+            "uuid": "fb13848d-f010-4497-9ba8-9a571280e6c9",
+            "displayName": "{{ label }}",
+            "descriptions": {
+                "singular": "Label"
+            }
+        },
+        {
+            "type": "string",
+            "name": "collections",
+            "length": null,
+            "orderIndex": 4,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": true,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": false,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "sattrib": "/api/3/staging_model_metadatas/f11d681a-58e5-4b53-adb6-085f6462593e",
+            "uuid": "3cb34d81-7676-458d-9fff-549cbd8173ce",
+            "displayName": "{{ collections }}",
+            "descriptions": {
+                "singular": "Collection"
+            }
         }
     ],
-    "system": true,
+    "system": false,
     "module": "threat_intel_feeds",
     "softDeleteable": false,
     "archivable": false,
