@@ -954,7 +954,7 @@
         },
         {
             "type": "string",
-            "name": "collections",
+            "name": "collection",
             "length": null,
             "orderIndex": 4,
             "formType": "text",
@@ -987,7 +987,7 @@
             "recommend": false,
             "sattrib": "/api/3/staging_model_metadatas/f11d681a-58e5-4b53-adb6-085f6462593e",
             "uuid": "3cb34d81-7676-458d-9fff-549cbd8173ce",
-            "displayName": "{{ collections }}",
+            "displayName": "{{ collection }}",
             "descriptions": {
                 "singular": "Collection"
             }
