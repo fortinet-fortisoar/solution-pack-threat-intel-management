@@ -1,6 +1,6 @@
 {
     "type": "threat_intel_feeds",
-    "parentType": null,
+    "parentType": "threat_intel_base",
     "tableName": "threat_intel_feeds",
     "ownable": false,
     "userOwnable": false,
