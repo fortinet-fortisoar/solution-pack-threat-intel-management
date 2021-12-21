@@ -14,7 +14,7 @@
                                     "wid": "f39b51c5-4dff-4010-a6cc-38c6f44e17ac",
                                     "module": "threat_intel_feeds",
                                     "columns": [
-                                        "type",
+                                        "typeOfFeed",
                                         "value",
                                         "reputation",
                                         "source",

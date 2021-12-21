@@ -135,7 +135,7 @@
             "uuid": "de900a6b-aed1-43a9-8973-7606b196cef6",
             "displayName": "{{ typeOfFeed }}",
             "descriptions": {
-                "singular": "typeOfFeed"
+                "singular": "Type"
             }
         },
         {

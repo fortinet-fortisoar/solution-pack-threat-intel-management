@@ -37,7 +37,7 @@
                                                 {
                                                     "fields": [
                                                         {
-                                                            "name": "type",
+                                                            "name": "typeOfFeed",
                                                             "highlightMode": true,
                                                             "linky": true,
                                                             "readOnly": false

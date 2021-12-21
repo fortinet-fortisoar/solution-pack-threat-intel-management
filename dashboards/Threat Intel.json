@@ -1,0 +1,525 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "b4ed31f6-41e2-47d9-badd-79f21e5b15a4",
+    "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
+    "createDate": 1639983783.042921,
+    "modifyUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
+    "modifyDate": 1640071174.701213,
+    "displayName": "Threat Intel",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [
+        "\/api\/3\/roles\/21d7a7c6-9d68-438f-b732-e8950c5f745b",
+        "\/api\/3\/roles\/685e516f-f317-47b3-a7ad-9add6c4e03a8"
+    ],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "performanceMetrics",
+                                "config": {
+                                    "wid": "649dc83d-f812-4353-b325-b397c74ef7a7",
+                                    "grouping": {
+                                        "primary": [],
+                                        "secondary": []
+                                    },
+                                    "showSavings": "dollar",
+                                    "includeFailedPlaybooks": true,
+                                    "excludeConfigActions": true,
+                                    "days": 15,
+                                    "showPercentageChanges": true,
+                                    "metricsType": "totalCount",
+                                    "resource": "threat_intel_feeds",
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    },
+                                    "title": "Feed Observables Ingested (Last 15 Days)",
+                                    "timeRange": "created"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-4"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "performanceMetrics",
+                                "config": {
+                                    "wid": "467dc81e-b651-40bc-a4b5-ff303ff30113",
+                                    "grouping": {
+                                        "primary": [],
+                                        "secondary": []
+                                    },
+                                    "showSavings": "dollar",
+                                    "includeFailedPlaybooks": true,
+                                    "excludeConfigActions": true,
+                                    "days": 15,
+                                    "showPercentageChanges": true,
+                                    "metricsType": "totalCount",
+                                    "resource": "threat_intel_feeds",
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": [
+                                            {
+                                                "field": "confidence",
+                                                "operator": "gt",
+                                                "_operator": "gt",
+                                                "value": 45,
+                                                "type": "primitive"
+                                            }
+                                        ]
+                                    },
+                                    "timeRange": "created",
+                                    "title": "High Confidence Observables"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-4"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "performanceMetrics",
+                                "config": {
+                                    "wid": "05068a2e-d3da-40d9-8834-a09350536de2",
+                                    "grouping": {
+                                        "primary": [],
+                                        "secondary": []
+                                    },
+                                    "showSavings": "dollar",
+                                    "includeFailedPlaybooks": true,
+                                    "excludeConfigActions": true,
+                                    "days": 15,
+                                    "showPercentageChanges": true,
+                                    "metricsType": "totalCount",
+                                    "resource": "threat_intel_feeds",
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": [
+                                            {
+                                                "field": "indicators.uuid",
+                                                "operator": "isnull",
+                                                "_operator": "isnull",
+                                                "value": "false",
+                                                "type": "primitive"
+                                            }
+                                        ]
+                                    },
+                                    "title": "Linked Indicators",
+                                    "timeRange": "created"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-4"
+                    }
+                ],
+                "wid": "46657fb8-6511-4968-9912-669dcff3c812",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "1f96df64-6e2f-4488-a2a3-c03dfbded4cb",
+                                    "widgetAlwaysDisplay": false,
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "source",
+                                                "field": "source"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": null,
+                                        "firstGrouping": "",
+                                        "secondGrouping": "type",
+                                        "fieldName": "source"
+                                    },
+                                    "aggregate": true,
+                                    "resource": "threat_intel_feeds",
+                                    "title": "Feed Sources",
+                                    "chart": "donut",
+                                    "barStyle": "horizontal",
+                                    "showCount": false
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "c5dfee8c-5b35-4311-bdbb-3303be8dbbcd",
+                                    "widgetAlwaysDisplay": true,
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "field": "type.orderIndex",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "select",
+                                                "alias": "typeOfFeed",
+                                                "field": "typeOfFeed.itemValue"
+                                            },
+                                            {
+                                                "operator": "select",
+                                                "alias": "color",
+                                                "field": "typeOfFeed.color"
+                                            },
+                                            {
+                                                "operator": "select",
+                                                "alias": "orderIndex",
+                                                "field": "typeOfFeed.orderIndex"
+                                            },
+                                            {
+                                                "operator": "select",
+                                                "alias": "created",
+                                                "field": "created"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": "",
+                                        "fieldName": "typeOfFeed",
+                                        "dateFieldName": "created",
+                                        "timeScope": "month",
+                                        "dateFormat": "%b %e",
+                                        "createTimeField": "",
+                                        "responseTimeField": "expiresOn"
+                                    },
+                                    "aggregate": true,
+                                    "resource": "threat_intel_feeds",
+                                    "chart": "timeseries",
+                                    "title": "Ingestion Rate"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "c542ba9d-5a3b-4dac-9c38-825f87cf7a30",
+                "_collapsed": false,
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "container": true
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "cardCount",
+                                "config": {
+                                    "wid": "57a29f16-9286-4882-bbe2-b3ea9935e6a5",
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "field": "source",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "source",
+                                                "field": "source"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": "",
+                                        "fieldName": "source"
+                                    },
+                                    "aggregate": true,
+                                    "title": "Feeds Monitored",
+                                    "resource": "threat_intel_feeds"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "b52f9592-b9f4-4f1e-9a40-b1a12d64f6a8",
+                                    "widgetAlwaysDisplay": true,
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "field": "type.orderIndex",
+                                                "direction": "ASC"
+                                            },
+                                            {
+                                                "field": "source",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "typeOfFeed",
+                                                "field": "typeOfFeed.itemValue"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "firstOrderIndex",
+                                                "field": "typeOfFeed.orderIndex"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "source",
+                                                "field": "source"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": "",
+                                        "firstGrouping": "typeOfFeed",
+                                        "secondGrouping": "source"
+                                    },
+                                    "aggregate": true,
+                                    "title": "By Type",
+                                    "resource": "threat_intel_feeds",
+                                    "chart": "bar"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "6645db0c-c175-4691-9e6b-53726c6e0ad5",
+                "_collapsed": false,
+                "collapsible": false,
+                "collapsibleIndex": 0
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "chart",
+                                "config": {
+                                    "wid": "0a8f50c8-41d2-4179-a102-2be0875e64dd",
+                                    "widgetAlwaysDisplay": false,
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [
+                                            {
+                                                "field": "indicators.uuid",
+                                                "operator": "isnull",
+                                                "_operator": "isnull",
+                                                "value": "false",
+                                                "type": "primitive"
+                                            }
+                                        ],
+                                        "aggregates": [
+                                            {
+                                                "operator": "countdistinct",
+                                                "field": "*",
+                                                "alias": "total"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "source",
+                                                "field": "source"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": null,
+                                        "firstGrouping": "",
+                                        "secondGrouping": "typeOfFeed",
+                                        "fieldName": "source"
+                                    },
+                                    "aggregate": true,
+                                    "resource": "threat_intel_feeds",
+                                    "title": "Most Relevant Feed Sources",
+                                    "chart": "donut",
+                                    "barStyle": "horizontal",
+                                    "showCount": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [
+                            {
+                                "type": "relationshipCount",
+                                "config": {
+                                    "wid": "d05a878f-95b3-446c-a422-18b177c8a7e1",
+                                    "widgetAlwaysDisplay": true,
+                                    "query": {
+                                        "sort": [
+                                            {
+                                                "field": "value",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "limit": 2147483647,
+                                        "logic": "AND",
+                                        "filters": [
+                                            {
+                                                "field": "alerts.status",
+                                                "operator": "neq",
+                                                "value": "\/api\/3\/picklists\/fac53e73-8d16-4189-98d5-95fbd1555232",
+                                                "_value": {
+                                                    "display": "Closed",
+                                                    "itemValue": "Closed",
+                                                    "@id": "\/api\/3\/picklists\/fac53e73-8d16-4189-98d5-95fbd1555232"
+                                                },
+                                                "type": "object"
+                                            },
+                                            {
+                                                "field": "threatIntelFeeds.uuid",
+                                                "operator": "isnull",
+                                                "_operator": "isnull",
+                                                "value": "false",
+                                                "type": "primitive"
+                                            }
+                                        ],
+                                        "aggregates": [
+                                            {
+                                                "operator": "count",
+                                                "alias": "total",
+                                                "field": "alerts.uuid"
+                                            },
+                                            {
+                                                "operator": "groupby",
+                                                "alias": "value",
+                                                "field": "value"
+                                            }
+                                        ]
+                                    },
+                                    "mapping": {
+                                        "assignedToPerson": "",
+                                        "firstGrouping": "value",
+                                        "secondGrouping": "alerts"
+                                    },
+                                    "aggregate": true,
+                                    "chart": "relationshipBar",
+                                    "title": "Most Active Threats",
+                                    "resource": "indicators",
+                                    "primaryDataSourceLabel": "Active Threat Actors",
+                                    "resourceRelationship": "alerts",
+                                    "sortStyle": "DESC",
+                                    "limit": 10,
+                                    "relatedDataSourceLabel": "Sightings",
+                                    "queryRelationship": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    }
+                                }
+                            }
+                        ],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "9348a1c8-7aac-48b9-9b42-547f4b198060",
+                "_collapsed": false,
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "container": true
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [],
+                        "style": "col-lg-3"
+                    },
+                    {
+                        "widgets": [],
+                        "style": "col-lg-9"
+                    }
+                ],
+                "wid": "4ea24dff-919a-45ff-a0b1-e9d0762ef614",
+                "collapsible": false,
+                "collapsibleIndex": 0,
+                "_collapsed": false,
+                "container": true
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "iframe",
+                                "config": {
+                                    "wid": "148e3246-723e-4eb6-853d-5b33c19c46e4",
+                                    "url": "https:\/\/threatmap.fortiguard.com\/",
+                                    "height": 500,
+                                    "title": "FortiGuard Threat Map",
+                                    "expandCollaps": true
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "c9e419c9-20f7-451a-ad76-6585ab22c0c9",
+                "_collapsed": false
+            }
+        ],
+        "wid": "e4165698-ad20-486d-8408-fbf7376f4c01"
+    },
+    "filterArray": [],
+    "updateDate": null
+}
