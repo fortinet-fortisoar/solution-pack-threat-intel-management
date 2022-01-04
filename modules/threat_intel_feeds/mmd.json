@@ -1028,7 +1028,7 @@
             "uuid": "8c10b3e0-2c23-473d-a784-48a9f5d882ef",
             "displayName": "{{ sourceId }}",
             "descriptions": {
-                "singular": "sourceId"
+                "singular": "Source Id"
             }
         }
     ],
