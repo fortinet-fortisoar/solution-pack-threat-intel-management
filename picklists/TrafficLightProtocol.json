@@ -14,7 +14,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "0472d368-bd15-4f52-a119-d403470cbe43",
-            "id": 304
+            "id": 288
         },
         {
             "@id": "\/api\/3\/picklists\/7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
@@ -25,7 +25,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
-            "id": 305
+            "id": 289
         },
         {
             "@id": "\/api\/3\/picklists\/47004ad3-721e-43e0-b729-2ad8ee6441c0",
@@ -36,9 +36,9 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "47004ad3-721e-43e0-b729-2ad8ee6441c0",
-            "id": 306
+            "id": 290
         }
     ],
     "uuid": "40f1345f-f679-43c0-9237-5b06edd8385f",
-    "id": 53
+    "id": 47
 }

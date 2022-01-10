@@ -109,24 +109,64 @@
                                 }
                             },
                             {
-                                "type": "editableFormGroup",
+                                "type": "tabs",
                                 "config": {
-                                    "wid": "4b2df76e-8540-457a-9f2a-481b43529940",
-                                    "rows": [
+                                    "wid": "fd33fe59-10c7-445c-a9bf-30f09ad97261",
+                                    "tabs": [
                                         {
-                                            "columns": [
-                                                {
-                                                    "fields": [
+                                            "title": "Description",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "45b9e633-3d98-4c4c-afaa-676803b95ea6",
+                                                    "rows": [
                                                         {
-                                                            "name": "sourceData",
-                                                            "highlightMode": true,
-                                                            "linky": true,
-                                                            "readOnly": true,
-                                                            "renderWidget": "json"
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "description",
+                                                                            "highlightMode": true,
+                                                                            "linky": true,
+                                                                            "readOnly": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 }
-                                            ]
+                                            },
+                                            "icon": "fa fa-none"
+                                        },
+                                        {
+                                            "title": "Source Data",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "21898d5e-b8cf-4824-ad30-be6cac382b1e",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "sourceData",
+                                                                            "highlightMode": true,
+                                                                            "linky": true,
+                                                                            "readOnly": true,
+                                                                            "renderWidgetHeight": 400
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "fa fa-none"
                                         }
                                     ]
                                 }
@@ -162,6 +202,64 @@
                                             },
                                             "show": true,
                                             "icon": "fa fa-none"
+                                        },
+                                        {
+                                            "title": "Visual Correlation",
+                                            "active": 0,
+                                            "widget": {
+                                                "type": "visualCorrelation",
+                                                "config": {
+                                                    "wid": "9cfa5d49-4af6-4f38-8e87-4ff6aae29d9b",
+                                                    "nodeLevels": [
+                                                        {
+                                                            "name": "threat_intel_feeds",
+                                                            "level": 1
+                                                        },
+                                                        {
+                                                            "name": "mitre_software",
+                                                            "level": 2
+                                                        },
+                                                        {
+                                                            "name": "mitre_groups",
+                                                            "level": 3
+                                                        },
+                                                        {
+                                                            "name": "mitre_techniques",
+                                                            "level": 4
+                                                        },
+                                                        {
+                                                            "name": "mitre_sub_techniques",
+                                                            "level": 5
+                                                        },
+                                                        {
+                                                            "name": "indicators",
+                                                            "level": 6
+                                                        },
+                                                        {
+                                                            "name": "alerts",
+                                                            "level": 7
+                                                        },
+                                                        {
+                                                            "name": "assets",
+                                                            "level": 8
+                                                        },
+                                                        {
+                                                            "name": "warrooms",
+                                                            "level": 9
+                                                        },
+                                                        {
+                                                            "name": "incidents",
+                                                            "level": 10
+                                                        },
+                                                        {
+                                                            "name": "vulnerabilities",
+                                                            "level": 11
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "icon": "fa fa-none",
+                                            "show": true
                                         }
                                     ],
                                     "wid": "933d120c-e1eb-43fc-a891-3f0497858933"
