@@ -15,7 +15,7 @@
                                     "idField": "id",
                                     "picklistFieldReadOnly": false,
                                     "titleFieldReadOnly": false,
-                                    "titleFieldLinky": true,
+                                    "titleFieldLinky": false,
                                     "featuredRelationship": {
                                         "field": null,
                                         "preText": "Under Investigation In",
