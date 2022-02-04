@@ -17,7 +17,7 @@
             "type": "solutionpack",
             "label": "Mitre ATT&CK"
         }
-    ]
+    ],
      "contents": {
         "picklist": [
             {
@@ -28,18 +28,36 @@
             }
         ],
         "module": {
-            "threat_intel_feeds": []
+            "threat_intel_feeds": [],
+            "threat_intel_managements": [],
+            "workspaces": []
         },
         "views": {
             "threat_intel_feeds": [
                 "detail",
                 "list",
                 "form"
+            ],
+            "threat_intel_managements": [
+                "list",
+                "detail",
+                "form"
+            ],
+            "workspaces": [
+                "list",
+                "detail",
+                "form"
             ]
         },
         "dashboards": [
             {
                 "name": "Threat Intel"
+            }
+        ],
+        "widgets": [
+            {
+                "name": "Datasets",
+                "version": "1.0.0"
             }
         ]
     }
