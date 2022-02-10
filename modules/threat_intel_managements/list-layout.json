@@ -28,6 +28,7 @@
                                                                         {
                                                                             "type": "performanceMetrics",
                                                                             "config": {
+                                                                                "widgetAlwaysDisplay":true,
                                                                                 "wid": "ba0a3003-9da8-4bf2-9392-36f84ca76eac",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -58,6 +59,7 @@
                                                                         {
                                                                             "type": "performanceMetrics",
                                                                             "config": {
+                                                                                "widgetAlwaysDisplay":true,
                                                                                 "wid": "accd3082-be55-48f1-b6e5-3ce8659ee12a",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -96,6 +98,7 @@
                                                                         {
                                                                             "type": "performanceMetrics",
                                                                             "config": {
+                                                                                "widgetAlwaysDisplay":true,
                                                                                 "wid": "f70b5164-5ca0-47f0-875f-bb70496c44a5",
                                                                                 "grouping": {
                                                                                     "primary": [],
