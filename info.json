@@ -19,7 +19,7 @@
         }
     ],
      "contents": {
-        "picklist": [
+        "picklistNames": [
             {
                 "name": "ThreatIntelFeedType"
             },
@@ -27,7 +27,7 @@
                 "name": "TrafficLightProtocol"
             }
         ],
-        "module": {
+        "modules": {
             "threat_intel_feeds": []
         },
         "views": {
