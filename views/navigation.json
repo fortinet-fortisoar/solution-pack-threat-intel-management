@@ -315,11 +315,11 @@
                 "title": "Threat Intel Management",
                 "icon": "fa fa-bar-chart",
                 "require": {
-                    "module": "solutionpack",
+                    "module": "threat_intel_feeds",
                     "action": "read"
                 },
                 "state": {
-                    "name": "main.threat_intel_management"
+                    "name": "main.threat_intel_feeds"
                 },
                 "editMode": false
             }

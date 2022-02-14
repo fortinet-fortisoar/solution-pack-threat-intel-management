@@ -364,7 +364,7 @@
                                                                             "type": "grid",
                                                                             "config": {
                                                                                 "wid": "0285302c-03b2-4ff3-a443-622de58d5e2d",
-                                                                                "module": "threat_intel_managements",
+                                                                                "module": "threat_intel_feeds",
                                                                                 "columns": [
                                                                                     "id"
                                                                                 ],
