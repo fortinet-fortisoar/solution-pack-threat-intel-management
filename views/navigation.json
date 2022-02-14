@@ -8,8 +8,8 @@
                 "title": "Dashboard",
                 "icon": "icon icon-dashboard",
                 "require": {
-                    "module": "dashboard",
-                    "action": "read"
+                    "action": "read",
+                    "module": "dashboard"
                 },
                 "state": {
                     "name": "main.dashboard",
@@ -22,93 +22,93 @@
                 "icon": "icon icon-incident-response",
                 "items": [
                     {
-                        "title": "Alerts",
                         "icon": "icon icon-alert",
-                        "require": {
-                            "module": "alerts",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "alerts"
                             }
                         },
+                        "title": "Alerts",
+                        "require": {
+                            "action": "read",
+                            "module": "alerts"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Incidents",
                         "icon": "icon icon-incidents",
-                        "require": {
-                            "module": "incidents",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "incidents"
                             }
                         },
+                        "title": "Incidents",
+                        "require": {
+                            "action": "read",
+                            "module": "incidents"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Tasks",
-                        "require": {
-                            "module": "tasks",
-                            "action": "read"
-                        },
+                        "icon": "icon icon-tasks",
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "tasks"
                             }
                         },
-                        "editMode": false,
-                        "icon": "icon icon-tasks"
+                        "title": "Tasks",
+                        "require": {
+                            "action": "read",
+                            "module": "tasks"
+                        },
+                        "editMode": false
                     },
                     {
-                        "title": "Indicators",
                         "icon": "icon icon-indicators",
-                        "require": {
-                            "module": "indicators",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "indicators"
                             }
                         },
+                        "title": "Indicators",
+                        "require": {
+                            "action": "read",
+                            "module": "indicators"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Emails",
-                        "require": {
-                            "module": "emails",
-                            "action": "read"
-                        },
+                        "icon": "icon icon-send-email",
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "emails"
                             }
                         },
-                        "icon": "icon icon-send-email",
+                        "title": "Emails",
+                        "require": {
+                            "action": "read",
+                            "module": "emails"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "War Rooms",
-                        "require": {
-                            "module": "warrooms",
-                            "action": "read"
-                        },
+                        "icon": "icon icon-war-room",
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "warrooms"
                             }
                         },
-                        "icon": "icon icon-war-room",
+                        "title": "War Rooms",
+                        "require": {
+                            "action": "read",
+                            "module": "warrooms"
+                        },
                         "editMode": false
                     }
                 ],
@@ -119,47 +119,47 @@
                 "icon": "icon icon-vulnerability-management",
                 "items": [
                     {
-                        "title": "Vulnerabilities",
                         "icon": "icon icon-vulnerability",
-                        "require": {
-                            "module": "vulnerabilities",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "vulnerabilities"
                             }
                         },
+                        "title": "Vulnerabilities",
+                        "require": {
+                            "action": "read",
+                            "module": "vulnerabilities"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Assets",
                         "icon": "icon icon-assets",
-                        "require": {
-                            "module": "assets",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "assets"
                             }
                         },
+                        "title": "Assets",
+                        "require": {
+                            "action": "read",
+                            "module": "assets"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Scans",
                         "icon": "icon icon-scans",
-                        "require": {
-                            "module": "scans",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "scans"
                             }
+                        },
+                        "title": "Scans",
+                        "require": {
+                            "action": "read",
+                            "module": "scans"
                         },
                         "editMode": false
                     }
@@ -171,66 +171,66 @@
                 "icon": "icon icon-automation",
                 "items": [
                     {
-                        "title": "Playbooks",
                         "icon": "icon icon-playbooks",
-                        "require": {
-                            "module": "workflows",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.workflow"
                         },
+                        "title": "Playbooks",
+                        "require": {
+                            "action": "read",
+                            "module": "workflows"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Data Ingestion",
                         "icon": "icon icon-updates",
-                        "require": {
-                            "module": "connectors",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.dataIngestion"
                         },
+                        "title": "Data Ingestion",
+                        "require": {
+                            "action": "read",
+                            "module": "connectors"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Assignment",
                         "icon": "icon icon-queue-members",
-                        "require": {
-                            "module": "fsr_queues",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.assignment_automation_entry"
                         },
+                        "title": "Assignment",
+                        "require": {
+                            "action": "read",
+                            "module": "fsr_queues"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Schedules",
-                        "require": {
-                            "module": "schedules",
-                            "action": "read"
-                        },
+                        "icon": "icon icon-schedules",
                         "state": {
                             "name": "main.schedules"
                         },
-                        "icon": "icon icon-schedules",
+                        "title": "Schedules",
+                        "require": {
+                            "action": "read",
+                            "module": "schedules"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "SLA Templates",
-                        "require": {
-                            "module": "sla_template",
-                            "action": "read"
-                        },
+                        "icon": "fa fa-clock-o",
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "sla_template"
                             }
                         },
-                        "icon": "fa fa-clock-o",
+                        "title": "SLA Templates",
+                        "require": {
+                            "action": "read",
+                            "module": "sla_template"
+                        },
                         "editMode": false
                     }
                 ],
@@ -241,34 +241,34 @@
                 "icon": "icon icon-resources",
                 "items": [
                     {
-                        "title": "Attachments",
                         "icon": "icon icon-attachments",
-                        "require": {
-                            "module": "attachments",
-                            "action": "read"
-                        },
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "attachments"
                             }
                         },
+                        "title": "Attachments",
+                        "require": {
+                            "action": "read",
+                            "module": "attachments"
+                        },
                         "editMode": false
                     },
                     {
-                        "title": "Email Templates",
-                        "require": {
-                            "module": "email_templates",
-                            "action": "read"
-                        },
+                        "icon": "icon icon-email-templates",
                         "state": {
                             "name": "main.modules.list",
                             "parameters": {
                                 "module": "email_templates"
                             }
                         },
-                        "editMode": false,
-                        "icon": "icon icon-email-templates"
+                        "title": "Email Templates",
+                        "require": {
+                            "action": "read",
+                            "module": "email_templates"
+                        },
+                        "editMode": false
                     }
                 ],
                 "editMode": false
@@ -277,8 +277,8 @@
                 "title": "Reports",
                 "icon": "icon icon-reports",
                 "require": {
-                    "module": "reporting",
-                    "action": "read"
+                    "action": "read",
+                    "module": "reporting"
                 },
                 "state": {
                     "name": "main.reporting",
@@ -290,8 +290,8 @@
                 "title": "Marketplace",
                 "icon": "fa fa-cart-plus",
                 "require": {
-                    "module": "solutionpack",
-                    "action": "read"
+                    "action": "read",
+                    "module": "solutionpack"
                 },
                 "state": {
                     "name": "main.marketplace"
@@ -313,14 +313,17 @@
             },
             {
                 "title": "Threat Intel Management",
-                "icon": "fa fa-bar-chart",
                 "require": {
                     "module": "threat_intel_feeds",
                     "action": "read"
                 },
                 "state": {
-                    "name": "main.threat_intel_feeds"
+                    "name": "main.modules.list",
+                    "parameters": {
+                        "module": "threat_intel_feeds"
+                    }
                 },
+                "icon": "icon icon-queue-management",
                 "editMode": false
             }
         ]
