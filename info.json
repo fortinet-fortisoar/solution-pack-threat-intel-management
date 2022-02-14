@@ -29,18 +29,12 @@
         ],
         "module": {
             "threat_intel_feeds": [],
-            "threat_intel_managements": [],
             "workspaces": []
         },
         "views": {
             "threat_intel_feeds": [
                 "detail",
                 "list",
-                "form"
-            ],
-            "threat_intel_managements": [
-                "list",
-                "detail",
                 "form"
             ],
             "workspaces": [

@@ -3,7 +3,7 @@
     "@id": "\/api\/3\/staging_model_metadatas\/e5c1c474-47d5-4bd4-99b0-0eaddb371b94",
     "@type": "StagingModelMetadata",
     "type": "workspaces",
-    "parentType": null,
+    "parentType": "filterable_entity",
     "tableName": "workspace",
     "ownable": false,
     "userOwnable": false,
