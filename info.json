@@ -28,10 +28,16 @@
             }
         ],
         "module": {
-            "threat_intel_feeds": []
+            "threat_intel_feeds": [],
+            "workspaces":[]
         },
         "views": {
             "threat_intel_feeds": [
+                "detail",
+                "list",
+                "form"
+            ],
+            "workspaces": [
                 "detail",
                 "list",
                 "form"
