@@ -5,8 +5,8 @@
     "description": "Essentially the root user, use carefully",
     "name": "Full App Permissions",
     "modulePermissions": {
-        "40": {
-            "@id": "\/api\/3\/module_permissions\/0bb94b80-fa97-4f5c-877d-5d2deaa88219",
+        "1": {
+            "@id": "\/api\/3\/module_permissions\/26003baf-7512-3f82-b6d7-136a6b5f6df6",
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": false,
@@ -15,19 +15,7 @@
             "canDelete": true,
             "fieldPermissions": [],
             "module": "threat_intel_feeds",
-            "uuid": "0bb94b80-fa97-4f5c-877d-5d2deaa88219"
-        },
-        "41": {
-            "@id": "\/api\/3\/module_permissions\/55adf50d-8298-4732-917d-c7ae965aac95",
-            "@type": "ModulePermission",
-            "canCreate": true,
-            "canExecute": true,
-            "canRead": true,
-            "canUpdate": true,
-            "canDelete": true,
-            "fieldPermissions": [],
-            "module": "workspaces",
-            "uuid": "55adf50d-8298-4732-917d-c7ae965aac95"
+            "uuid": "26003baf-7512-3f82-b6d7-136a6b5f6df6"
         }
     },
     "uuid": "21d7a7c6-9d68-438f-b732-e8950c5f745b"

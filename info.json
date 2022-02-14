@@ -1,13 +1,25 @@
 {
+    "name": "threatIntelManagement",
+    "version": "1.0.0",
+    "label": "Threat Intel Management",
+    "description": "FortiSOAR Solution Pack Around Threat Intelligence Management",
+    "category": [],
+    "publisher": "Fortinet",
+    "certified": "true",
+    "type": "multiContent",
+    "supportInfo": "support@fortinet.com",
+    "help":"https://github.com/fortinet-fortisoar/solution-pack-threat-intel/blob/develop/README.md",
+    "tags": [],
     "fsrMinCompatibility": "7.2.0",
-    "date": "2022-02-14T12:54:52+00:00",
-    "exported_from": "fortisoar3.cybersponse.net",
-    "exported_by": "CS Admin",
-    "contents": {
-        "picklistNames": [
-            {
-                "name": "IndicatorReputation"
-            },
+    "dependencies": [
+        {
+            "name": "mitreAttack",
+            "type": "solutionpack",
+            "label": "Mitre ATT&CK"
+        }
+    ],
+     "contents": {
+        "picklist": [
             {
                 "name": "ThreatIntelFeedType"
             },
@@ -15,61 +27,20 @@
                 "name": "TrafficLightProtocol"
             }
         ],
-        "modules": {
-            "threat_intel_feeds": {
-                "name": "Threat Intel Feeds",
-                "apiName": "threat_intel_feeds"
-            },
-            "workspaces": {
-                "name": "Workspaces",
-                "apiName": "workspaces"
-            }
-        },
-        "viewTemplates": {
-            "threat_intel_feeds": [
-                "list",
-                "detail",
-                "form"
-            ],
-            "workspaces": [
-                "list",
-                "detail",
-                "form"
-            ]
+        "module": {
+            "threat_intel_feeds": []
         },
         "views": {
-            "navigation": [
-                [
-                    "Dashboard",
-                    "Incident Response",
-                    "Vulnerability Management",
-                    "Automation",
-                    "Resources",
-                    "Reports",
-                    "Marketplace",
-                    "Help",
-                    "Threat Intel Management"
-                ]
+            "threat_intel_feeds": [
+                "detail",
+                "list",
+                "form"
             ]
         },
-        "roles": [
+        "dashboards": [
             {
-                "name": "Full App Permissions"
-            },
-            {
-                "name": "T1 Analyst"
-            },
-            {
-                "name": "T2 Analyst"
+                "name": "Threat Intel"
             }
-        ],
-        "widgets": [
-            {
-                "apiName": "manageDatasets",
-                "name": "Manage Datasets",
-                "version": "1.0.0"
-            }
-        ],
-        "recordSets": []
+        ]
     }
 }

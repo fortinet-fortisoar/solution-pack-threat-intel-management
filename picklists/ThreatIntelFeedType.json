@@ -14,7 +14,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "ec8b8c0a-825e-4c6d-8ad2-628100d6da76",
-            "id": "302",
+            "id": 302,
             "recordTags": []
         },
         {
@@ -26,7 +26,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "ce20efe5-622e-4c05-be81-5210d12988ef",
-            "id": "303",
+            "id": 303,
             "recordTags": []
         },
         {
@@ -38,7 +38,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "b788efc2-dadb-4448-9018-043b37266de4",
-            "id": "304",
+            "id": 304,
             "recordTags": []
         },
         {
@@ -50,7 +50,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "7a874c06-b65b-4850-9dd0-ff1c1db6491f",
-            "id": "305",
+            "id": 305,
             "recordTags": []
         },
         {
@@ -62,7 +62,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "00180d62-b914-4522-bd68-4914eb484841",
-            "id": "306",
+            "id": 306,
             "recordTags": []
         },
         {
@@ -74,7 +74,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "8c88bc82-c803-4cba-9997-4d734123493b",
-            "id": "307",
+            "id": 307,
             "recordTags": []
         },
         {
@@ -86,7 +86,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "393cc8c8-da97-414a-9058-ee177c946bed",
-            "id": "308",
+            "id": 308,
             "recordTags": []
         },
         {
@@ -98,7 +98,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "b1bbe31b-6121-45d5-9acb-94f67edbd7ba",
-            "id": "309",
+            "id": 309,
             "recordTags": []
         },
         {
@@ -110,7 +110,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "0aa43df6-3331-4994-a442-8543f7e17365",
-            "id": "310",
+            "id": 310,
             "recordTags": []
         },
         {
@@ -122,7 +122,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "18c5c903-eda5-494d-aa7e-f28b479681ac",
-            "id": "311",
+            "id": 311,
             "recordTags": []
         },
         {
@@ -134,7 +134,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "76b68a66-ffaa-4003-b60d-a43fcc64c003",
-            "id": "312",
+            "id": 312,
             "recordTags": []
         },
         {
@@ -146,7 +146,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "22ff2fc7-e1bb-4d68-b1c1-990618639731",
-            "id": "313",
+            "id": 313,
             "recordTags": []
         },
         {
@@ -158,7 +158,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "b8bc8bf3-5162-478e-9fe8-1ff54b0d9721",
-            "id": "314",
+            "id": 314,
             "recordTags": []
         },
         {
@@ -170,7 +170,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "6b149497-4f2a-4843-8137-cbdcfd6f90f1",
-            "id": "315",
+            "id": 315,
             "recordTags": []
         },
         {
@@ -182,7 +182,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "a0094047-6423-4a7c-8e59-e8d0e425e4f3",
-            "id": "316",
+            "id": 316,
             "recordTags": []
         },
         {
@@ -194,7 +194,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "a73a2378-92b2-4c6e-952c-ec340ea565a6",
-            "id": "317",
+            "id": 317,
             "recordTags": []
         },
         {
@@ -206,7 +206,7 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "50b01115-a213-4e85-aed6-0c85f31a30c2",
-            "id": "318",
+            "id": 356,
             "recordTags": []
         },
         {
@@ -218,11 +218,11 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/41d5146e-c882-4bfb-abdf-8e2d16c1895f",
             "uuid": "2884a5af-00a9-4172-b00b-5b081d112715",
-            "id": "319",
+            "id": 357,
             "recordTags": []
         }
     ],
     "uuid": "41d5146e-c882-4bfb-abdf-8e2d16c1895f",
-    "id": "49",
+    "id": 49,
     "recordTags": []
 }
