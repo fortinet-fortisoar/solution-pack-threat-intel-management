@@ -28,7 +28,7 @@
                                                                         {
                                                                             "type": "performanceMetrics",
                                                                             "config": {
-                                                                                "widgetAlwaysDisplay":true,
+                                                                                "widgetAlwaysDisplay": true,
                                                                                 "wid": "ba0a3003-9da8-4bf2-9392-36f84ca76eac",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -59,7 +59,7 @@
                                                                         {
                                                                             "type": "performanceMetrics",
                                                                             "config": {
-                                                                                "widgetAlwaysDisplay":true,
+                                                                                "widgetAlwaysDisplay": true,
                                                                                 "wid": "accd3082-be55-48f1-b6e5-3ce8659ee12a",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -98,7 +98,7 @@
                                                                         {
                                                                             "type": "performanceMetrics",
                                                                             "config": {
-                                                                                "widgetAlwaysDisplay":true,
+                                                                                "widgetAlwaysDisplay": true,
                                                                                 "wid": "f70b5164-5ca0-47f0-875f-bb70496c44a5",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -342,7 +342,7 @@
                                                 }
                                             },
                                             "icon": "icon icon-summary",
-                                            "show": true
+                                            "show": false
                                         },
                                         {
                                             "title": "Threat Feeds",
@@ -355,8 +355,40 @@
                                                         {
                                                             "columns": [
                                                                 {
-                                                                    "widgets": [],
-                                                                    "style": "col-lg-3"
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "rows",
+                                                                            "config": {
+                                                                                "wid": "5faa6fef-cda7-484e-8dca-84a6130dd761",
+                                                                                "rows": [
+                                                                                    {
+                                                                                        "columns": [
+                                                                                            {
+                                                                                                "widgets": [
+                                                                                                    {
+                                                                                                        "type": "manageDatasets-1.0.0",
+                                                                                                        "config": {
+                                                                                                            "wid": "908b1e10-0e93-48da-930e-7ca0a0d01a2a",
+                                                                                                            "typeofWidget": "createAndListDataset",
+                                                                                                            "title": "Saved Feed Datasets",
+                                                                                                            "selectedModule": "threat_intel_feeds"
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "style": "col-lg-12"
+                                                                                            }
+                                                                                        ],
+                                                                                        "wid": "87adb304-86b3-4da6-ad50-7495fc0eef4d",
+                                                                                        "collapsible": false,
+                                                                                        "collapsibleIndex": 0,
+                                                                                        "_collapsed": false
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-3",
+                                                                    "collapsedText": "Manage Datasets"
                                                                 },
                                                                 {
                                                                     "widgets": [
@@ -366,7 +398,12 @@
                                                                                 "wid": "0285302c-03b2-4ff3-a443-622de58d5e2d",
                                                                                 "module": "threat_intel_feeds",
                                                                                 "columns": [
-                                                                                    "id"
+                                                                                    "value",
+                                                                                    "typeOfFeed",
+                                                                                    "source",
+                                                                                    "confidence",
+                                                                                    "reputation",
+                                                                                    "recordTags"
                                                                                 ],
                                                                                 "expandableCol": [],
                                                                                 "relationshipField": [],
@@ -386,7 +423,7 @@
                                                                 }
                                                             ],
                                                             "wid": "3e209381-3fb2-45ce-be1e-1c70c6fe56dd",
-                                                            "collapsible": false,
+                                                            "collapsible": true,
                                                             "collapsibleIndex": 0,
                                                             "_collapsed": false
                                                         }
@@ -394,7 +431,7 @@
                                                 }
                                             },
                                             "icon": "fa fa-sign-out",
-                                            "show": false
+                                            "show": true
                                         },
                                         {
                                             "title": "Workspace",
@@ -442,7 +479,7 @@
                                                 }
                                             },
                                             "icon": "fa fa-shopping-bag",
-                                            "show": true
+                                            "show": false
                                         },
                                         {
                                             "title": "Feed Configurations",

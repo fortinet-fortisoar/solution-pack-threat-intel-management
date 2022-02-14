@@ -14,7 +14,8 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "0472d368-bd15-4f52-a119-d403470cbe43",
-            "id": 304
+            "id": "320",
+            "recordTags": []
         },
         {
             "@id": "\/api\/3\/picklists\/7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
@@ -25,7 +26,8 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
-            "id": 305
+            "id": "321",
+            "recordTags": []
         },
         {
             "@id": "\/api\/3\/picklists\/47004ad3-721e-43e0-b729-2ad8ee6441c0",
@@ -36,7 +38,8 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "47004ad3-721e-43e0-b729-2ad8ee6441c0",
-            "id": 306
+            "id": "322",
+            "recordTags": []
         },
         {
             "@id": "\/api\/3\/picklists\/815d21f7-787b-4480-8009-558aa64fe776",
@@ -47,9 +50,11 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/40f1345f-f679-43c0-9237-5b06edd8385f",
             "uuid": "815d21f7-787b-4480-8009-558aa64fe776",
-            "id": 322
+            "id": "323",
+            "recordTags": []
         }
     ],
     "uuid": "40f1345f-f679-43c0-9237-5b06edd8385f",
-    "id": 53
+    "id": "50",
+    "recordTags": []
 }

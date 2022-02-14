@@ -5,8 +5,8 @@
     "description": "Responsible for Incident Investigation and other remediation and containment related tasks.",
     "name": "T2 Analyst",
     "modulePermissions": {
-        "40": {
-            "@id": "\/api\/3\/module_permissions\/e1704cee-7e10-426e-b61e-94b05f074121",
+        "20": {
+            "@id": "\/api\/3\/module_permissions\/a76062ce-0dba-4594-929f-06dce5e9a637",
             "@type": "ModulePermission",
             "canCreate": true,
             "canExecute": true,
@@ -15,7 +15,7 @@
             "canDelete": false,
             "fieldPermissions": [],
             "module": "threat_intel_feeds",
-            "uuid": "e1704cee-7e10-426e-b61e-94b05f074121"
+            "uuid": "a76062ce-0dba-4594-929f-06dce5e9a637"
         }
     },
     "uuid": "aada6692-fbf4-4a02-a580-f8a200962365"
