@@ -1,0 +1,25 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "app",
+    "config": {
+        "navigation": [
+            {
+                "title": "Threat Intel Management",
+                "require": {
+                    "module": "threat_intel_feeds",
+                    "action": "read"
+                },
+                "state": {
+                    "name": "main.modules.list",
+                    "parameters": {
+                        "module": "threat_intel_feeds"
+                    }
+                },
+                "icon": "icon icon-queue-management",
+                "editMode": false
+            }
+        ]
+    },
+    "uuid": "navigation"
+}
