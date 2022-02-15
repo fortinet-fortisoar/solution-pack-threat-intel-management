@@ -41,6 +41,11 @@
                 "detail",
                 "list",
                 "form"
+            ],
+            "navigation": [
+                [
+                    "Threat Intel Management"
+                ]
             ]
         },
         "dashboards": [
