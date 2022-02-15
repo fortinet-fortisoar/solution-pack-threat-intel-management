@@ -41,6 +41,11 @@
                 "detail",
                 "list",
                 "form"
+            ],
+            "navigation": [
+                [
+                    "Incident Response"
+                ]
             ]
         },
         "dashboards": [
