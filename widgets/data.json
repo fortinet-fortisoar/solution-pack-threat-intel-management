@@ -1,9 +1,0 @@
-[
-    {
-        "name": "manageDatasets",
-        "version": "1.0.0",
-        "title": "Manage Datasets",
-        "install_mode": "tgz",
-        "installer_path": "manageDatasets-1.0.0.tgz"
-    }
-]
