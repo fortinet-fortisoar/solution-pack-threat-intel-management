@@ -25,39 +25,69 @@
                                                                     {
                                                                         "title": "Saved Datasets",
                                                                         "active": 0,
-                                                                        "widget": null,
+                                                                        "widget": {
+                                                                            "type": "rows",
+                                                                            "config": {
+                                                                                "wid": "775a7da3-36a4-4d04-b29e-209e28c93e0e",
+                                                                                "rows": [
+                                                                                    {
+                                                                                        "columns": [
+                                                                                            {
+                                                                                                "widgets": [
+                                                                                                    {
+                                                                                                        "type": "manageDatasets-1.0.0",
+                                                                                                        "config": {
+                                                                                                            "wid": "2eb00e50-bfce-40bd-9f1b-4e220cea5799",
+                                                                                                            "typeofWidget": "datasetSelection",
+                                                                                                            "title": "Selected Datasets"
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ],
+                                                                                        "wid": "2ade6585-e235-4d7a-aa8e-c3ca791a9c8d"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
                                                                         "icon": "fa fa-align-justify",
-                                                                        "subtitle": "Saved Feeds and Indicators"
+                                                                        "subtitle": "Saved Feeds and Indicators",
+                                                                        "show": true
                                                                     },
                                                                     {
                                                                         "title": "Feed Correlations",
                                                                         "active": 0,
                                                                         "widget": null,
                                                                         "icon": "fa fa-list",
-                                                                        "subtitle": "Explore Threat Intel Data"
+                                                                        "subtitle": "Explore Threat Intel Data",
+                                                                        "show": false
                                                                     },
                                                                     {
                                                                         "title": "Task Management",
                                                                         "active": 0,
                                                                         "widget": null,
                                                                         "icon": "fa fa-list",
-                                                                        "subtitle": "Organise Threat Hunting Task"
+                                                                        "subtitle": "Organise Threat Hunting Task",
+                                                                        "show": false
                                                                     },
                                                                     {
                                                                         "title": "Reports",
                                                                         "active": 0,
                                                                         "widget": null,
                                                                         "icon": "icon icon-generate-incident-summary-report",
-                                                                        "subtitle": "Threat Intel Reports"
+                                                                        "subtitle": "Threat Intel Reports",
+                                                                        "show": false
                                                                     }
                                                                 ],
                                                                 "isPrimaryTab": true
                                                             }
                                                         }
-                                                    ]
+                                                    ],
+                                                    "style": "col-lg-12"
                                                 }
                                             ],
-                                            "wid": "0d9010a6-a1fe-4fce-a72e-09dc272c3c5e"
+                                            "wid": "0d9010a6-a1fe-4fce-a72e-09dc272c3c5e",
+                                            "_collapsed": false
                                         }
                                     ]
                                 }

@@ -29,7 +29,7 @@
                                                                             "type": "performanceMetrics",
                                                                             "config": {
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "wid": "ba0a3003-9da8-4bf2-9392-36f84ca76eac",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -61,7 +61,7 @@
                                                                             "type": "performanceMetrics",
                                                                             "config": {
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "wid": "accd3082-be55-48f1-b6e5-3ce8659ee12a",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -101,7 +101,7 @@
                                                                             "type": "performanceMetrics",
                                                                             "config": {
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "wid": "f70b5164-5ca0-47f0-875f-bb70496c44a5",
                                                                                 "grouping": {
                                                                                     "primary": [],
@@ -142,7 +142,7 @@
                                                                             "config": {
                                                                                 "wid": "f422baf4-dbfb-4849-8efa-d2dab828becf",
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "query": {
                                                                                     "sort": [],
                                                                                     "limit": 2147483647,
@@ -182,7 +182,7 @@
                                                                             "config": {
                                                                                 "wid": "5a7c3438-232e-44e5-8b79-1b58fddd5643",
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "query": {
                                                                                     "sort": [
                                                                                         {
@@ -247,7 +247,7 @@
                                                                             "config": {
                                                                                 "wid": "ca65ea2a-b031-4659-9116-c25b69fafe36",
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "query": {
                                                                                     "sort": [],
                                                                                     "limit": 2147483647,
@@ -286,7 +286,7 @@
                                                                             "config": {
                                                                                 "wid": "2f48e77a-4526-4e6e-bb5d-18aace83a723",
                                                                                 "widgetAlwaysDisplay": true,
-                                                                                "widgetAlwaysExpanded":true,
+                                                                                "widgetAlwaysExpanded": true,
                                                                                 "query": {
                                                                                     "sort": [
                                                                                         {
@@ -376,7 +376,7 @@
                                                                                                         "type": "manageDatasets-1.0.0",
                                                                                                         "config": {
                                                                                                             "wid": "908b1e10-0e93-48da-930e-7ca0a0d01a2a",
-                                                                                                            "widgetAlwaysExpanded":true,
+                                                                                                            "widgetAlwaysExpanded": true,
                                                                                                             "typeofWidget": "createAndListDataset",
                                                                                                             "title": "Saved Feed Datasets",
                                                                                                             "selectedModule": "threat_intel_feeds"
@@ -439,7 +439,7 @@
                                                 }
                                             },
                                             "icon": "fa fa-sign-out",
-                                            "show": true
+                                            "show": false
                                         },
                                         {
                                             "title": "Workspace",
@@ -454,26 +454,23 @@
                                                                 {
                                                                     "widgets": [
                                                                         {
-                                                                            "type": "cardList",
+                                                                            "type": "cardTiles-1.0.0",
                                                                             "config": {
-                                                                                "wid": "844abb15-64e0-4c96-b8c3-e25f40d9b269",
+                                                                                "wid": "b7c7208f-a85b-46fb-a928-c4605099d833",
+                                                                                "module": "workspaces",
                                                                                 "query": {
                                                                                     "sort": [],
-                                                                                    "limit": 50,
+                                                                                    "limit": 100,
                                                                                     "logic": "AND",
                                                                                     "filters": []
                                                                                 },
-                                                                                "mapping": {
-                                                                                    "templateView": "cardView",
-                                                                                    "assignedToPerson": null,
-                                                                                    "picklistBar": null,
-                                                                                    "title": "id",
-                                                                                    "subTitle": "name",
-                                                                                    "subTitle3": "description",
-                                                                                    "subTitle4": "createUser"
-                                                                                },
-                                                                                "module": "workspaces",
-                                                                                "title": "Workspace Listing"
+                                                                                "cardIcon": "fa fa-gift",
+                                                                                "cardHeader": "name",
+                                                                                "cardTitle": "name",
+                                                                                "subtitle1": "createUser",
+                                                                                "subtitle2": "createDate",
+                                                                                "cardDetails": "description",
+                                                                                "showIcon": true
                                                                             }
                                                                         }
                                                                     ],
@@ -487,7 +484,7 @@
                                                 }
                                             },
                                             "icon": "fa fa-shopping-bag",
-                                            "show": false
+                                            "show": true
                                         },
                                         {
                                             "title": "Feed Configurations",
