@@ -1325,6 +1325,6 @@
     "displayName": "{{ value }}",
     "descriptions": {
         "singular": "Threat Intel Feed", 
-        "plural": "Threat Intel Management"
+        "plural": "Threat Intel Feeds"
     }
 }
