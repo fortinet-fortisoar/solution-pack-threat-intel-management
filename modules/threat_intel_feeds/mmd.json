@@ -1324,7 +1324,7 @@
     "uuid": "f11d681a-58e5-4b53-adb6-085f6462593e",
     "displayName": "{{ value }}",
     "descriptions": {
-        "singular": "Threat Intel Feed",
-        "plural": "Threat Intel Feeds"
+        "singular": "Threat Intel Feed", 
+        "plural": "Threat Intel Management"
     }
 }
