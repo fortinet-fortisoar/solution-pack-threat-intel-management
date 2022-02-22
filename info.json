@@ -28,30 +28,73 @@
             }
         ],
         "modules": {
-            "threat_intel_feeds": [],
-            "workspaces":[]
+            "attachments": {
+                "name": "Attachments",
+                "apiName": "attachments"
+            },
+            "indicators": {
+                "name": "Indicators",
+                "apiName": "indicators"
+            },
+            "tasks": {
+                "name": "Tasks",
+                "apiName": "tasks"
+            },
+            "threat_intel_feeds": {
+                "name": "Threat Intel Feeds",
+                "apiName": "threat_intel_feeds"
+            },
+            "workspaces": {
+                "name": "Workspaces",
+                "apiName": "workspaces"
+            }
         },
-        "views": {
+        "viewTemplates": {
             "threat_intel_feeds": [
-                "detail",
                 "list",
+                "detail",
                 "form"
             ],
             "workspaces": [
-                "detail",
                 "list",
+                "detail",
                 "form"
-            ],
+            ]
+        },
+        "views": {
             "navigation": [
                 [
                     "Threat Intel Management"
                 ]
             ]
         },
+        "roles": [
+            {
+                "name": "Full App Permissions"
+            },
+            {
+                "name": "T1 Analyst"
+            },
+            {
+                "name": "T2 Analyst"
+            }
+        ],
+        "playbooks": [
+            {
+                "name": "Workspace Automation"
+            }
+        ],
+        "globalVariables": [],
+        "reports": [
+            {
+                "name": "Threat Intel Summary Report"
+            }
+        ],
         "dashboards": [
             {
                 "name": "Threat Intel"
             }
-        ]
+        ],
+        "recordSets": []
     }
 }

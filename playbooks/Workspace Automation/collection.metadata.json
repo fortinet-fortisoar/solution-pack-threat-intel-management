@@ -1,0 +1,11 @@
+{
+    "@context": "\/api\/3\/contexts\/WorkflowCollection",
+    "@type": "WorkflowCollection",
+    "name": "Workspace Automation",
+    "description": null,
+    "visible": true,
+    "image": null,
+    "uuid": "06d1fa99-bb84-41c5-954f-d0781dafebc5",
+    "recordTags": [],
+    "deletedAt": null
+}
