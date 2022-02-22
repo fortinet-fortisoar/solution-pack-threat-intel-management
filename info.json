@@ -28,18 +28,6 @@
             }
         ],
         "modules": {
-            "attachments": {
-                "name": "Attachments",
-                "apiName": "attachments"
-            },
-            "indicators": {
-                "name": "Indicators",
-                "apiName": "indicators"
-            },
-            "tasks": {
-                "name": "Tasks",
-                "apiName": "tasks"
-            },
             "threat_intel_feeds": {
                 "name": "Threat Intel Feeds",
                 "apiName": "threat_intel_feeds"
