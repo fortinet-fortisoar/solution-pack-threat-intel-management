@@ -1308,6 +1308,45 @@
             "descriptions": {
                 "singular": "Source Data"
             }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/6b3485f0-9140-4baf-aefa-e4b9cc2fbbd5",
+            "@type": "AttributeMetadata",
+            "type": "workspaces",
+            "name": "workspaces",
+            "length": null,
+            "orderIndex": 20,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "workspaces"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "threatFeeds",
+            "ownsRelationship": false,
+            "validation": null,
+            "bulkAction": null,
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "6b3485f0-9140-4baf-aefa-e4b9cc2fbbd5",
+            "recordTags": [],
+            "displayName": "{{Workspaces}}",
+            "descriptions": {
+                "singular": "Workspaces"
+            }
         }
     ],
     "system": false,

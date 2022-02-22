@@ -180,7 +180,7 @@
                                                                         {
                                                                             "type": "chart",
                                                                             "config": {
-                                                                                "wid": "5a7c3438-232e-44e5-8b79-1b58fddd5643",
+                                                                                "wid": "fc3b09dd-d78e-4fa4-acb3-9aef72391df2",
                                                                                 "widgetAlwaysDisplay": true,
                                                                                 "widgetAlwaysExpanded": true,
                                                                                 "query": {
@@ -243,14 +243,18 @@
                                                                 {
                                                                     "widgets": [
                                                                         {
-                                                                            "type": "chart",
+                                                                            "type": "cardCount",
                                                                             "config": {
-                                                                                "wid": "ca65ea2a-b031-4659-9116-c25b69fafe36",
-                                                                                "widgetAlwaysDisplay": true,
+                                                                                "wid": "c4d1d36e-24c5-48c1-93e1-562698698d2b",
                                                                                 "widgetAlwaysExpanded": true,
                                                                                 "query": {
-                                                                                    "sort": [],
-                                                                                    "limit": 2147483647,
+                                                                                    "sort": [
+                                                                                        {
+                                                                                            "field": "source",
+                                                                                            "direction": "ASC"
+                                                                                        }
+                                                                                    ],
+                                                                                    "limit": 30,
                                                                                     "logic": "AND",
                                                                                     "filters": [],
                                                                                     "aggregates": [
@@ -267,13 +271,12 @@
                                                                                     ]
                                                                                 },
                                                                                 "mapping": {
-                                                                                    "assignedToPerson": "",
+                                                                                    "assignedToPerson": null,
                                                                                     "fieldName": "source"
                                                                                 },
                                                                                 "aggregate": true,
-                                                                                "title": "Most Relevant Feeds",
-                                                                                "resource": "threat_intel_feeds",
-                                                                                "chart": "donut"
+                                                                                "title": "Feeds Monitored",
+                                                                                "resource": "threat_intel_feeds"
                                                                             }
                                                                         }
                                                                     ],
@@ -284,17 +287,17 @@
                                                                         {
                                                                             "type": "chart",
                                                                             "config": {
-                                                                                "wid": "2f48e77a-4526-4e6e-bb5d-18aace83a723",
+                                                                                "wid": "5a7c3438-232e-44e5-8b79-1b58fddd5643",
                                                                                 "widgetAlwaysDisplay": true,
                                                                                 "widgetAlwaysExpanded": true,
                                                                                 "query": {
                                                                                     "sort": [
                                                                                         {
-                                                                                            "field": "reputation.orderIndex",
+                                                                                            "field": "typeOfFeed.orderIndex",
                                                                                             "direction": "ASC"
                                                                                         },
                                                                                         {
-                                                                                            "field": "label",
+                                                                                            "field": "source",
                                                                                             "direction": "ASC"
                                                                                         }
                                                                                     ],
@@ -309,31 +312,164 @@
                                                                                         },
                                                                                         {
                                                                                             "operator": "groupby",
-                                                                                            "alias": "reputation",
-                                                                                            "field": "reputation.itemValue"
+                                                                                            "alias": "typeOfFeed",
+                                                                                            "field": "typeOfFeed.itemValue"
                                                                                         },
                                                                                         {
                                                                                             "operator": "groupby",
                                                                                             "alias": "firstOrderIndex",
-                                                                                            "field": "reputation.orderIndex"
+                                                                                            "field": "typeOfFeed.orderIndex"
                                                                                         },
                                                                                         {
                                                                                             "operator": "groupby",
-                                                                                            "alias": "label",
-                                                                                            "field": "label"
+                                                                                            "alias": "source",
+                                                                                            "field": "source"
                                                                                         }
                                                                                     ]
                                                                                 },
                                                                                 "mapping": {
                                                                                     "assignedToPerson": "",
-                                                                                    "firstGrouping": "reputation",
-                                                                                    "secondGrouping": "label"
+                                                                                    "timeScope": "month",
+                                                                                    "dateFieldName": "created",
+                                                                                    "fieldName": "",
+                                                                                    "dateFormat": "%b %e",
+                                                                                    "secondGrouping": "source",
+                                                                                    "firstGrouping": "typeOfFeed"
+                                                                                },
+                                                                                "aggregate": true,
+                                                                                "chart": "bar",
+                                                                                "title": "By Type",
+                                                                                "resource": "threat_intel_feeds"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-9"
+                                                                }
+                                                            ],
+                                                            "wid": "161c970e-0f7a-4cfb-86dd-ad36b1136615",
+                                                            "collapsible": false,
+                                                            "collapsibleIndex": 0,
+                                                            "_collapsed": false
+                                                        },
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "chart",
+                                                                            "config": {
+                                                                                "wid": "ca65ea2a-b031-4659-9116-c25b69fafe36",
+                                                                                "widgetAlwaysDisplay": true,
+                                                                                "widgetAlwaysExpanded": true,
+                                                                                "query": {
+                                                                                    "sort": [],
+                                                                                    "limit": 2147483647,
+                                                                                    "logic": "AND",
+                                                                                    "filters": [
+                                                                                        {
+                                                                                            "field": "indicators.uuid",
+                                                                                            "operator": "isnull",
+                                                                                            "_operator": "isnull",
+                                                                                            "value": "false",
+                                                                                            "type": "primitive"
+                                                                                        }
+                                                                                    ],
+                                                                                    "aggregates": [
+                                                                                        {
+                                                                                            "operator": "countdistinct",
+                                                                                            "field": "*",
+                                                                                            "alias": "total"
+                                                                                        },
+                                                                                        {
+                                                                                            "operator": "groupby",
+                                                                                            "alias": "source",
+                                                                                            "field": "source"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "mapping": {
+                                                                                    "assignedToPerson": null,
+                                                                                    "fieldName": "source"
+                                                                                },
+                                                                                "aggregate": true,
+                                                                                "title": "Most Relevant Feed Sources",
+                                                                                "resource": "threat_intel_feeds",
+                                                                                "chart": "donut",
+                                                                                "showCount": true
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-3"
+                                                                },
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "relationshipCount",
+                                                                            "config": {
+                                                                                "wid": "fb36eb00-5a29-43e5-a8fd-3f7163db0125",
+                                                                                "widgetAlwaysDisplay": true,
+                                                                                "query": {
+                                                                                    "sort": [
+                                                                                        {
+                                                                                            "field": "value",
+                                                                                            "direction": "ASC"
+                                                                                        }
+                                                                                    ],
+                                                                                    "limit": 2147483647,
+                                                                                    "logic": "AND",
+                                                                                    "filters": [
+                                                                                        {
+                                                                                            "field": "alerts.status",
+                                                                                            "operator": "neq",
+                                                                                            "value": "\/api\/3\/picklists\/fac53e73-8d16-4189-98d5-95fbd1555232",
+                                                                                            "_value": {
+                                                                                                "display": "Closed",
+                                                                                                "itemValue": "Closed",
+                                                                                                "@id": "\/api\/3\/picklists\/fac53e73-8d16-4189-98d5-95fbd1555232"
+                                                                                            },
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        {
+                                                                                            "field": "threatIntelFeeds.uuid",
+                                                                                            "operator": "isnull",
+                                                                                            "_operator": "isnull",
+                                                                                            "value": "false",
+                                                                                            "type": "primitive"
+                                                                                        }
+                                                                                    ],
+                                                                                    "aggregates": [
+                                                                                        {
+                                                                                            "operator": "count",
+                                                                                            "alias": "total",
+                                                                                            "field": "alerts.uuid"
+                                                                                        },
+                                                                                        {
+                                                                                            "operator": "groupby",
+                                                                                            "alias": "value",
+                                                                                            "field": "value"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "mapping": {
+                                                                                    "assignedToPerson": "",
+                                                                                    "firstGrouping": "value",
+                                                                                    "secondGrouping": "alerts"
                                                                                 },
                                                                                 "aggregate": true,
                                                                                 "title": "Most Active Threats",
-                                                                                "resource": "threat_intel_feeds",
-                                                                                "chart": "bar",
-                                                                                "barStyle": "horizontal"
+                                                                                "chart": "relationshipBar",
+                                                                                "resource": "indicators",
+                                                                                "primaryDataSourceLabel": "Active Threat Actors",
+                                                                                "sortStyle": "DESC",
+                                                                                "limit": 10,
+                                                                                "resourceRelationship": "alerts",
+                                                                                "queryRelationship": {
+                                                                                    "sort": [],
+                                                                                    "limit": 30,
+                                                                                    "logic": "AND",
+                                                                                    "filters": []
+                                                                                },
+                                                                                "relatedDataSourceLabel": "Sightings"
                                                                             }
                                                                         }
                                                                     ],
@@ -344,12 +480,34 @@
                                                             "collapsible": false,
                                                             "collapsibleIndex": 0,
                                                             "_collapsed": false
+                                                        },
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "iframe",
+                                                                            "config": {
+                                                                                "wid": "e382fd91-8283-4a2e-9178-50d63c1fb066",
+                                                                                "widgetAlwaysExpanded": true,
+                                                                                "url": "https:\/\/threatmap.fortiguard.com\/",
+                                                                                "height": 500,
+                                                                                "title": "FortiGuard Threat Map",
+                                                                                "expandCollaps": true
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-12"
+                                                                }
+                                                            ],
+                                                            "wid": "8b3db283-d086-4625-af42-069e8bc1117e",
+                                                            "_collapsed": false
                                                         }
                                                     ]
                                                 }
                                             },
                                             "icon": "icon icon-summary",
-                                            "show": false
+                                            "show": true
                                         },
                                         {
                                             "title": "Threat Feeds",
@@ -464,8 +622,8 @@
                                                                                     "logic": "AND",
                                                                                     "filters": []
                                                                                 },
-                                                                                "cardIcon": "fa fa-gift",
-                                                                                "cardHeader": "name",
+                                                                                "cardIcon": "icon icon-threat-intelligence",
+                                                                                "cardHeader": "createDate",
                                                                                 "cardTitle": "name",
                                                                                 "subtitle1": "createUser",
                                                                                 "subtitle2": "createDate",
@@ -484,7 +642,7 @@
                                                 }
                                             },
                                             "icon": "fa fa-shopping-bag",
-                                            "show": true
+                                            "show": false
                                         },
                                         {
                                             "title": "Feed Configurations",

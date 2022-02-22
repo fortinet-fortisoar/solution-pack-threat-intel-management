@@ -1,0 +1,248 @@
+{
+    "@context": "\/api\/3\/contexts\/Reporting",
+    "@type": "Reporting",
+    "uuid": "2bd62ca7-a36a-4c13-b836-dde8839c6eba",
+    "recordTags": [],
+    "displayName": "Threat Intel Summary Report",
+    "type": "rows",
+    "templateType": "reporting",
+    "roles": [],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "7dde165c-b423-4d31-a018-cf0399813c00",
+                                    "sectionText": "<p style=\"text-align: center;\">&nbsp;<\/p>\n<p style=\"text-align: center; background: #4e94d0; padding-top: 5px;\"><span style=\"font-size: 25pt;\"><strong><span style=\"color: #efefee;\">Threat Intel Summary Report<\/span>&nbsp;<\/strong><\/span><\/p>\n<p style=\"background: #2a5173; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; text-align: center;\"><span style=\"font-size: 12pt; color: #efefee;\">Generated On {{todayDate}}<\/span><\/p>",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "519727ca-5677-4a5d-954b-8c2c0de8aee5",
+                "container": false,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "sectionHeader",
+                                "config": {
+                                    "wid": "c96ab5d9-40f0-4563-bd8b-f4443626233c",
+                                    "query": {
+                                        "filters": [],
+                                        "sort": [],
+                                        "limit": 10
+                                    },
+                                    "editorType": "html",
+                                    "sectionText": "<h3><strong><span class=\"cs-richtext-field\" title=\"Warrooms ID {{warRoomID}} - Title\">{{title}}<\/span><\/strong><\/h3>",
+                                    "fieldType": "record fields",
+                                    "resource": "warrooms",
+                                    "resourceId": "{{warRoomID}}"
+                                }
+                            },
+                            {
+                                "type": "readonlyFormGroup",
+                                "config": {
+                                    "wid": "2927532b-ddf4-4188-bc6e-ddbd8ed9e4f2",
+                                    "gridColumns": [],
+                                    "displayType": "card-view",
+                                    "widgetAlwaysDisplay": true,
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 10,
+                                        "logic": "AND",
+                                        "filters": []
+                                    },
+                                    "recordTitle": {
+                                        "type": "sectionHeader",
+                                        "wid": "f0712be2-19ce-4b71-a9ac-e1e6c2ea8af6",
+                                        "clone": false,
+                                        "remove": false
+                                    },
+                                    "relatedTemplate": {
+                                        "type": "rows",
+                                        "rows": [
+                                            {
+                                                "columns": [
+                                                    {
+                                                        "widgets": [
+                                                            {
+                                                                "type": "simpleGrid",
+                                                                "config": {
+                                                                    "wid": "c39f6c44-89de-476f-820e-234a4ead7f82",
+                                                                    "widgetAlwaysDisplay": true,
+                                                                    "query": {
+                                                                        "sort": [],
+                                                                        "limit": 10,
+                                                                        "logic": "AND",
+                                                                        "filters": []
+                                                                    },
+                                                                    "mapping": {
+                                                                        "assignedToPerson": ""
+                                                                    },
+                                                                    "columns": [
+                                                                        "typeOfFeed",
+                                                                        "value",
+                                                                        "confidence",
+                                                                        "reputation",
+                                                                        "source",
+                                                                        "validFrom",
+                                                                        "validUntil"
+                                                                    ],
+                                                                    "title": "Related Feed Records",
+                                                                    "module": "threat_intel_feeds"
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "simpleGrid",
+                                                                "config": {
+                                                                    "wid": "f8522fda-863f-41ba-9559-37cb3e2a896e",
+                                                                    "widgetAlwaysDisplay": true,
+                                                                    "query": {
+                                                                        "sort": [],
+                                                                        "limit": 10,
+                                                                        "logic": "AND",
+                                                                        "filters": []
+                                                                    },
+                                                                    "mapping": {
+                                                                        "assignedToPerson": ""
+                                                                    },
+                                                                    "columns": [
+                                                                        "typeofindicator",
+                                                                        "value",
+                                                                        "reputation",
+                                                                        "sources"
+                                                                    ],
+                                                                    "title": "Related Indicator Records",
+                                                                    "module": "indicators"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "wid": "e6b2e264-fceb-4b39-ac78-232bbf12dba3"
+                                            }
+                                        ],
+                                        "wid": "087a984b-3489-4e23-98df-948471bac09e"
+                                    },
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "name",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "description",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-12"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "actorGroupAnalysis",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-12"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "impactAnalysis",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-12"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "nextSteps",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-12"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "resource": "workspaces"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "f207f02d-85f5-4187-9d7e-1e0ea8741217",
+                "container": true,
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "de2bf7f4-61f6-4f69-83d3-d7b7e802e6e0",
+                "container": true,
+                "_collapsed": false
+            }
+        ],
+        "wid": "daaaadd9-c536-462a-8e54-47f8d9897aff"
+    },
+    "filterArray": [
+        {
+            "key": "workspaceID",
+            "open": true,
+            "type": "number",
+            "label": "Workspace ID",
+            "value": 1,
+            "expression": "{{workspaceID}}",
+            "defaultValue": 1
+        }
+    ],
+    "updateDate": 1556262219
+}
