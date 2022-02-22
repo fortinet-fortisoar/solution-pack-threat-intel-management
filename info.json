@@ -84,7 +84,6 @@
                 "name": "Workspace Automation"
             }
         ],
-        "globalVariables": [],
         "reports": [
             {
                 "name": "Threat Intel Summary Report"
@@ -94,7 +93,6 @@
             {
                 "name": "Threat Intel"
             }
-        ],
-        "recordSets": []
+        ]
     }
 }
