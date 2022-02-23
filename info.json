@@ -49,6 +49,23 @@
                 "form"
             ]
         },
+        "widgets": [
+            {
+                "apiName": "cardTiles",
+                "name": "Card Tiles",
+                "version": "1.0.0"
+            },
+            {
+                "apiName": "taskManagement",
+                "name": "Task Management",
+                "version": "2.0.0"
+            },
+            {
+                "apiName": "manageDatasets",
+                "name": "Manage Datasets",
+                "version": "1.0.0"
+            }
+        ],
         "views": {
             "navigation": [
                 [
