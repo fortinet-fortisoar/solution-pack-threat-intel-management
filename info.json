@@ -13,9 +13,14 @@
     "fsrMinCompatibility": "7.2.0",
     "dependencies": [
         {
-            "name": "mitreAttack",
+            "name": "sOARFramework",
             "type": "solutionpack",
-            "label": "Mitre ATT&CK"
+            "label": "SOAR Framework"
+        },
+        {
+            "name": "mITREATTACKEnrichmentFramework",
+            "type": "solutionpack",
+            "label": "MITRE ATTACK Enrichment Framework"
         }
     ],
      "contents": {
