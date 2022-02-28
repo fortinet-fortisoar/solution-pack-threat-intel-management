@@ -1,0 +1,238 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Setup TIM Workspace (Tasks)",
+    "aliasName": null,
+    "tag": null,
+    "description": "Launch TIM Workspace from Tasks (PIR)",
+    "isActive": true,
+    "debug": true,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "lastModifyDate": 1645988166,
+    "collection": "\/api\/3\/workflow_collections\/06d1fa99-bb84-41c5-954f-d0781dafebc5",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/fe61da55-c1d8-45bf-a68e-17f912f79ccf",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Find Related Indicators",
+            "description": null,
+            "arguments": {
+                "query": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "type": "primitive",
+                            "field": "id",
+                            "value": "{{vars.input.records[0].id}}",
+                            "operator": "eq",
+                            "_operator": "eq"
+                        }
+                    ]
+                },
+                "module": "tasks?$limit=30&$relationships=true",
+                "checkboxFields": false,
+                "step_variables": []
+            },
+            "status": null,
+            "top": "165",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928770",
+            "uuid": "6412d3ff-b5d6-4bab-ac5d-81a2cac4b36c"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create Workspace",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "name": "{{vars.input.params.nameOfWorkspace}}",
+                    "tasks": "{{vars.input.records[0]['@id']}}",
+                    "status": "\/api\/3\/picklists\/287ff5ad-f54a-4d3e-84f9-b00281fa5057",
+                    "__replace": "",
+                    "indicators": "{{vars.linkedIndicators}}",
+                    "description": "{{vars.input.params.wsDescription}}"
+                },
+                "_showJson": false,
+                "operation": "Overwrite",
+                "collection": "\/api\/3\/workspaces",
+                "__recommend": [],
+                "fieldOperation": {
+                    "recordTags": "Overwrite"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "435",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
+            "uuid": "86fb7112-a0de-4606-8e48-5e73a0bb2ba5"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Save Linked Indicators",
+            "description": null,
+            "arguments": {
+                "linkedIndicators": "{{vars.steps.Find_Related_Indicators[0].indicators}}"
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "uuid": "c98be818-5d86-4b52-bdb4-9e55cfd83d60"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "route": "8bac9970-f8fd-4a43-b583-90886029727b",
+                "title": "Setup TIM Workspace",
+                "resources": [
+                    "tasks"
+                ],
+                "inputVariables": [
+                    {
+                        "name": "nameOfWorkspace",
+                        "type": "string",
+                        "label": "Workspace Name",
+                        "tooltip": "",
+                        "dataType": "text",
+                        "formType": "text",
+                        "required": true,
+                        "_expanded": true,
+                        "moduleField": "name",
+                        "_nameTouched": true,
+                        "defaultValue": null,
+                        "_previousName": "workspaceName",
+                        "useRecordFieldDefault": true
+                    },
+                    {
+                        "name": "wsDescription",
+                        "type": "string",
+                        "label": "Description (Goal)",
+                        "title": "Rich Text (HTML)",
+                        "usable": true,
+                        "tooltip": "",
+                        "dataType": "text",
+                        "formType": "html",
+                        "required": true,
+                        "_expanded": true,
+                        "mmdUpdate": true,
+                        "collection": false,
+                        "searchable": true,
+                        "templateUrl": "app\/components\/form\/fields\/htmlEditor.html",
+                        "_nameTouched": true,
+                        "defaultValue": "",
+                        "_previousName": "ws_description",
+                        "lengthConstraint": true,
+                        "allowedEncryption": true,
+                        "allowedGridColumn": true,
+                        "useRecordFieldDefault": false
+                    }
+                ],
+                "step_variables": {
+                    "input": {
+                        "params": {
+                            "wsDescription": "{{vars.request.data[\"wsDescription\"]}}",
+                            "nameOfWorkspace": "{{vars.request.data[\"nameOfWorkspace\"]}}"
+                        },
+                        "records": "{{vars.input.records}}"
+                    }
+                },
+                "_promptexpanded": true,
+                "displayConditions": {
+                    "tasks": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": [
+                            {
+                                "type": "object",
+                                "field": "type",
+                                "value": "\/api\/3\/picklists\/94d71aa6-6ecf-4df7-8d95-5ee8f9ff8649",
+                                "_value": {
+                                    "@id": "\/api\/3\/picklists\/94d71aa6-6ecf-4df7-8d95-5ee8f9ff8649",
+                                    "itemValue": "Threat Intel"
+                                },
+                                "operator": "eq"
+                            }
+                        ]
+                    },
+                    "alerts": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    },
+                    "incidents": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    },
+                    "indicators": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    },
+                    "threat_intel_feeds": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    }
+                },
+                "executeButtonText": "Setup TIM Workspace",
+                "noRecordExecution": false,
+                "singleRecordExecution": false
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+            "uuid": "fe61da55-c1d8-45bf-a68e-17f912f79ccf"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Fetch Related Indicators -> Get Linked Indicators",
+            "targetStep": "\/api\/3\/workflow_steps\/c98be818-5d86-4b52-bdb4-9e55cfd83d60",
+            "sourceStep": "\/api\/3\/workflow_steps\/6412d3ff-b5d6-4bab-ac5d-81a2cac4b36c",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "421221f6-289b-4591-8c59-c2c1df9faebf"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Get Linked Indicators -> Create Workspace",
+            "targetStep": "\/api\/3\/workflow_steps\/86fb7112-a0de-4606-8e48-5e73a0bb2ba5",
+            "sourceStep": "\/api\/3\/workflow_steps\/c98be818-5d86-4b52-bdb4-9e55cfd83d60",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "453a669c-b0c6-4fd0-8672-994f17244693"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Fetch Related Indicators",
+            "targetStep": "\/api\/3\/workflow_steps\/6412d3ff-b5d6-4bab-ac5d-81a2cac4b36c",
+            "sourceStep": "\/api\/3\/workflow_steps\/fe61da55-c1d8-45bf-a68e-17f912f79ccf",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "84a57d24-8036-4e00-9f2b-58ebd453fd01"
+        }
+    ],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "9ce4a8a7-e981-4db9-82ec-13701fe2e86b",
+    "recordTags": [],
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null
+}

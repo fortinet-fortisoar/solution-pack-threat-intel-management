@@ -1,5 +1,5 @@
 {
-    "name": "threat-intel-management",
+    "name": "threatIntelManagement",
     "version": "1.0.0",
     "label": "Threat Intel Management",
     "description": "FortiSOAR Solution Pack Around Threat Intelligence Management",
@@ -30,6 +30,9 @@
             },
             {
                 "name": "TrafficLightProtocol"
+            },
+            {
+                "name": "Workspace Status"
             }
         ],
         "modules": {
@@ -91,7 +94,15 @@
         ],
         "playbooks": [
             {
-                "name": "Workspace Automation"
+                "name": "TIM Automation"
+            }
+        ],
+        "globalVariables": [
+            {
+                "id": 11,
+                "name": "Indicator_Feed_Reputation_Preference",
+                "value": "{\"setReputation\":true,\"confidenceThreshold\":70}",
+                "default_value": "{\"setReputation\":true,\"confidenceThreshold\":70}"
             }
         ],
         "reports": [

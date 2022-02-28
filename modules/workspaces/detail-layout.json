@@ -32,7 +32,8 @@
                                                                     "statusField": null,
                                                                     "sort": []
                                                                 },
-                                                                "titleField": "name"
+                                                                "titleField": "name",
+                                                                "picklistField": "status"
                                                             }
                                                         }
                                                     ],
@@ -66,43 +67,54 @@
                                                 {
                                                     "widgets": [
                                                         {
-                                                            "type": "editableFormGroup",
+                                                            "type": "relationship.lineItem",
                                                             "config": {
-                                                                "wid": "d0978eb3-2ec4-4507-9040-f0dcb42b1b01",
-                                                                "rows": [
+                                                                "wid": "1e7cab78-e0da-45c9-b258-4de81cc582af",
+                                                                "query": {
+                                                                    "sort": [],
+                                                                    "limit": 10,
+                                                                    "logic": "AND",
+                                                                    "filters": [
+                                                                        {
+                                                                            "field": "recordTags",
+                                                                            "value": [
+                                                                                "\/api\/3\/tags\/pirRequest"
+                                                                            ],
+                                                                            "display": null,
+                                                                            "operator": "in",
+                                                                            "type": "array",
+                                                                            "OPERATOR_KEY": "$",
+                                                                            "module": "recordTags",
+                                                                            "template": "tags",
+                                                                            "previousOperator": "in",
+                                                                            "previousTemplate": "tags"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "mapping": {
+                                                                    "assignedToPerson": ""
+                                                                },
+                                                                "columns": [
                                                                     {
-                                                                        "columns": [
-                                                                            {
-                                                                                "fields": [
-                                                                                    {
-                                                                                        "name": "createUser",
-                                                                                        "highlightMode": true,
-                                                                                        "linky": true,
-                                                                                        "readOnly": false
-                                                                                    },
-                                                                                    {
-                                                                                        "name": "createDate",
-                                                                                        "highlightMode": true,
-                                                                                        "linky": true,
-                                                                                        "readOnly": false
-                                                                                    },
-                                                                                    {
-                                                                                        "name": "modifyDate",
-                                                                                        "highlightMode": true,
-                                                                                        "linky": true,
-                                                                                        "readOnly": false
-                                                                                    },
-                                                                                    {
-                                                                                        "name": "modifyUser",
-                                                                                        "highlightMode": true,
-                                                                                        "linky": true,
-                                                                                        "readOnly": false
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        ]
+                                                                        "column_name": "status",
+                                                                        "display_type": "block"
+                                                                    },
+                                                                    {
+                                                                        "column_name": "name",
+                                                                        "display_type": "block"
+                                                                    },
+                                                                    {
+                                                                        "column_name": "createDate",
+                                                                        "display_type": "inline"
+                                                                    },
+                                                                    {
+                                                                        "column_name": "createUser",
+                                                                        "display_type": "inline"
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "title": "Source PIR",
+                                                                "module": "tasks",
+                                                                "fieldName": "tasks"
                                                             }
                                                         }
                                                     ],
@@ -138,6 +150,75 @@
                                         }
                                     ]
                                 }
+                            },
+                            {
+                                "type": "rows",
+                                "config": {
+                                    "wid": "dfdebc54-9b86-41a5-ab0f-7a4475de6fda",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "widgets": [
+                                                        {
+                                                            "type": "editableFormGroup",
+                                                            "config": {
+                                                                "wid": "fcfeef63-fe9d-4f50-b1c8-060b43c81c79",
+                                                                "rows": [
+                                                                    {
+                                                                        "columns": [
+                                                                            {
+                                                                                "fields": [
+                                                                                    {
+                                                                                        "name": "createUser",
+                                                                                        "highlightMode": true,
+                                                                                        "linky": true,
+                                                                                        "readOnly": false
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "createDate",
+                                                                                        "highlightMode": true,
+                                                                                        "linky": true,
+                                                                                        "readOnly": false
+                                                                                    }
+                                                                                ],
+                                                                                "style": "col-lg-6"
+                                                                            },
+                                                                            {
+                                                                                "fields": [
+                                                                                    {
+                                                                                        "name": "modifyDate",
+                                                                                        "highlightMode": true,
+                                                                                        "linky": true,
+                                                                                        "readOnly": false
+                                                                                    },
+                                                                                    {
+                                                                                        "name": "modifyUser",
+                                                                                        "highlightMode": true,
+                                                                                        "linky": true,
+                                                                                        "readOnly": false
+                                                                                    }
+                                                                                ],
+                                                                                "style": "col-lg-6"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "title": ""
+                                                            }
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-12"
+                                                }
+                                            ],
+                                            "wid": "5e656a31-c537-4309-8553-219a14fcef99",
+                                            "container": true,
+                                            "_collapsed": false,
+                                            "collapsible": false,
+                                            "collapsibleIndex": 0
+                                        }
+                                    ]
+                                }
                             }
                         ],
                         "style": "col-lg-3",
@@ -158,10 +239,10 @@
                                     "wid": "78c6fa7f-1ad5-44d0-acd8-abb95627b2c2",
                                     "tabs": [
                                         {
-                                            "title": "Relevant Datasets",
+                                            "title": "Collection & Processing",
                                             "active": 0,
                                             "icon": "fa fa-list-alt",
-                                            "subtitle": "Saved Feeds and Indicators",
+                                            "subtitle": "Accumulate Datasets & TTPs",
                                             "show": true,
                                             "widget": {
                                                 "type": "rows",
@@ -173,11 +254,37 @@
                                                                 {
                                                                     "widgets": [
                                                                         {
+                                                                            "type": "sectionHeader",
+                                                                            "config": {
+                                                                                "wid": "e9f155f2-9573-4fec-9225-96d7317dd0a2",
+                                                                                "query": {
+                                                                                    "filters": [],
+                                                                                    "sort": [],
+                                                                                    "limit": 10
+                                                                                },
+                                                                                "editorType": "html",
+                                                                                "sectionText": "<h4><span style=\"font-size: 14pt; color: #95a5a6;\"><strong><span class=\"font-primary-color\"><span style=\"color: #3598db;\">Workspace Datasets<\/span><br \/><\/span><\/strong><\/span><span style=\"font-size: 10pt;\"><span class=\"font-primary-color\"><span style=\"color: #95a5a6;\">Select the datasets that are relevant to this workspace<\/span><\/span><\/span><\/h4>"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-12"
+                                                                }
+                                                            ],
+                                                            "wid": "17b969f9-0b01-47dd-83a6-466594fc29f2",
+                                                            "_collapsed": false,
+                                                            "collapsible": false,
+                                                            "collapsibleIndex": 0
+                                                        },
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
                                                                             "type": "manageDatasets-1.0.0",
                                                                             "config": {
                                                                                 "wid": "f5ca9c36-0f14-473d-a3a0-3339c1dba3e5",
                                                                                 "typeofWidget": "datasetSelection",
-                                                                                "title": "Relevant Datasets"
+                                                                                "title": "Datasets"
                                                                             }
                                                                         }
                                                                     ],
@@ -185,7 +292,9 @@
                                                                 }
                                                             ],
                                                             "wid": "c83fc830-2925-4128-b0ec-b240c8ea920c",
-                                                            "_collapsed": false
+                                                            "_collapsed": false,
+                                                            "collapsible": false,
+                                                            "collapsibleIndex": 0
                                                         },
                                                         {
                                                             "columns": [
@@ -201,7 +310,7 @@
                                                                                     "limit": 10
                                                                                 },
                                                                                 "editorType": "html",
-                                                                                "sectionText": "<p><br \/><span style=\"font-size: 10pt;\"><strong><span class=\"font-primary-color\">Linked Feeds, Indicators and Files<\/span><\/strong><\/span><\/p>"
+                                                                                "sectionText": "<hr \/>\n<p><span style=\"font-size: 14pt;\"><strong><span class=\"font-primary-color\"><span style=\"color: #ced4d9;\"><span style=\"color: #3598db;\">Actors, Observables and TTPs<\/span><br \/><\/span><\/span><\/strong><span class=\"font-primary-color\" style=\"font-size: 10pt;\"><span style=\"color: #95a5a6;\">Link relevant adversary TTPs and related threat intel<\/span><br \/><\/span><strong><span class=\"font-primary-color\"><br \/><\/span><\/strong><\/span><\/p>"
                                                                             }
                                                                         }
                                                                     ],
@@ -216,191 +325,28 @@
                                                                 {
                                                                     "widgets": [
                                                                         {
-                                                                            "type": "rows",
+                                                                            "type": "relationship.subtab",
                                                                             "config": {
-                                                                                "wid": "30edc509-3367-4bc1-9d25-cf06c1e36126",
-                                                                                "rows": [
-                                                                                    {
-                                                                                        "columns": [
-                                                                                            {
-                                                                                                "widgets": [
-                                                                                                    {
-                                                                                                        "type": "relationship.lineItem",
-                                                                                                        "config": {
-                                                                                                            "wid": "771e42f7-9648-4e57-b55d-393a0d518eea",
-                                                                                                            "query": {
-                                                                                                                "sort": [],
-                                                                                                                "limit": 10,
-                                                                                                                "logic": "AND",
-                                                                                                                "filters": []
-                                                                                                            },
-                                                                                                            "mapping": {
-                                                                                                                "assignedToPerson": ""
-                                                                                                            },
-                                                                                                            "columns": [
-                                                                                                                {
-                                                                                                                    "column_name": "created",
-                                                                                                                    "display_type": "block"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "value",
-                                                                                                                    "display_type": "block"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "typeOfFeed",
-                                                                                                                    "display_type": "inline"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "confidence",
-                                                                                                                    "display_type": "inline"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "reputation",
-                                                                                                                    "display_type": "inline"
-                                                                                                                }
-                                                                                                            ],
-                                                                                                            "title": "Linked Feed Records",
-                                                                                                            "module": "threat_intel_feeds",
-                                                                                                            "fieldName": "threatFeeds"
-                                                                                                        }
-                                                                                                    }
-                                                                                                ],
-                                                                                                "style": "col-lg-12"
-                                                                                            }
-                                                                                        ],
-                                                                                        "wid": "50e36f88-fd71-4e50-bc9f-f6268ac21733",
-                                                                                        "_collapsed": false
-                                                                                    }
-                                                                                ]
+                                                                                "wid": "528b0f8b-7ef2-4247-a440-589ec9e675bd",
+                                                                                "excludes": [
+                                                                                    "notes",
+                                                                                    "comments",
+                                                                                    "userOwners",
+                                                                                    "attachments",
+                                                                                    "files",
+                                                                                    "owners",
+                                                                                    "tasks",
+                                                                                    "relatedWorkspaces"
+                                                                                ],
+                                                                                "expandableCol": []
                                                                             }
                                                                         }
                                                                     ],
-                                                                    "style": "col-lg-4"
-                                                                },
-                                                                {
-                                                                    "widgets": [
-                                                                        {
-                                                                            "type": "rows",
-                                                                            "config": {
-                                                                                "wid": "f53b83ee-4c28-41fb-b8be-1869acf8bec4",
-                                                                                "rows": [
-                                                                                    {
-                                                                                        "columns": [
-                                                                                            {
-                                                                                                "widgets": [
-                                                                                                    {
-                                                                                                        "type": "relationship.lineItem",
-                                                                                                        "config": {
-                                                                                                            "wid": "ffd0cb1f-4782-4964-b792-3d205dc36beb",
-                                                                                                            "query": {
-                                                                                                                "sort": [],
-                                                                                                                "limit": 10,
-                                                                                                                "logic": "AND",
-                                                                                                                "filters": []
-                                                                                                            },
-                                                                                                            "mapping": {
-                                                                                                                "assignedToPerson": ""
-                                                                                                            },
-                                                                                                            "columns": [
-                                                                                                                {
-                                                                                                                    "column_name": "createDate",
-                                                                                                                    "display_type": "block"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "value",
-                                                                                                                    "display_type": "block"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "typeofindicator",
-                                                                                                                    "display_type": "inline"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "reputation",
-                                                                                                                    "display_type": "inline"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "indicatorStatus",
-                                                                                                                    "display_type": "inline"
-                                                                                                                }
-                                                                                                            ],
-                                                                                                            "title": "Linked Indicator Records",
-                                                                                                            "module": "indicators",
-                                                                                                            "fieldName": "indicators"
-                                                                                                        }
-                                                                                                    }
-                                                                                                ],
-                                                                                                "style": "col-lg-12"
-                                                                                            }
-                                                                                        ],
-                                                                                        "wid": "85e2b7ee-6aa3-409f-a6b9-55e24686175e",
-                                                                                        "_collapsed": false
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    ],
-                                                                    "style": "col-lg-4"
-                                                                },
-                                                                {
-                                                                    "widgets": [
-                                                                        {
-                                                                            "type": "rows",
-                                                                            "config": {
-                                                                                "wid": "cba67fda-4651-4627-a364-8faf563ca0a3",
-                                                                                "rows": [
-                                                                                    {
-                                                                                        "columns": [
-                                                                                            {
-                                                                                                "widgets": [
-                                                                                                    {
-                                                                                                        "type": "relationship.lineItem",
-                                                                                                        "config": {
-                                                                                                            "wid": "626b74b5-2f36-4f8e-864a-2938dcb13958",
-                                                                                                            "query": {
-                                                                                                                "sort": [],
-                                                                                                                "limit": 10,
-                                                                                                                "logic": "AND",
-                                                                                                                "filters": []
-                                                                                                            },
-                                                                                                            "mapping": {
-                                                                                                                "assignedToPerson": ""
-                                                                                                            },
-                                                                                                            "columns": [
-                                                                                                                {
-                                                                                                                    "column_name": "createUser",
-                                                                                                                    "display_type": "block"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "name",
-                                                                                                                    "display_type": "block"
-                                                                                                                },
-                                                                                                                {
-                                                                                                                    "column_name": "type",
-                                                                                                                    "display_type": "inline"
-                                                                                                                }
-                                                                                                            ],
-                                                                                                            "title": "Linked Attachments",
-                                                                                                            "module": "attachments",
-                                                                                                            "fieldName": "files"
-                                                                                                        }
-                                                                                                    }
-                                                                                                ],
-                                                                                                "style": "col-lg-12"
-                                                                                            }
-                                                                                        ],
-                                                                                        "wid": "39cae810-4b1c-4396-85cd-c5040395ff13",
-                                                                                        "_collapsed": false
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        }
-                                                                    ],
-                                                                    "style": "col-lg-4"
+                                                                    "style": "col-lg-12"
                                                                 }
                                                             ],
-                                                            "wid": "d16d905f-a4c4-4239-a557-8d9524a8c5be",
-                                                            "collapsible": false,
-                                                            "collapsibleIndex": 0,
+                                                            "wid": "b582eac3-2d7a-4926-a948-21d108e6b2f3",
+                                                            "container": true,
                                                             "_collapsed": false
                                                         }
                                                     ]
@@ -408,81 +354,240 @@
                                             }
                                         },
                                         {
-                                            "title": "Feed Correlations",
+                                            "title": "Analysis & Production",
                                             "active": 0,
+                                            "icon": "fa fa-sliders",
+                                            "subtitle": "Prepare Actionable Insights",
+                                            "show": false,
                                             "widget": {
-                                                "type": "visualCorrelation",
+                                                "type": "rows",
                                                 "config": {
-                                                    "wid": "6e8cef30-e0ae-4ce0-b6ba-e24487cfbda2",
-                                                    "nodeLevels": [
+                                                    "wid": "040bc6b3-771d-4494-a1c0-3317f9043ffe",
+                                                    "rows": [
                                                         {
-                                                            "name": "threat_intel_feeds",
-                                                            "level": 1
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "rows",
+                                                                            "config": {
+                                                                                "wid": "0692700d-0a9c-4a6e-aebe-fb54842a7978",
+                                                                                "rows": [
+                                                                                    {
+                                                                                        "columns": [
+                                                                                            {
+                                                                                                "widgets": [
+                                                                                                    {
+                                                                                                        "type": "visualCorrelation",
+                                                                                                        "config": {
+                                                                                                            "wid": "3f715e6d-52a7-44dc-b991-ae6d36c61caa",
+                                                                                                            "nodeLevels": [
+                                                                                                                {
+                                                                                                                    "name": "alerts",
+                                                                                                                    "level": 1
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "assets",
+                                                                                                                    "level": 2
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "warrooms",
+                                                                                                                    "level": 3
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "incidents",
+                                                                                                                    "level": 4
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "indicators",
+                                                                                                                    "level": 5
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "workspaces",
+                                                                                                                    "level": 6
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "mitre_groups",
+                                                                                                                    "level": 7
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "mitre_tactics",
+                                                                                                                    "level": 8
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "mitre_software",
+                                                                                                                    "level": 9
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "vulnerabilities",
+                                                                                                                    "level": 10
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "mitre_techniques",
+                                                                                                                    "level": 11
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "threat_intel_feeds",
+                                                                                                                    "level": 12
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "mitre_sub_techniques",
+                                                                                                                    "level": 13
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "style": "col-lg-12"
+                                                                                            }
+                                                                                        ],
+                                                                                        "wid": "ffde6953-652a-4019-af3f-f4f281a008aa",
+                                                                                        "_collapsed": false
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-9"
+                                                                },
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "editableFormGroup",
+                                                                            "config": {
+                                                                                "wid": "b9604e04-71ce-4d96-9eb1-e91daa73135e",
+                                                                                "rows": [
+                                                                                    {
+                                                                                        "columns": [
+                                                                                            {
+                                                                                                "fields": [
+                                                                                                    {
+                                                                                                        "name": "keyFindings",
+                                                                                                        "highlightMode": true,
+                                                                                                        "linky": true,
+                                                                                                        "readOnly": false
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "name": "actorGroupAnalysis",
+                                                                                                        "highlightMode": true,
+                                                                                                        "linky": true,
+                                                                                                        "readOnly": false
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ],
+                                                                                "title": "Notes"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-3"
+                                                                }
+                                                            ],
+                                                            "wid": "9dfdf654-4e60-441d-81cc-2a6827000766",
+                                                            "collapsible": false,
+                                                            "collapsibleIndex": 0,
+                                                            "container": true,
+                                                            "_collapsed": false
                                                         },
                                                         {
-                                                            "name": "indicators",
-                                                            "level": 2
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "relationship.subtab",
+                                                                            "config": {
+                                                                                "wid": "3a777306-ba7d-4e4a-8537-fcef461f6306",
+                                                                                "excludes": [
+                                                                                    "notes",
+                                                                                    "comments",
+                                                                                    "userOwners",
+                                                                                    "attachments",
+                                                                                    "files",
+                                                                                    "owners",
+                                                                                    "relatedWorkspaces",
+                                                                                    "tasks"
+                                                                                ],
+                                                                                "expandableCol": []
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-9"
+                                                                },
+                                                                {
+                                                                    "widgets": [],
+                                                                    "style": "col-lg-3"
+                                                                }
+                                                            ],
+                                                            "wid": "de04eaa8-b175-4fdb-b212-500a81425291",
+                                                            "_collapsed": false,
+                                                            "collapsible": false,
+                                                            "collapsibleIndex": 0,
+                                                            "container": true
                                                         },
                                                         {
-                                                            "name": "vulnerabilities",
-                                                            "level": 3
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "sectionHeader",
+                                                                            "config": {
+                                                                                "wid": "ef648f2e-ea6f-4d78-a653-0be50f4bce1a",
+                                                                                "query": {
+                                                                                    "filters": [],
+                                                                                    "sort": [],
+                                                                                    "limit": 10
+                                                                                },
+                                                                                "editorType": "html",
+                                                                                "sectionText": "<hr \/>\n<h4><span style=\"font-size: 14pt; color: #95a5a6;\"><strong><span class=\"font-primary-color\"><span style=\"color: #3598db;\">Task Management<\/span><br \/><\/span><\/strong><\/span><span style=\"font-size: 10pt;\"><span class=\"font-primary-color\"><span style=\"color: #95a5a6;\">Assign and Monitor Threat Hunting Tasks<\/span><\/span><\/span><\/h4>"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-12"
+                                                                }
+                                                            ],
+                                                            "wid": "ca8ddc7a-0f50-4e44-8987-1cfa3a6a52a3",
+                                                            "_collapsed": false
                                                         },
                                                         {
-                                                            "name": "assets",
-                                                            "level": 4
-                                                        },
-                                                        {
-                                                            "name": "alerts",
-                                                            "level": 5
-                                                        },
-                                                        {
-                                                            "name": "warrooms",
-                                                            "level": 6
-                                                        },
-                                                        {
-                                                            "name": "incidents",
-                                                            "level": 7
-                                                        },
-                                                        {
-                                                            "name": "workspaces",
-                                                            "level": 8
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "taskManagement-2.0.0",
+                                                                            "config": {
+                                                                                "wid": "748a4007-13f7-4eba-b54c-d88736a2ad26",
+                                                                                "selectedModule": "tasks",
+                                                                                "groupByField": "status",
+                                                                                "filterByField1": "status",
+                                                                                "filterByField2": "type",
+                                                                                "filterByField3": "priority",
+                                                                                "priorityField": "priority",
+                                                                                "titleField": "name",
+                                                                                "assignedToField": "assignedToPerson",
+                                                                                "dueDateField": "dueBy",
+                                                                                "borderColourField": "status",
+                                                                                "showCommentsCount": true
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "style": "col-lg-12"
+                                                                }
+                                                            ],
+                                                            "wid": "47cad57a-dba2-4674-b8e1-06d28bb64ae0",
+                                                            "container": true,
+                                                            "_collapsed": false
                                                         }
                                                     ]
                                                 }
-                                            },
-                                            "icon": "fa fa-arrow-circle-o-down",
-                                            "subtitle": "Explore Threat Intel Data",
-                                            "show": false
+                                            }
                                         },
                                         {
-                                            "title": "Task Management",
+                                            "title": "Dissemination & Feedback",
                                             "active": 0,
-                                            "widget": {
-                                                "type": "taskManagement-2.0.0",
-                                                "config": {
-                                                    "wid": "5961ca80-9bf0-4057-a0ba-67e70f76c6b7",
-                                                    "selectedModule": "tasks",
-                                                    "groupByField": "status",
-                                                    "filterByField1": "status",
-                                                    "filterByField2": "assignedToPerson",
-                                                    "filterByField3": "priority",
-                                                    "priorityField": "priority",
-                                                    "titleField": "name",
-                                                    "assignedToField": "assignedToPerson",
-                                                    "dueDateField": "dueBy",
-                                                    "borderColourField": "priority",
-                                                    "showCommentsCount": true
-                                                }
-                                            },
-                                            "icon": "fa fa-times",
-                                            "subtitle": "Organize Threat Hunting Tasks",
-                                            "show": false
-                                        },
-                                        {
-                                            "title": "Reporting",
-                                            "active": 0,
-                                            "icon": "fa fa-user",
-                                            "subtitle": "Threat Intel Reports",
+                                            "icon": "fa fa-file-text-o",
+                                            "subtitle": "Publish & Share Insights",
                                             "show": false,
                                             "widget": {
                                                 "type": "rows",
@@ -611,9 +716,10 @@
                     }
                 ],
                 "wid": "074d6c39-41a8-4bc8-8fd6-b9d62437208c",
-                "_collapsed": true,
+                "_collapsed": false,
                 "collapsible": true,
-                "collapsibleIndex": 0
+                "collapsibleIndex": 0,
+                "container": true
             },
             {
                 "columns": [
@@ -633,7 +739,102 @@
                 "name": "Generate Threat Summary Report",
                 "icon": "fa fa-files-o"
             }
-        ]
+        ],
+        "allowExecuteConnectorActionButton": true,
+        "showRecommendations": true,
+        "workspace": {
+            "predictions": {
+                "enable": false,
+                "fields": [],
+                "aggs": [],
+                "enableWeightRange": false,
+                "useSimilarCriteria": true,
+                "filter": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "logic": "AND",
+                            "filters": [
+                                {
+                                    "field": "createDate",
+                                    "operator": "gt",
+                                    "value": "{{getRelativeDate(0,0,-30,\"end\",\"end\",\"end\")}}",
+                                    "type": "datetime"
+                                }
+                            ],
+                            "_field": "createDate",
+                            "_value": {
+                                "differenceType": "days",
+                                "differenceValue": -30
+                            },
+                            "_operator": "gt",
+                            "type": "datetime"
+                        }
+                    ]
+                }
+            },
+            "similarRecords": {
+                "enable": true,
+                "fields": [
+                    {
+                        "name": "techniques",
+                        "title": "Techniques",
+                        "type": "manyToMany"
+                    },
+                    {
+                        "name": "indicators",
+                        "title": "Indicators",
+                        "type": "manyToMany"
+                    },
+                    {
+                        "name": "actorGroups",
+                        "title": "Actor Groups",
+                        "type": "manyToMany"
+                    },
+                    {
+                        "name": "tools",
+                        "title": "Tools",
+                        "type": "manyToMany"
+                    }
+                ],
+                "enableWeightRange": false,
+                "filter": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "logic": "AND",
+                            "filters": [
+                                {
+                                    "field": "createDate",
+                                    "operator": "gt",
+                                    "value": "{{getRelativeDate(0,0,-30,\"end\",\"end\",\"end\")}}",
+                                    "type": "datetime"
+                                }
+                            ],
+                            "_field": "createDate",
+                            "_value": {
+                                "differenceType": "days",
+                                "differenceValue": -30
+                            },
+                            "_operator": "gt",
+                            "type": "datetime"
+                        }
+                    ]
+                },
+                "playbooks": [],
+                "mapping": {
+                    "title": "name",
+                    "subTitle1": "status",
+                    "subTitle2": "createUser",
+                    "subTitle3": "createDate",
+                    "picklistBar": "status"
+                }
+            }
+        }
     },
     "uuid": "modules-workspaces-detail"
 }
