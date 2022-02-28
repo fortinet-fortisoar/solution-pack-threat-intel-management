@@ -717,9 +717,33 @@
                                         {
                                             "title": "Feed Configurations",
                                             "active": 0,
-                                            "widget": null,
+                                            "widget": {
+                                                "type": "rows",
+                                                "config": {
+                                                    "wid": "d269440f-bbec-435d-a16b-83830e08f4d9",
+                                                    "widgetAlwaysExpanded": true,
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "widgets": [
+                                                                        {
+                                                                            "type": "feedConfigurationSettings-1.0.0",
+                                                                            "config": {
+                                                                                "wid": "fae4648b-d68c-4c70-af65-9c2cc2152fbd",
+                                                                                "module": "threat_intel_feeds"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ],
+                                                            "wid": "06004059-a9b7-4754-95b8-0b6644872490"
+                                                        }
+                                                    ]
+                                                }
+                                            },
                                             "icon": "icon icon-settings",
-                                            "show": false,
+                                            "show": true,
                                             "subtitle": "Outbound Feed Settings"
                                         }
                                     ],
