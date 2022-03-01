@@ -109,7 +109,6 @@
         ],
         "globalVariables": [
             {
-                "id": 11,
                 "name": "Indicator_Feed_Reputation_Preference",
                 "value": "{\"setReputation\":true,\"confidenceThreshold\":70}",
                 "default_value": "{\"setReputation\":true,\"confidenceThreshold\":70}"
