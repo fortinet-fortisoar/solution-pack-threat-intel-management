@@ -620,7 +620,7 @@
                                                 }
                                             },
                                             "icon": "icon icon-threat_feeds",
-                                            "classes": "feeds-tab-content-no-padding",
+                                            "classes": "svt-feeds-tab-content-no-padding",
                                             "show": false,
                                             "subtitle": "Incoming Intelligence Feeds"
                                         },
@@ -744,7 +744,7 @@
                                                 }
                                             },
                                             "icon": "icon icon-playbook-logging-level",
-                                            "classes": "right-aligned-tab",
+                                            "classes": "svt-right-aligned-tab",
                                             "show": false,
                                             "subtitle": "Outbound Feed Settings"
                                         }
