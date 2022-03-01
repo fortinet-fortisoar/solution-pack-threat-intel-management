@@ -522,7 +522,7 @@
                                                 }
                                             },
                                             "icon": "icon icon-dashboard",
-                                            "show": false,
+                                            "show": true,
                                             "subtitle": "TIM Overview and ROI"
                                         },
                                         {
@@ -619,7 +619,8 @@
                                                     ]
                                                 }
                                             },
-                                            "icon": "icon icon-ingestion-monitor",
+                                            "icon": "icon icon-threat_feeds",
+                                            "classes": "feeds-tab-content-no-padding",
                                             "show": false,
                                             "subtitle": "Incoming Intelligence Feeds"
                                         },
@@ -711,7 +712,7 @@
                                                 }
                                             },
                                             "icon": "icon icon-byoc-workspace",
-                                            "show": true,
+                                            "show": false,
                                             "subtitle": "PIRs and Workspaces"
                                         },
                                         {
@@ -742,8 +743,9 @@
                                                     ]
                                                 }
                                             },
-                                            "icon": "icon icon-settings",
-                                            "show": true,
+                                            "icon": "icon icon-playbook-logging-level",
+                                            "classes": "right-aligned-tab",
+                                            "show": false,
                                             "subtitle": "Outbound Feed Settings"
                                         }
                                     ],
@@ -759,7 +761,11 @@
                 "container": true
             }
         ],
-        "wid": "7ec6c145-ec57-4a11-8321-b896ef5093ff"
+        "wid": "7ec6c145-ec57-4a11-8321-b896ef5093ff",
+        "metadata": {
+            "customTemplateTitle": "Threat Intel Management",
+            "originalTemplateTitle": "Threat Intel Feeds"
+        }
     },
     "uuid": "modules-threat_intel_feeds-list"
 }
