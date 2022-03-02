@@ -26,10 +26,19 @@
      "contents": {
         "picklistNames": [
             {
+                "name": "IndicatorReputation"
+            },
+            {
+                "name": "TaskType"
+            },
+            {
                 "name": "ThreatIntelFeedType"
             },
             {
                 "name": "TrafficLightProtocol"
+            },
+            {
+                "name": "Workspace Status"
             }
         ],
         "modules": {
@@ -69,6 +78,16 @@
                 "apiName": "manageDatasets",
                 "name": "Manage Datasets",
                 "version": "1.0.0"
+            },
+            {
+                "apiName": "accessControl",
+                "name": "Access Control",
+                "version": "2.0.0"
+            },
+            {
+                "apiName": "feedConfigurationSettings",
+                "name": "Feed Configuration Settings",
+                "version": "1.0.0"
             }
         ],
         "views": {
@@ -91,17 +110,19 @@
         ],
         "playbooks": [
             {
-                "name": "Workspace Automation"
+                "name": "TIM Automation"
+            }
+        ],
+        "globalVariables": [
+            {
+                "name": "Indicator_Feed_Reputation_Preference",
+                "value": "{\"setReputation\":true,\"confidenceThreshold\":70}",
+                "default_value": "{\"setReputation\":true,\"confidenceThreshold\":70}"
             }
         ],
         "reports": [
             {
                 "name": "Threat Intel Summary Report"
-            }
-        ],
-        "dashboards": [
-            {
-                "name": "Threat Intel"
             }
         ]
     }

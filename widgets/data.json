@@ -14,10 +14,24 @@
         "installer_path": "taskManagement-2.0.0"
     },
     {
+        "name": "accessControl",
+        "version": "2.0.0",
+        "title": "Access Control",
+        "install_mode": "rpm",
+        "installer_path": "accessControl-2.0.0"
+    },
+    {
         "name": "manageDatasets",
         "version": "1.0.0",
         "title": "Manage Datasets",
         "install_mode": "rpm",
         "installer_path": "manageDatasets-1.0.0"
+    },
+    {
+        "name": "feedConfigurationSettings",
+        "version": "1.0.0",
+        "title": "Feed Configuration Settings",
+        "install_mode": "rpm",
+        "installer_path": "feedConfigurationSettings-1.0.0"
     }
 ]

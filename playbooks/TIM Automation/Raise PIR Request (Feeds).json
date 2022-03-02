@@ -1,7 +1,7 @@
 {
     "@type": "Workflow",
     "triggerLimit": null,
-    "name": "Add To Workspace",
+    "name": "Raise PIR Request (Feeds)",
     "aliasName": null,
     "tag": null,
     "description": "Adds selected threat intel records to a new or existing workspace",
@@ -11,7 +11,7 @@
     "remoteExecutableFlag": false,
     "parameters": [],
     "synchronous": false,
-    "lastModifyDate": 1645462463,
+    "lastModifyDate": 1646027225,
     "collection": "\/api\/3\/workflow_collections\/06d1fa99-bb84-41c5-954f-d0781dafebc5",
     "versions": [],
     "triggerStep": "\/api\/3\/workflow_steps\/6e563b15-085c-449e-9f39-eb5b11f5fa4d",
@@ -22,6 +22,7 @@
             "description": null,
             "arguments": {
                 "route": "a977f5c2-0faa-4588-9973-dca60a9e0e2b",
+                "title": "Raise PIR Request",
                 "resources": [
                     "threat_intel_feeds"
                 ],

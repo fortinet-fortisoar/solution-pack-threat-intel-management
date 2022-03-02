@@ -1,0 +1,334 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Generate Threat Summary Report",
+    "aliasName": null,
+    "tag": null,
+    "description": null,
+    "isActive": true,
+    "debug": true,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "lastModifyDate": 1646025175,
+    "collection": "\/api\/3\/workflow_collections\/06d1fa99-bb84-41c5-954f-d0781dafebc5",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/7866e8fc-b362-4744-85ea-f49bdc086db1",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Update Worksapce",
+            "description": null,
+            "arguments": {
+                "resource": [],
+                "_showJson": false,
+                "operation": "Append",
+                "collection": "{{vars.input.records[0]['@id']}}",
+                "__recommend": [],
+                "collectionType": "\/api\/3\/workspaces",
+                "fieldOperation": {
+                    "recordTags": "Append"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928722",
+            "uuid": "05d52d7d-1406-47b3-813b-cc4eb720f3a1"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Attach Report To PIR Task",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "__link": {
+                        "attachments": "{{vars.steps.Generate_Report_By_Manual_Trigger.data['@id']}}}}"
+                    }
+                },
+                "_showJson": false,
+                "operation": "Append",
+                "collection": "{{vars.steps.Find_PIR_Task[0]['@id']}}",
+                "__recommend": [],
+                "collectionType": "\/api\/3\/tasks",
+                "fieldOperation": {
+                    "recordTags": "Append"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "361",
+            "left": "735",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928722",
+            "uuid": "49796000-860b-4c62-b611-3399fb820e85"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "route": "177547a1-b3cb-47ca-a186-743a675a79c4",
+                "title": "Generate Threat Summary Report",
+                "resources": [
+                    "workspaces"
+                ],
+                "inputVariables": [
+                    {
+                        "name": "attachReportPDFToSourcePIRTask",
+                        "type": "boolean",
+                        "label": "Attach Report PDF to Source PIR Task?",
+                        "title": "Checkbox",
+                        "usable": true,
+                        "tooltip": "",
+                        "dataType": "checkbox",
+                        "formType": "checkbox",
+                        "required": false,
+                        "_expanded": false,
+                        "mmdUpdate": true,
+                        "collection": false,
+                        "searchable": true,
+                        "templateUrl": "app\/components\/form\/fields\/checkbox.html",
+                        "_nameTouched": true,
+                        "defaultValue": null,
+                        "_previousName": "attachReportPDFToSourcePIRTask?",
+                        "lengthConstraint": false,
+                        "allowedEncryption": false,
+                        "allowedGridColumn": true,
+                        "useRecordFieldDefault": false
+                    },
+                    {
+                        "name": "updatePIRTaskStatus",
+                        "type": "boolean",
+                        "label": "Update PIR Task Status To \"Awaiting Feedback\"",
+                        "title": "Checkbox",
+                        "usable": true,
+                        "tooltip": "",
+                        "dataType": "checkbox",
+                        "formType": "checkbox",
+                        "required": false,
+                        "_expanded": false,
+                        "mmdUpdate": true,
+                        "collection": false,
+                        "dataSource": [],
+                        "searchable": true,
+                        "templateUrl": "app\/components\/form\/fields\/checkbox.html",
+                        "_nameTouched": true,
+                        "defaultValue": null,
+                        "_previousName": "updatePIRTaskStatusTo\"AwaitingFeedback\"",
+                        "displayTemplate": "%7B%7B%20itemValue%20%7D%7D",
+                        "lengthConstraint": false,
+                        "allowedEncryption": false,
+                        "allowedGridColumn": true,
+                        "useRecordFieldDefault": false
+                    },
+                    {
+                        "name": "assignPIRTaskTo",
+                        "type": "people",
+                        "label": "Assign PIR Task To",
+                        "title": "Lookup (One to Many or One to One)",
+                        "usable": true,
+                        "tooltip": "",
+                        "dataType": "lookup",
+                        "formType": "lookup",
+                        "required": false,
+                        "_expanded": true,
+                        "mmdUpdate": true,
+                        "collection": false,
+                        "dataSource": {
+                            "model": "people",
+                            "displayConditions": []
+                        },
+                        "searchable": false,
+                        "templateUrl": "app\/components\/form\/fields\/typeahead.html",
+                        "defaultValue": null,
+                        "_previousName": "assignPIR",
+                        "displayTemplate": "%7B%7B%20firstname%20%7D%7D%20%7B%7B%20lastname%20%7D%7D",
+                        "lengthConstraint": false,
+                        "allowedEncryption": false,
+                        "allowedGridColumn": true,
+                        "useRecordFieldDefault": false
+                    }
+                ],
+                "step_variables": {
+                    "input": {
+                        "params": {
+                            "assignPIRTaskTo": "{{vars.request.data[\"assignPIRTaskTo\"]}}",
+                            "updatePIRTaskStatus": "{{vars.request.data[\"updatePIRTaskStatus\"]}}",
+                            "attachReportPDFToSourcePIRTask": "{{vars.request.data[\"attachReportPDFToSourcePIRTask\"]}}"
+                        },
+                        "records": "{{vars.input.records}}"
+                    }
+                },
+                "_promptexpanded": true,
+                "displayConditions": {
+                    "warrooms": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    },
+                    "workspaces": {
+                        "sort": [],
+                        "limit": 30,
+                        "logic": "AND",
+                        "filters": []
+                    }
+                },
+                "executeButtonText": "Generate Threat Intel Summary Report",
+                "noRecordExecution": false,
+                "singleRecordExecution": true
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+            "uuid": "7866e8fc-b362-4744-85ea-f49bdc086db1"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Insert Link for Report",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "file": "{{vars.steps.Generate_Report_By_Manual_Trigger.data.file[\"@id\"]}}",
+                    "type": "\/api\/3\/picklists\/ff599189-3eeb-4c86-acb0-a7915e85ac3b",
+                    "people": [],
+                    "content": "<p>Workspace Threat Summary Report available for download<\/p>",
+                    "__replace": "",
+                    "isImportant": false,
+                    "peopleUpdated": false
+                },
+                "_showJson": false,
+                "operation": "Overwrite",
+                "collection": "\/api\/3\/comments",
+                "__recommend": [],
+                "fieldOperation": {
+                    "recordTags": "Overwrite"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "720",
+            "left": "120",
+            "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
+            "uuid": "a1379010-dd28-4f8b-b7c0-f487da5717e1"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Find PIR Task",
+            "description": null,
+            "arguments": {
+                "query": {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "type": "array",
+                            "field": "recordTags",
+                            "value": [
+                                "\/api\/3\/tags\/pirRequest"
+                            ],
+                            "module": "recordTags",
+                            "display": null,
+                            "operator": "in",
+                            "template": "tags",
+                            "enableJinja": true,
+                            "OPERATOR_KEY": "$",
+                            "previousOperator": "in",
+                            "previousTemplate": "tags"
+                        },
+                        {
+                            "type": "primitive",
+                            "field": "relatedWorkspaces.id",
+                            "value": "{{vars.input.records[0].id}}",
+                            "operator": "eq",
+                            "_operator": "eq"
+                        }
+                    ]
+                },
+                "module": "tasks?$limit=30&$relationships=true",
+                "step_variables": []
+            },
+            "status": null,
+            "top": "340",
+            "left": "440",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928770",
+            "uuid": "d104c5d6-ad52-4203-963d-4a1e81acc35c"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Generate Report By Manual Trigger",
+            "description": null,
+            "arguments": {
+                "name": "Report Engine",
+                "params": {
+                    "user_id": "{{vars.currentUser}}",
+                    "timezone": "{{vars.request.headers.tz}}",
+                    "report_id": "2bd62ca7-a36a-4c13-b836-dde8839c6eba",
+                    "query_params": "{\"qparam\": {\"workspaceID\": {{vars.input.records[0].id}} } }"
+                },
+                "version": "1.2.1",
+                "connector": "cyops-schedule-report",
+                "operation": "schedule_report_manual",
+                "operationTitle": "Generate Report From Report ID",
+                "step_variables": {
+                    "reportObject": "{{vars.result.data}}"
+                }
+            },
+            "status": null,
+            "top": "165",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/0bfed618-0316-11e7-93ae-92361f002671",
+            "uuid": "f5a78d15-ee9c-49c3-8525-853406bceff4"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Generate Report By Manual Trigger",
+            "targetStep": "\/api\/3\/workflow_steps\/f5a78d15-ee9c-49c3-8525-853406bceff4",
+            "sourceStep": "\/api\/3\/workflow_steps\/7866e8fc-b362-4744-85ea-f49bdc086db1",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "3b0feef8-610e-4429-9bbb-9e5f5292f05f"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Generate Report By Manual Trigger -> Update war room file",
+            "targetStep": "\/api\/3\/workflow_steps\/05d52d7d-1406-47b3-813b-cc4eb720f3a1",
+            "sourceStep": "\/api\/3\/workflow_steps\/f5a78d15-ee9c-49c3-8525-853406bceff4",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "5a2e552d-96ef-40b9-ab11-25416687a84b"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Find PIR Task -> Attach Report To PIR Task",
+            "targetStep": "\/api\/3\/workflow_steps\/49796000-860b-4c62-b611-3399fb820e85",
+            "sourceStep": "\/api\/3\/workflow_steps\/d104c5d6-ad52-4203-963d-4a1e81acc35c",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "8a5be844-f5da-4f1f-9389-d6b1b86ffb72"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Update Worksapce -> Find PIR Task",
+            "targetStep": "\/api\/3\/workflow_steps\/d104c5d6-ad52-4203-963d-4a1e81acc35c",
+            "sourceStep": "\/api\/3\/workflow_steps\/05d52d7d-1406-47b3-813b-cc4eb720f3a1",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "958e146c-8a3c-4cf5-948c-0eb3abd19790"
+        }
+    ],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "0107557f-0c15-48b6-9133-7521ec8a1ae1",
+    "recordTags": [
+        "system"
+    ],
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null
+}

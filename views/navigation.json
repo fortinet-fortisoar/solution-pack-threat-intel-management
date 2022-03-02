@@ -5,18 +5,18 @@
     "config": {
         "navigation": [
             {
-                "title": "Threat Intel Management",
-                "require": {
-                    "module": "threat_intel_feeds",
-                    "action": "read"
-                },
+                "icon": "icon icon-queue-management",
                 "state": {
                     "name": "main.modules.list",
                     "parameters": {
                         "module": "threat_intel_feeds"
                     }
                 },
-                "icon": "icon icon-queue-management",
+                "title": "Threat Intel Management",
+                "require": {
+                    "action": "read",
+                    "module": "threat_intel_feeds"
+                },
                 "editMode": false
             }
         ]

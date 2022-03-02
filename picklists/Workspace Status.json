@@ -1,0 +1,44 @@
+{
+    "@context": "\/api\/3\/contexts\/PicklistName",
+    "@id": "\/api\/3\/picklist_names\/7994d302-afde-40c8-9560-ad83216c721e",
+    "@type": "PicklistName",
+    "name": "Workspace Status",
+    "system": false,
+    "picklists": [
+        {
+            "@id": "\/api\/3\/picklists\/3b1f304e-0422-47f3-bc60-84b92fddbdbe",
+            "@type": "Picklist",
+            "itemValue": "Active",
+            "orderIndex": 0,
+            "color": "#1d9f1d",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/7994d302-afde-40c8-9560-ad83216c721e",
+            "uuid": "3b1f304e-0422-47f3-bc60-84b92fddbdbe",
+            "recordTags": []
+        },
+        {
+            "@id": "\/api\/3\/picklists\/45a0c097-78a0-4051-93c4-0e1dfd66d987",
+            "@type": "Picklist",
+            "itemValue": "Archived",
+            "orderIndex": 1,
+            "color": "#8a7f00",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/7994d302-afde-40c8-9560-ad83216c721e",
+            "uuid": "45a0c097-78a0-4051-93c4-0e1dfd66d987",
+            "recordTags": []
+        },
+        {
+            "@id": "\/api\/3\/picklists\/287ff5ad-f54a-4d3e-84f9-b00281fa5057",
+            "@type": "Picklist",
+            "itemValue": "Draft",
+            "orderIndex": 2,
+            "color": "#6c6c6c",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/7994d302-afde-40c8-9560-ad83216c721e",
+            "uuid": "287ff5ad-f54a-4d3e-84f9-b00281fa5057",
+            "recordTags": []
+        }
+    ],
+    "uuid": "7994d302-afde-40c8-9560-ad83216c721e",
+    "recordTags": []
+}

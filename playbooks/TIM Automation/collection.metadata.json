@@ -1,7 +1,7 @@
 {
     "@context": "\/api\/3\/contexts\/WorkflowCollection",
     "@type": "WorkflowCollection",
-    "name": "Workspace Automation",
+    "name": "TIM Automation",
     "description": null,
     "visible": true,
     "image": null,
