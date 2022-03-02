@@ -1,5 +1,5 @@
 {
-    "name": "threatIntelManagement",
+    "name": "threat-intel-management",
     "version": "1.0.0",
     "label": "Threat Intel Management",
     "description": "FortiSOAR Solution Pack Around Threat Intelligence Management",
@@ -25,6 +25,12 @@
     ],
      "contents": {
         "picklistNames": [
+            {
+                "name": "IndicatorReputation"
+            },
+            {
+                "name": "TaskType"
+            },
             {
                 "name": "ThreatIntelFeedType"
             },
@@ -117,11 +123,6 @@
         "reports": [
             {
                 "name": "Threat Intel Summary Report"
-            }
-        ],
-        "dashboards": [
-            {
-                "name": "Threat Intel"
             }
         ]
     }
