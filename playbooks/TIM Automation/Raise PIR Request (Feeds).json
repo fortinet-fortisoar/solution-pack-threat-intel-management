@@ -49,7 +49,7 @@
                         "tooltip": "",
                         "dataType": "text",
                         "formType": "html",
-                        "required": false,
+                        "required": true,
                         "_expanded": true,
                         "mmdUpdate": true,
                         "collection": false,
@@ -100,7 +100,7 @@
                     "name": "{{vars.input.params.workspaceName}}",
                     "__replace": "",
                     "description": "{{vars.input.params.description}}",
-                    "threatFeeds": "{{vars.input.records[0]['@id']}}"
+                    "threatFeeds": "{{vars.input.records | json_query('[].\"@id\"')}}"
                 },
                 "_showJson": false,
                 "operation": "Overwrite",
