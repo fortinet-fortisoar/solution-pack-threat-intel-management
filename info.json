@@ -10,6 +10,7 @@
     "supportInfo": "support@fortinet.com",
     "help":"https://github.com/fortinet-fortisoar/solution-pack-threat-intel/blob/develop/README.md",
     "tags": [],
+    "featuredTags": ["preview"],
     "fsrMinCompatibility": "7.2.0",
     "dependencies": [
         {

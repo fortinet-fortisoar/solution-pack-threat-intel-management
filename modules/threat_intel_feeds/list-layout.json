@@ -522,6 +522,7 @@
                                                 }
                                             },
                                             "icon": "icon icon-dashboard",
+                                            "classes": "svt-feeds-tab-content-no-padding",
                                             "show": true,
                                             "subtitle": "TIM Overview and ROI"
                                         },
@@ -763,6 +764,7 @@
         ],
         "wid": "7ec6c145-ec57-4a11-8321-b896ef5093ff",
         "metadata": {
+            "previewMode": true,
             "customTemplateTitle": "Threat Intel Management",
             "originalTemplateTitle": "Threat Intel Feeds"
         }
