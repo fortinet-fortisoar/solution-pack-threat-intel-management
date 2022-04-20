@@ -206,4 +206,4 @@ Apart from this, you can also use standard ways to export a CSV file so that oth
 
 ### Videos
 
-To view a video demonstration for the Threat Intelligence Management solution click [here](res/TIM_FSR_demo.mp4).
+To view a video demonstration for the Threat Intelligence Management solution click [here](https://www.youtube.com/watch?v=vTvtHQxniVU).
