@@ -128,7 +128,7 @@ The solution is intelligent to auto-link malicious feeds with good confidence (c
 
 1. On the FortiSOAR left navigation, click **Content Hub**.
 2. On the `Content Hub` page, from the **Filter** panel choose **Solution Packs** to view the list of all currently available solution packs:  
-   ![Discover tab - Available Solution Packs](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/tree/release/1.0.0/docs/res/availableSPs.png)
+   ![Discover tab - Available Solution Packs](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/raw/release/1.0.0/docs/res/availableSPs.png)
 3. Click the **Threat Intel Management** (TIM) card to display the TIM popup:  
    ![TIM popup](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/tree/release/1.0.0/docs/res/timpopup.png)
 4. Ensure that the prerequisites to installing the TIM solution pack are met. If yes, click **Install** to install the same.  
