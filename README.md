@@ -4,4 +4,4 @@ https://www.youtube.com/watch?v=vTvtHQxniVU
 
 This pack requires FortiSOAR version 7.2.0 as a minimal platform version requirement.
 
-The detailed solution document is available [here](docs/README.md).
+The detailed solution document is available [here](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/develop/docs/README.md).
