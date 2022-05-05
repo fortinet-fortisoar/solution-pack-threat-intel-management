@@ -41,7 +41,7 @@ Apart from the above mandatory solution packs, it is also highly recommended tha
 
 ## Contents
 
-This section lists the various contents of the SOAR Framework Solution Pack. 
+This section lists the various contents of the Threat Intel Management (TIM) Solution Pack. 
 
 ### Module Schemas
 
@@ -165,10 +165,14 @@ Similarly, you can create multiple datasets based on your goals or filtration re
 
 ### Threat Intelligence Workflow 
 
-The **Threat Intelligence** tab is the cornerstone of the TIM solution as alone threat feeds can often prove to be a burden on the threat intelligence team and analysts when there is no clear picture of what to consume and what to leave. On the Threat Intelligence tab you can create and consume actionable and contextual threat intelligence:  
+The **Threat Intelligence** tab is the cornerstone of the TIM solution as alone threat feeds can often prove to be a burden on the threat intelligence team and analysts when there is no clear picture of what to consume and what to leave. On the **Threat Intelligence** tab you can create and consume actionable and contextual threat intelligence. 
+
+A quick example of creating a threat intelligence workflow can be a management request to the threat intelligence team for information on a particular threat actor group, for example, APT 34 in the Middle East and the Telecom sector. In this case, the management team raises a PIR, by selecting a correlation (indicators) on a record and then clicking **Execute** and choosing the **Raise Priority Intelligence Requirement Request (PIR)** playbook. Once the `Need more info on APT 34 in the Middle East` PIR is raised, the same is visible in the **Priority Intelligence  Requests (PIRs)** section on the left pane of the `Threat Intelligence` page. Once the threat intelligence team gets this request, they can click the **Need more info on APT 34 in the Middle East** PIR to open its details and click **Execute** > **Setup TIM Workspace** to create a 'Workspace'.  
+**Important**: You have to manually click the **Refresh** button in the **Recent TIM Workspaces** section to view newly created Workspaces.  
 ![Threat Intelligence Page](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/raw/release/1.0.0/docs/res/threatintelpg.png)
 
-A quick example of creating a threat intelligence workflow can be a management request to the threat intelligence team for information on a particular threat actor group, for example, APT 34 in the Middle East and the Telecom sector. Once the threat intelligence team gets this request, they can create a 'Workspace' in the **Recent TIM Workspaces** section as follows:   
+Click the **APT34 in MiddleEast (Telelcom)** workspace card in the **Recent TIM Workspaces** section to view its details:  
+
 ![APT 34 Middle East workspace](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/raw/release/1.0.0/docs/res/workspaces.png)
 
 As you can see the threat intelligence team has defined a workspace APT in MiddleEast (Telecom). The 'Workspace' contains a **Source PIR** section in which the PIR is linked automatically and in which the threat intelligence team can add more contributors allowing for comprehensive research. Also, the Workspace is split into various phases aligned to the Threat Intelligence Lifecycle, where the first stage is collecting and processing data, followed by analyzing the data, and then finally sharing the actionable insights to the stakeholders using reports, etc.
@@ -196,7 +200,7 @@ There are other ways in which threat intelligence teams interact with Workspaces
 Now, for this phishing alert, the team requires to get more intelligence around the URL in the 'Covid' correlation that does not contain reputation information (`No Reputation Available`) from the standard enrichment sources. So then, you can select that correlation and click **Execute** and choose the **Raise Priority Intelligence Requirement Request (PIR)** playbook:  
 ![Raising a PIR](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/raw/release/1.0.0/docs/res/raisepir.png)
 
-Clicking  **Raise Priority Intelligence Requirement Request (PIR)**  displays a  **Raise Priority Intelligence Requirement Request (PIR)**  popup, in which you can specify the details of the PIR and then click Submit PIR Request To Threat Intel Team. This in turn submits the PIR to the threat intelligence team and they create the required workspace such as 'Investigatecovidreporting.com'. Next, the threat intelligence team can start investigating the URL, find related IPs, run whois analysis, etc., and then add all the relevant items and sent this information back to the 'Firewall' team, which starts the feedback loop and dialog between teams, making detection and prevention more effective.
+Clicking **Raise Priority Intelligence Requirement Request (PIR)**  displays a  **Raise Priority Intelligence Requirement Request (PIR)**  popup, in which you can specify the details of the PIR and then click Submit PIR Request To Threat Intel Team. This in turn submits the PIR to the threat intelligence team and they create the required workspace such as 'Investigatecovidreporting.com'. Next, the threat intelligence team can start investigating the URL, find related IPs, run whois analysis, etc., and then add all the relevant items and sent this information back to the 'Firewall' team, which starts the feedback loop and dialog between teams, making detection and prevention more effective.
 
 ### Feed Configurations
 
