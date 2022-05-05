@@ -172,6 +172,7 @@ A quick example of creating a threat intelligence workflow can be a management r
 ![Threat Intelligence Page](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/raw/release/1.0.0/docs/res/threatintelpg.png)
 
 Click the **APT34 in MiddleEast (Telelcom)** workspace card in the **Recent TIM Workspaces** section to view its details:  
+
 ![APT 34 Middle East workspace](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/raw/release/1.0.0/docs/res/workspaces.png)
 
 As you can see the threat intelligence team has defined a workspace APT in MiddleEast (Telecom). The 'Workspace' contains a **Source PIR** section in which the PIR is linked automatically and in which the threat intelligence team can add more contributors allowing for comprehensive research. Also, the Workspace is split into various phases aligned to the Threat Intelligence Lifecycle, where the first stage is collecting and processing data, followed by analyzing the data, and then finally sharing the actionable insights to the stakeholders using reports, etc.
