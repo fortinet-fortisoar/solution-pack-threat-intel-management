@@ -1,15 +1,17 @@
-| [Home](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/develop/README.md) |
+| [Home](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.0.1/README.md) |
 |--------------------------------------------|
 
 # Usage
 
 The FortiSOAR's new **Threat Intel Management Solution Pack** brings the SOAR and TIM worlds closer by introducing advanced Threat Intel Management capabilities within the SOAR platform. Refer to the following video to witness how this integration greatly simplifies investigations by bringing in contextual threat intel.
 
-https://www.youtube.com/watch?v=vTvtHQxniVU
+| [![Threat Intel Management Demo Video](res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+|:-----------------------------------------------------------------------------------------------------------------------------------:|
+|                          [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)                           |
 
 ## Threat Feed Management and FortiGuard Integration
 
-Using comprehensive, ingestion-friendly feed integrations for multiple paid and open-source third-party feeds (available in FortiSOAR Content Hub), threat intelligence teams can now ingest varied feed data and manage them in a normalized, single pane of glass using the 'Threat Feeds' Module. The solution provides multiple ways to  manage this volume of data by parameters such as feed & source confidence, TLP, Severity, Expiry/Age, etc. Additionally, the solution allows to create feed datasets to filter and group relevant feeds for use in sharing, exporting, or eventually as useful data reference while creating contextual threat intelligence. 
+Using comprehensive, ingestion-friendly feed integrations for multiple paid and open-source third-party feeds (available in FortiSOAR Content Hub), threat intelligence teams can now ingest varied feed data and manage them in a normalized, single pane of glass using the 'Threat Feeds' Module. The solution provides multiple ways to manage this volume of data by parameters such as feed & source confidence, TLP, Severity, Expiry/Age, etc. Additionally, the solution helps create feed datasets to filter and group relevant feeds for use in sharing, exporting, or eventually as useful data reference while creating contextual threat intelligence. 
 
 Another big value addition of the solution is its comprehensive integration with FortiGuard, Fortinet’s flagship threat intelligence source. As part of FortiSOAR TIM Solution, you get unlimited lookups into the rich FortiGuard threat intel database and an ability to ingest its valuable daily threat intelligence feed. In the 'Preview' mode, you can ingest a maximum of 100 feeds daily.
 
@@ -37,7 +39,7 @@ Once the TIM solution pack is installed, you must configure your threat intellig
 Once you have set up data ingestion and are ingesting feeds from various sources, click **Threat Intel Management** in the left navigation to view the `Dashboard` page:  
 ![Threat Intel Management left-navigation collapsed view](res/tim-dashboard-collapsed.png)
 
-The `Dashboard` provides you with insights into the ROI, effectiveness of ingestion, ingestion rates of feeds, how many observables were ingested, how many of the ingested observables got linked to indicators, relevance of the feed sources, etc. These metrics enable you to decide which threat feeds are worth monitoring and the performance of the various threat feeds.
+The `Dashboard` provides you with insights into the ROI, effectiveness of ingestion, ingestion rates of feeds, how many observables were ingested, how many of the ingested observables got linked to indicators, and relevance of the feed sources, etc. These metrics enable you to decide which threat feeds are worth monitoring and the performance of the various threat feeds.
 
 ### Threat Feed Management
 
@@ -62,7 +64,7 @@ The **Threat Intelligence** tab is the cornerstone of the TIM solution as alone 
 A quick example of creating a threat intelligence workflow can be a management request to the threat intelligence team for information on a particular threat actor group, for example, APT 34 in the Middle East and the Telecom sector. Once the threat intelligence team gets this request, they can create a 'Workspace' in the **Recent TIM Workspaces** section as follows:   
 ![APT 34 Middle East workspace](res/workspaces.png)
 
-As you can see the threat intelligence team has defined a workspace APT in MiddleEast (Telecom). The 'Workspace' contains a **Source PIR** section in which the PIR is linked automatically and in which the threat intelligence team can add more contributors allowing for comprehensive research. Also, the Workspace is split into various phases aligned to the Threat Intelligence Lifecycle, where the first stage is collecting and processing data, followed by analyzing the data, and then finally sharing the actionable insights to the stakeholders using reports, etc.
+As you can see the threat intelligence team has defined a workspace APT in MiddleEast (Telecom). The 'Workspace' contains a **Source PIR** section in which the PIR automatically links and the threat intelligence team can add more contributors allowing for comprehensive research. Also, the Workspace is split into various phases aligned to the Threat Intelligence Lifecycle, where the first stage is collecting and processing data, followed by analyzing the data, and then finally sharing the actionable insights to the stakeholders using reports, etc.
 
 On the **Collection & Processing** tab, you can use the datasets that you have created or you can add new datasets in the **Workspace Datasets** section. You can add or link a variety of correlations feed from the MITRE ATT&CK intelligence Framework around its techniques, sub-techniques, tools, etc, or can be associated with vulnerabilities, indicators, notes, etc.  
 ![Collection and Processing tab](res/workspace-datasets.png)
@@ -77,7 +79,7 @@ Once you are done with your analysis, you move on to the **Dissemination & Feedb
 ![Dissemination and Feedback tab](res/share-tab.png)
 
 You can generate a threat summary report of your finding by clicking the **Generate Threat Summary Report** button:  
-![Generate Threat Summary Report popup](res/geneate-threat-summary-report.png)
+![Generate Threat Summary Report popup](res/generate-threat-summary-report.png)
 
 In the Generate Threat Summary Report popup, you can choose various options such as adding a comment to the Workspace and PIR with the report attached for feedback, updating the PIR task status to 'Awaiting Feedback', and you can also assign the task back to the person who raised the request for feedback. Clicking **Generate Threat Intel Summary Report** generates the report and sends it to the team members. This also starts the feedback loop, which if actionable, leads to improvement in the detection rules, or other areas of improvement.
 
@@ -87,20 +89,34 @@ There are other ways in which threat intelligence teams interact with Workspaces
 Now, for this phishing alert, the team requires to get more intelligence around the URL in the 'Covid' correlation that does not contain reputation information (`No Reputation Available`) from the standard enrichment sources. So then, you can select that correlation and click **Execute** and choose the **Raise Priority Intelligence Requirement Request (PIR)** playbook:  
 ![Raising a PIR](res/raise-pir.png)
 
-Clicking  **Raise Priority Intelligence Requirement Request (PIR)**  displays a  **Raise Priority Intelligence Requirement Request (PIR)**  popup, in which you can specify the details of the PIR and then click Submit PIR Request To Threat Intel Team. This in turn submits the PIR to the threat intelligence team and they create the required workspace such as 'Investigatecovidreporting.com'. Next, the threat intelligence team can start investigating the URL, find related IPs, run whois analysis, etc., and then add all the relevant items and sent this information back to the 'Firewall' team, which starts the feedback loop and dialog between teams, making detection and prevention more effective.
+Clicking  **Raise Priority Intelligence Requirement Request (PIR)**  displays a  **Raise Priority Intelligence Requirement Request (PIR)**  popup, in which you can specify the details of the PIR and then click Submit PIR Request To Threat Intel Team. This in turn submits the PIR to the threat intelligence team and they create the required workspace such as 'Investigatecovidreporting.com'. Next, the threat intelligence team can start investigating the URL, find related IPs, run whois analysis, etc., and then add all the relevant items and send this information back to the 'Firewall' team, which starts the feedback loop and dialog between teams, making detection and prevention more effective.
 
 ### Feed Configurations
 
 On the **Feed Configurations** tab, on the **General** tab, you can configure the feed confidence threshold to automatically update the matching indicator record reputation. In this case, the reputation of an indicator that has a matching feed gets automatically updated with the reputation of the feed, provided the confidence of the feed is equal or above to the value specified in the Selected Feed Confidence Threshold field (70% in our example):  
 ![Feed Configurations - General tab](res/general.png)
 
-On the **Outgoing Feed** tab, you can configure standard ways to share threat feeds data, by clicking Enable on the Outgoing Feed tab and then configure a TAXII server so that any other platform having STIX/TAXII capabilities can consume this data:  
-![Feed Configurations - Outgoing Feed tab](res/feed-config.png) 
+The **Outgoing Feed** tab allows you to configure standard ways to share threat feed data. Under **Enable TAXII Server**, Click the button to enable the TAXII server so that any TAXII client can subscribe to the collection and receive feeds.
+
+![Feed Configurations - Outgoing Feed tab](res/feed-config.png)
+
+As soon as you enable the TAXII server, the following details appear under **TAXII Server Details**:
+
+**Server address**: Contains a TAXII server address for the clients to connect, and eventually process, the threat intel feed
+
+**Authentication method**: The authentication method that clients may use to connect. They may use the URL for authentication as demonstrated in the example
+
+**Available Endpoints**: There are 4 endpoints available. Append these to the end of a TAXII server address to get the mentioned result:
+
+| Path                                                     | Purpose                         |
+|:---------------------------------------------------------|:--------------------------------|
+| `api/taxii/1/collections`                                | list all available datasets     |
+| `api/taxii/1/collections/<datasetId>`                    | get details of any dataset      |
+| `api/taxii/1/collections/<datasetId>/objects`            | list threat feeds in a dataset         |
+| `api/taxii/1/collections/<datasetId>/objects/<objectId>` | list details of a specific feed objects|
+
+**Available Datasets**: The `Available Datasets` section, contains a list of all datasets of the Threat Intel Feeds module. You can click the **JSON** or **CSV** icons to export the threat feeds in the JSON format or the CSV format respectively. You can use the exported threat feeds for consumption in other use cases.
+
+>**NOTE**: You need **FortiSOAR release 7.2.2 or later** to export the threat feeds in the CSV format.
 
 Apart from this, you can also use standard ways to export a CSV file so that other tools can import and use the filtered threat intelligence data.  
-
-## Additional Resources
-
-### Videos
-
-To view a video demonstration for the Threat Intelligence Management solution click [here](https://www.youtube.com/watch?v=vTvtHQxniVU).
