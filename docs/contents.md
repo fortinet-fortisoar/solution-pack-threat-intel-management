@@ -1,5 +1,5 @@
-| [Home](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/develop/README.md) |
-|--------------------------------------------|
+| [Home](../README.md) |
+|----------------------|
 
 # Contents
 
@@ -126,18 +126,18 @@ Following is the module schema of the **Threat Intel Feeds** module
 
 | Connector                               | Description                                                                                                                                |
 |:----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| Fortinet FortiGuard Threat Intelligence | It provides threat intelligence to protect them from malicious cyberattacks.                                                               |
-| MalSilo                                 | Facilitates automated interactions, with MalSilo using FortiSOAR™ playbooks. You can ingest threat intelligence feeds from MalSilo Gitlab. |
+| Fortinet FortiGuard Threat Intelligence | It provides threat intelligence to protect them from malicious cyberattacks                                                               |
+| MalSilo                                 | Facilitates automated interactions, with MalSilo using FortiSOAR™ playbooks. You can ingest threat intelligence feeds from MalSilo Gitlab |
 
 ## Widgets
 
-| Widgets                     | Description |
-|:----------------------------|:------------|
-| Card Tiles                  |             |
-| Task Management             |             |
-| Manage Datasets             |             |
-| Access Control              |             |
-| Feed Configuration Settings |             |
+| Widgets                     | Description                                                                  |
+|:----------------------------|:-----------------------------------------------------------------------------|
+| Card Tiles                  | Shows record list in a card tile view                                        |
+| Task Management             | Allows users to manage tasks and get visibility into the current task board. |
+| Manage Datasets             | Manage and Create datasets                                                   |
+| Access Control              | Change which teams or users have access to records                           |
+| Feed Configuration Settings | Configures feeds to be consumed by modules                                   |
 
 ## Playbook Collection
 
