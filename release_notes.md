@@ -1,26 +1,8 @@
 # What's New
 
-The STIX endpoint to fetch datasets from a FortiSOAR instance has been enhanced to provide the list of feeds in a CSV format as well. With this change, systems such as FortiGate can directly pull threat intel via a FortiSOAR dataset.
+- With FortiSOAR v7.3.0 and FortiGuard Connector v1.1.0, the solution pack now enables support for Threat Intel Management SKU.
+    - Enable the Threat Intel Management SKU for best-in-class FortiGuard's threat intel feeds.
+    - The feeds from Threat Intel Management SKU have a rich variety of data, ranging from IPs, URLs, Domain and malicious hashes carefully curated by our team of experts.
+    - The entire feeds database is labelled with the relevant threat types, and associated LockHeed Martin Kill Chain Phases, that enables user with a lot of contextual information to understand the nature of threat.
 
-## Threat Intel Feed Enhancements
-
-The **Threat Intel Feeds** module better tracks the date and time at which the feeds were ingested or updated into the FortiSOAR instance.
-
-- The Threat Intel Feeds module has now been made **Trackable**
-  - Enabling the **Trackable** checkbox makes the following fields available in the feed management grid:
-      - Created On
-      - Created By
-      - Modified On
-      - Modified By
-- Earlier, the time of creation of feeds at the intel source was labelled as *Created*. To avoid ambiguity with the *Created On* field, the field label *Created* has been renamed to *Created at Source*
-- For similar reasons, the field label *Modified* has been renamed to *Modified at Source*
-
-## Dashboard Enhancements
-
-- All default dashboard components, like *Feeds Ingested*, now reflect statistics for Threat Intel Feeds ingested in the *Last 15 days*
-- *Active Feeds* is now renamed to *Ingestion Volume*
-
-## Bugfixes
-
-- **Get Total Item Count**, under **Threat Intel Management** > **Threat Feeds**, now displays the item count when clicked
-- The query to get Linked Indicators now filters the relevant linked indicators
+- With added support for the FortiGuard Feeds, the **Preview** label has been removed from the Solution Pack.
