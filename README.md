@@ -4,7 +4,7 @@
 - **Certified**: Yes
 - **Publisher**: Fortinet
 - **Compatible Version**: FortiSOAR v7.2.0 and later
-- [Release Notes](./release_notes.md)
+- [Release Notes](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/release_notes.md)
 
 # Overview
 
@@ -20,7 +20,7 @@ The Threat Intelligence Management Solution Pack gathers raw data about emerging
 
 Check the following video demonstration of the Threat Intelligence Management solution:
 
-| [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+| [![](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 |:--------------------------------------------------------------------------------------------------------:|
 |             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
 
@@ -39,5 +39,5 @@ The Threat Intelligence Management Solution Pack has the following features:
 
 # Next Steps
 
-| [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) | [Contents](./docs/contents.md) |
+| [Installation](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/setup.md#installation) | [Configuration](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/setup.md#configuration) | [Usage](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/usage.md) | [Contents](./docs/contents.md) |
 |----------------------------------------------|------------------------------------------------|--------------------------|--------------------------------|
