@@ -178,10 +178,10 @@ FortiGate accepts a list of indicators in CSV format. The CSV file must contain 
     The CSV obtained has multiple comma-separated fields like `confidence`, `validFrom`, `validUntil`, `lastSeen`, and `value`. FortiGate requires only the `value` field in a CSV format that can be obtained by appending `$__selectFields=value` to the URL.
     >**TIP**: To obtain multiple fields in a CSV format, separate the field with a comma. For example, appending `$__selectFields=value,confidence` to the URL returns the value (domains in our example) and their confidence score received from the Threat Feeds.
 
-Some security applications may require a CSV output without headers. For all such cases, append `$headers=false` as a query at the end of the URL to get an output without headers. The following example URL returns an output in CSV format, containing only values, and without headers.
+Some security applications may require a CSV output without headers. For all such cases, append `$includeHeaders=false` as a query at the end of the URL to get an output without headers. The following example URL returns an output in CSV format, containing only values, and without headers.
 
 ```
-https://<server-address>/api/taxii/1/collections/<collection-ID>/objects?$format=csv&$limit=1000&$__selectFields=value&$headers=false
+https://<server-address>/api/taxii/1/collections/<collection-ID>/objects?$format=csv&$limit=1000&$__selectFields=value&$includeHeaders=false
 ```
 
 ### Import the Feeds in FortiGate
