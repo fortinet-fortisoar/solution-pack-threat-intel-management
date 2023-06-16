@@ -206,3 +206,79 @@ FortiGate accepts a list of indicators in CSV format. The CSV file must contain 
 3. Hover over the card you just created and select **View Entries**. It shows the domains that you have imported along with their validity.
 
 With this, the domains retrieved from the Threat Intel Management feed is imported into FortiGate for it to initiate action. Similarly, we can use this example to get the list of IP addresses and URLs.
+
+## Importing Threat Feeds using FortiRecon ACI
+
+Data ingestion capabilities built in FortiSOAR&trade; help **Threat Intel Management** solution pack import threat reports from FortiRecon ACI. This integration enhances the overall security posture and strengthens the organization's ability to detect and respond to cyber threats effectively.
+
+Following section elaborates on how to observe Threat Intel Management solution pack's functioning using a scenario.
+
+The section [Ingesting Threat Intel Reports from FortiRecon ACI](#ingesting-threat-intel-reports-from-fortirecon-aci) explains how to set up FortiRecon ACI for importing threat intel reports in Threat Intel Management solution pack.
+
+### Scenario - Threat Intel Report
+
+Before running the scenario, ensure that you have the MITRE connector configured. For information on how to configure Mitre connector, refer to [Configuring MITRE connector](https://docs.fortinet.com/document/fortisoar/2.0.2/mitre-att-ck/469/mitre-att-amp-ck-v2-0-2#Configuring_the_connector).
+
+Refer to [Simulate Scenario documentation](https://fortisoar.contenthub.fortinet.com//detail.html?entity=socSimulator&version=1.0.2&type=solutionpack) to understand how to simulate and reset scenarios.
+
+To understand the process FortiSOAR&trade; follows to respond to threat intel reports with *Technical Intelligence* as the *Source Category*, we have included a scenario &mdash; **Threat Intel Report** &mdash; with this solution pack.
+
+This scenario generates an example Threat Intel Report with Technical Intelligence as Source Category **Threat Intel Management** module.
+
+Navigate to the demo Threat Intel Report and note the following:
+
+- The demo threat intel report created is an example of a FortiRecon ACI threat report
+- The threat intel report has Source Category as *Technical Intelligence*
+
+    ![](./res/source-category-threat-intelligence.png)
+
+- The reported threat intel report contains the following information:
+    - TLP
+    - Relevance Rating
+    - Information Reliability
+    - Source Reliability
+    - Source Name
+    - Source Category
+    - Type
+    - Status
+    - Motivation
+    - Information Date
+    - Publish Date
+
+- Associated indicators from the Threat Intel Report are extracted and added in Threat Intel Feeds. All Threat Intel Feeds correlate with Threat Intel Report.   
+
+- Threat Intel Report's *Adversary* is validated with *Mitre Associated Groups* and linked to associated Group, Related Techniques, Sub-Techniques and Software to that Threat Intel Report.
+
+    ![Threat Intel Report](./res/threat-intel-report.png)
+
+### Ingesting Threat Intel Reports from FortiRecon ACI
+
+For a seamless data mapping with FortiSOAR&trade;'s modules during the FortiRecon ACI data ingestion process, ensure to install the Threat Intel Management solution pack before configuring ingestion of Threat Feeds from FortiRecon ACI.
+
+Following steps outline the process to follow when ingesting threat reports from FortiRecon ACI into Threat Intel Management solution pack.
+
+1. Install the Threat Intel Management solution pack. For information on how to install this solution pack, refer to [Installation](./setup.md#installation) section.
+
+2. Configure the FortiRecon ACI connector. For information on how to configure this connector, refer to the *Configuration* section in [FortiRecon ACI Connector documentation](https://docs.fortinet.com/fortisoar/connectors/fortirecon-aci).
+
+3. Configure data ingestion for the FortiRecon ACI connector. For information on how to configure data ingestion for this connector, refer to the *Data Ingestion* section in [FortiRecon ACI Connector documentation](https://docs.fortinet.com/fortisoar/connectors/fortirecon-aci).
+
+4. To access the threat intel reports ingested through FortiRecon ACI, open the **Threat Intel Management** menu from the left and click the **Threat Reports** tab.
+
+    ![](./res/FortiReconACI-threat-reports.png)
+
+5. Click open a report and observe the following:
+    
+    1. The **Report Details** sections displays reliability and source of this report.
+
+    2. **Threat**, **Adversary**, **Industry Tags**, and **Geography** in JSON format.
+
+    3. A **Visual Correlation** section depicting the correlation of this threat intel report with threat intel feed.
+
+    4. The **Threat Feeds** tab containing indicators and their type.
+
+    5. Click to open each indicator and the description contains more information related to that indicator.
+
+
+| [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) | [Contents](./contents.md) |
+|-----------------------------------------|-------------------------------------------|---------------------------|

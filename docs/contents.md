@@ -3,7 +3,7 @@
 
 # Contents
 
-This section lists the various contents of the Threat Intel Management Solution Pack. 
+This section lists the various contents of the **Threat Intel Management** Solution Pack. 
 
 ## Module Schemas
 
@@ -102,6 +102,40 @@ Following is the module schema of the **Threat Intel Feeds** module
 | `threatTypes`               | `multiselectpicklist` |
 | `killChainPhases`           | `multiselectpicklist` |
 
+### Threat Intel Reports
+Following is the module schema of the **Threat Intel Reports** module
+
+| Field                       | Field Type            |
+|-----------------------------|-----------------------|
+| `industryTags`              | `object`              |
+| `geography`                 | `object`              |
+| `threat    `                | `object`              |
+| `reportTitle`               | `text`                |
+| `reportID`                  | `text`                |
+| `status`                    | `text`                |
+| `summary`                   | `html`                |
+| `motivation`                | `text`                |     
+| `sourceName`                | `text`                |
+| `sourceData`                | `object`              |
+| `relevanceRating`           | `picklist`            |
+| `informationReliability`    | `picklist`            |
+| `reportType`                | `picklist`            |
+| `sourceCategory`            | `picklist`            |
+| `sourceReliabiobjectlity`   | `picklist`            | 
+| `reportLink`                | `url`                 |
+| `adversary`                 | `object`              |
+| `tLP`                       | `picklist`            |
+| `workspaces`                | `manyToMany`          |
+| `Comments`                  | `manyToMany`          |
+| `relatedThreatActors`       | `manyToMany`          |
+| `publishDate`               | `datetime`            |
+| `informationDate`           | `datetime`            |
+| `relatedATTCKTechniques`    | `manyToMany`          |
+| `relatedThreatIntelFeeds`   | `manyToMany`          |
+| `threatIntelFeed`           | `manyToMany`          |
+| `source`                    | `text`                |
+| `relatedATTCKSubTechniques` | `manyToMany`          |
+| `relatedMalware`            | `manyToMany`          |
 
 ## System View
 
@@ -111,10 +145,11 @@ Following is the module schema of the **Threat Intel Feeds** module
 
 ## Module Views
 
-| Module View        | Description                                                                                                                        |
-|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| Workspaces         | A module that contains threat details like techniques, sub-techniques, actor groups, and tactics among other information           |
-| Threat Intel Feeds | A module that contains *Att&ck* details like related techniques, sub-techniques, actor groups, and tactics among other information |
+| Module View          | Description                                                                                                                        |
+|:---------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
+| Workspaces           | A module that contains threat details like techniques, sub-techniques, actor groups, and tactics among other information           |
+| Threat Intel Feeds   | A module that contains *Att&ck* details like related techniques, sub-techniques, actor groups, and tactics among other information |
+| Threat Intel Reports | A module that contains in-depth analysis of the threat intelligence research conducted by FortiRecon ACI.                          |
 
 ## Global Variables
 
@@ -124,10 +159,11 @@ Following is the module schema of the **Threat Intel Feeds** module
 
 ## Connectors
 
-| Connector                               | Description                                                                                                                                |
-|:----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| Fortinet FortiGuard Threat Intelligence | It provides threat intelligence to protect them from malicious cyberattacks                                                               |
-| MalSilo                                 | Facilitates automated interactions, with MalSilo using FortiSOAR™ playbooks. You can ingest threat intelligence feeds from MalSilo Gitlab |
+| Connector                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|:----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fortinet FortiGuard Threat Intelligence | It provides threat intelligence to protect them from malicious cyber attacks                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| MalSilo                                 | Facilitates automated interactions, with MalSilo using FortiSOAR™ playbooks. You can ingest threat intelligence feeds from MalSilo Gitlab                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Fortinet FortiRecon ACI                 | FortiRecon is a Digital Risk Protection Service(DRPS) that provides an outside-the-network view to the risks posed to your enterprise.The Adversary Centric Intelligence (ACI) module leverages FortiGuard Threat Analysts to provide comprehensive coverage of dark web, open source, and technical threat intelligence, including threat actor insights. This information enables administrators to proactively assess risks, respond faster to incidents, better understand their attackers, and protect assets. This connector facilitates the automated operations related to ACI. |
 
 ## Widgets
 
@@ -144,11 +180,12 @@ Following is the module schema of the **Threat Intel Feeds** module
 | 10 - SP - TIM Automation |
 |:-------------------------|
 
-| Playbook                                              | Description                                                                     |
-|:------------------------------------------------------|:--------------------------------------------------------------------------------|
-| Setup TIM Workspace (Tasks)                           | Launch TIM Workspace from Tasks &ndash; Priority Intelligence Requirements(PIR) |
-| Raise Priority Intelligence Requirement Request (PIR) | Raises a PIR request                                                            |
-| Generate Threat Summary Report                        | Generates a threat summary report to ease analysis                              |
+| Playbook                                              | Description                                                                             |
+|:------------------------------------------------------|:----------------------------------------------------------------------------------------|
+| Setup TIM Workspace (Tasks)                           | Launch TIM Workspace from Tasks &ndash; Priority Intelligence Requirements(PIR)         |
+| Raise Priority Intelligence Requirement Request (PIR) | Raises a PIR request                                                                    |
+| Generate Threat Summary Report                        | Generates a threat summary report to ease analysis                                      |
+| Scenario - Threat Intel Reports                | Create threat intel report and its associated records in threat intel management module |
 
 ## Report
 
@@ -172,3 +209,11 @@ Following is the module schema of the **Threat Intel Feeds** module
 - Workspace Status
 - KillChainPhases
 - Threat Type
+- Information Reliability
+- Relevance Rating
+- Report Type
+- Source Category
+- Source Reliability
+
+| [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) | [Usage](./usage.md) |
+|-----------------------------------------|-------------------------------------------|---------------------|
