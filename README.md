@@ -1,10 +1,10 @@
 # Release Information
 
-- **Version**:  1.1.0
+- **Version**:  1.2.0
 - **Certified**: Yes
 - **Publisher**: Fortinet
 - **Compatible Version**: FortiSOAR v7.2.0 and later
-- [Release Notes](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/release_notes.md)
+- [Release Notes](./release_notes.md)
 
 # Overview
 
@@ -20,7 +20,7 @@ The Threat Intelligence Management Solution Pack gathers raw data about emerging
 
 Check the following video demonstration of the Threat Intelligence Management solution:
 
-| [![](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+| [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 |:--------------------------------------------------------------------------------------------------------:|
 |             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
 
@@ -29,15 +29,18 @@ Check the following video demonstration of the Threat Intelligence Management so
 The Threat Intelligence Management Solution Pack has the following features:
 
 - **Aggregation of intelligence from multiple sources** - A mature threat intelligence platform consumes and correlates data from external and internal sources, providing threat intelligence analysts with more comprehensive insights into known or suspected threats. The feeds can be structured (STIX, CSV) or unstructured (PDF threat reports).
+
 - **Curation, normalization, enrichment, and risk scoring of data**: Many of the inputs to a threat intelligence platform can be duplicate, no longer malicious, or not enough of a threat to merit action. Threat Intelligence Platforms (TIP) have machine-learning algorithms to sort the information and weigh the individual indicators of compromise (IOCs) based on a multitude of factors that are relevant to cyber threats. Curated indicators appear in an easy-to-read format with a risk score and associated intelligence.
+
 - **Integration**: TIPs act as an intermediary between information and your existing security solutions, eliminating the need to configure a connection manually. Various systems process these indicators as follows:
     - Firewalls and intrusion detection systems receive indicators for active blocking;
     - SIEMs and endpoint solutions correlate these indicators against available information to prioritize alerts
     - Orchestration platforms to use these indicators to improve workflows.  
       The flexibility of these integrations rapidly improves the ability of a security team to identify and counter threats. This holds true whether an organization’s security stack is entirely cloud-based, on-premises, or any combination of the two.
+
 - **Analysis and sharing of threat intelligence**: Securely sharing threat intelligence creates more comprehensive, reliable outputs that help analysts quickly respond to threats. Threat actors reuse many of their techniques, tactics, procedures, and strategies to target similar organizations and infrastructures. Comprehensive information and context around malicious actors make it quicker and easier for your security team to prevent them from doing significant harm.
 
 # Next Steps
 
-| [Installation](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/setup.md#installation) | [Configuration](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/setup.md#configuration) | [Usage](https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.1.0/docs/usage.md) | [Contents](./docs/contents.md) |
+| [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) | [Contents](./docs/contents.md) |
 |----------------------------------------------|------------------------------------------------|--------------------------|--------------------------------|
