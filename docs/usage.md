@@ -6,8 +6,8 @@
 FortiSOAR's new **Threat Intel Management** Solution Pack brings Security Orchestration and Automated Response (SOAR) and Threat Intel Management (TIM) worlds closer by introducing advanced Threat Intel Management capabilities within the SOAR platform. The following video demonstrates how this integration greatly simplifies investigations by bringing in contextual threat intel.
 
 | [![](./res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
-|:--------------------------------------------------------------------------------------------------------:|
-|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
+| :--------------------------------------: |
+| [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 
 ## Threat Feed Management and FortiGuard Integration
 
@@ -105,11 +105,11 @@ The Feed Configuration tab contains settings for easy feed management and dissem
 
 8. **Feed Expiry**: Specify the number of days after which the ingested unstructured threat feeds are marked as expired for deletion.
 
-8. **Feed Source**: Specify a value to be updated as *Source* for all ingested unstructured threat feeds.
+9. **Feed Source**: Specify a value to be updated as *Source* for all ingested unstructured threat feeds.
 
-9. **Tags**: Specify comma-separated values to be assigned as tags to the ingested unstructured threat feeds.
+10. **Tags**: Specify comma-separated values to be assigned as tags to the ingested unstructured threat feeds.
 
-10. Select the option **Automatic Block IOC** to block threat feeds immediately on ingestion. Leave unchecked to manually block threat feeds later.
+11. Select the option **Automatic Block IOC** to block threat feeds immediately on ingestion. Leave unchecked to manually block threat feeds later.
 
 ## Using Data from a TAXII Server Feed  
 
@@ -209,7 +209,7 @@ FortiGate accepts a list of indicators in CSV format. The CSV file must contain 
     ![](./res/fortigate-threat-feed-domain-name.png)
 
 4. Scroll down to **Threat Feeds** and select **Domain Name**.
-    
+
     >**NOTE**: When [creating a dataset](#create-a-dataset), we specified *Domain* as *Type*. Hence, we choose **Domain Name** in FortiGate.
 
     ![](./res/fortigate-new-external-connector.png)
@@ -275,7 +275,7 @@ Navigate to the demo Threat Intel Report and note the following:
 
 ### Ingesting Threat Intel Reports from FortiRecon ACI
 
-For a seamless data mapping with FortiSOAR&trade;'s modules during the FortiRecon ACI data ingestion process, ensure to install the **Threat Intel Management** solution pack before configuring ingestion of Threat Feeds from FortiRecon ACI.
+For a seamless data mapping with FortiSOAR™'s modules during the FortiRecon ACI data ingestion process, ensure to install the **Threat Intel Management** solution pack before configuring ingestion of Threat Feeds from FortiRecon ACI.
 
 Following steps outline the process to follow when ingesting threat reports from FortiRecon ACI into Threat Intel Management solution pack.
 
@@ -288,7 +288,7 @@ Following steps outline the process to follow when ingesting threat reports from
 4. To access the threat intel reports ingested through FortiRecon ACI, open the **Threat Intel Management** menu from the left and click the **Threat Reports** tab.
 
 5. Click open a report and observe the following:
-    
+
     1. The **Report Details** sections displays reliability and source of this report.
 
     2. **Threat**, **Adversary**, **Industry Tags**, and **Geography** in JSON format.
@@ -299,11 +299,24 @@ Following steps outline the process to follow when ingesting threat reports from
 
     5. Click to open each indicator and the description contains more information related to that indicator.
 
-### Ingesting Threat Intel Reports from FortiGuard
+## Ingesting Threat Intel Reports from FortiGuard
 
+For a seamless data mapping with FortiSOAR™'s modules during the FortiGuard's data ingestion process, ensure to install the **Threat Intel Management** solution pack before configuring ingestion of Threat Feeds from FortiGuard. 
 
+Following steps outline the process to follow when ingesting threat reports from FortiGuard into Threat Intel Management solution pack.
 
-### Threat Intelligence Workflow
+1. Install the Threat Intel Management solution pack. For information on how to install this solution pack, refer to [Installation](./setup.md#installation) section.
+2. Configure the CISA Advisory, Exploit Prediction Scoring System (EPSS), and NIST National Vulnerability Database connectors. For information on these connectors, refer to the *Connectors* page in [FortiSOAR Content Hub](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector).
+3. Configure data ingestion for the Fortinet FortiGuard Threat Intelligence connector. For information on how to configure data ingestion for this connector, refer to the *Data Ingestion* section in [Fortinet FortiGuard Threat Intelligence Connector documentation](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector&searchContent=/fortinet-fortiguard-threat-intelligencei).
+4. To access the threat intel reports ingested through FortiGuard, open the **Threat Intel Management** menu from the left and click the **Threat Reports** tab.
+5. Click open a report and observe the following:
+   1. The **Report Details** sections displays reliability and source of this report.
+   2. **Threat**, **Adversary**, **Industry Tags**, and **Geography** in JSON format.
+   3. A **Visual Correlation** section depicting the correlation of this threat intel report with threat intel feed.
+   4. The **Threat Feeds** tab containing indicators and their type.
+   5. Click to open each indicator and the description contains more information related to that indicator.
+
+## Threat Intelligence Workflow
 
 The **Threat Intelligence** tab is the cornerstone of the TIM solution, as threat feeds alone can often prove to be a burden on the threat intelligence team and analysts when there is no clear picture of what to consume and what to leave. On the Threat Intelligence tab, you can create and consume actionable and contextual threat intelligence:  
 

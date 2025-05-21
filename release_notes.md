@@ -1,5 +1,7 @@
 # What's New
 
+Threat Intel Report Enhancements
+
 ### Simplified Setup with the Configuration Wizard
 
 Effortlessly set up your Threat Intel Management system with our new **Configuration Wizard**. This step-by-step guide ensures an intuitive and smooth setup experience by breaking tasks into manageable stages:
@@ -30,7 +32,7 @@ This new navigation experience brings everything you need into a unified, intuit
     - *TAXII Server* - Configure a TAXII Server to generate an outgoing feed to share threat intelligence externally.
     - *Threat Feed Rules* - Configure threat feed to manage threat intelligence from various sources.
 - The **Workspace** now carries a description field to better communicate the purpose of setting up a workspace
-Stay aligned with industry standards while managing your threat feeds seamlessly.
+    Stay aligned with industry standards while managing your threat feeds seamlessly.
 
 ---
 
