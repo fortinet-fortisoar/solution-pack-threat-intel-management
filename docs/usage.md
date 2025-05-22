@@ -287,34 +287,35 @@ Following steps outline the process to follow when ingesting threat reports from
 
 4. To access the threat intel reports ingested through FortiRecon ACI, open the **Threat Intel Management** menu from the left and click the **Threat Reports** tab.
 
-5. Click open a report and observe the following:
+5. Click to open a report and observe the following:
 
     1. The **Report Details** sections displays reliability and source of this report.
-
     2. **Threat**, **Adversary**, **Industry Tags**, and **Geography** in JSON format.
-
     3. A **Visual Correlation** section depicting the correlation of this threat intel report with threat intel feed.
-
     4. The **Threat Feeds** tab containing indicators and their type.
-
     5. Click to open each indicator and the description contains more information related to that indicator.
 
 ## Ingesting Threat Intel Reports from FortiGuard
 
-For a seamless data mapping with FortiSOAR™'s modules during the FortiGuard's data ingestion process, ensure to install the **Threat Intel Management** solution pack before configuring ingestion of Threat Feeds from FortiGuard. 
+To ensure seamless data mapping with FortiSOAR™'s modules during the FortiGuard's data ingestion process, the **Threat Intel Management** solution pack must be installed before configuring the ingestion of Threat Feeds from FortiGuard. 
 
-Following steps outline the process to follow when ingesting threat reports from FortiGuard into Threat Intel Management solution pack.
+The following steps outline the process for ingesting threat reports from FortiGuard into the Threat Intel Management solution pack.
 
-1. Install the Threat Intel Management solution pack. For information on how to install this solution pack, refer to [Installation](./setup.md#installation) section.
+1. Install the Threat Intel Management solution pack. For installation instructions, refer to [Installation](./setup.md#installation) section.
+
 2. Configure the CISA Advisory, Exploit Prediction Scoring System (EPSS), and NIST National Vulnerability Database connectors. For information on these connectors, refer to the *Connectors* page in [FortiSOAR Content Hub](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector).
-3. Configure data ingestion for the Fortinet FortiGuard Threat Intelligence connector. For information on how to configure data ingestion for this connector, refer to the *Data Ingestion* section in [Fortinet FortiGuard Threat Intelligence Connector documentation](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector&searchContent=/fortinet-fortiguard-threat-intelligencei).
-4. To access the threat intel reports ingested through FortiGuard, open the **Threat Intel Management** menu from the left and click the **Threat Reports** tab.
-5. Click open a report and observe the following:
-   1. The **Report Details** sections displays reliability and source of this report.
-   2. **Threat**, **Adversary**, **Industry Tags**, and **Geography** in JSON format.
-   3. A **Visual Correlation** section depicting the correlation of this threat intel report with threat intel feed.
-   4. The **Threat Feeds** tab containing indicators and their type.
-   5. Click to open each indicator and the description contains more information related to that indicator.
+3. Configure data ingestion for the Fortinet FortiGuard Threat Intelligence connector. For configuration instructions, refer to the *Data Ingestion* section in [Fortinet FortiGuard Threat Intelligence Connector documentation](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector&searchContent=/fortinet-fortiguard-threat-intelligencei).
+4. To access the threat intel reports ingested through FortiGuard, navigate to the **Threat Intel Management** menu on the left and select the **Threat Reports** tab.
+5. Click to open a report and observe the following:
+
+    - The **Report Status** section displays the report's phase in a flow diagram format, corresponding to the report's status. Phases include: New, Processing, Red Flag, and Read.
+    - The **Report Details** sections includes information about the report such as report's source and type. 
+    - **Threat**, **Adversary**, **Industry Tags**, and **Geography** are displayed in JSON format.
+    - A **Visual Correlation** section displays how this threat intel report correlates with other threat intel feeds. 
+    - The **Related Records** tab contains details of correlated CVEs. You can click on each CVE to view more information about that CVE.
+
+***Sample Threat Intel Report from FortiGuard***:
+   ![Threat Intel Report from FortiGuard](./res/fortiguard_threat-intel-report.png)
 
 ## Threat Intelligence Workflow
 

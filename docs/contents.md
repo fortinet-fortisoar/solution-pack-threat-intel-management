@@ -180,7 +180,7 @@ Following is the module schema of the **Tasks** module
 | Module View                            | Description                              |
 | :------------------------------------- | :--------------------------------------- |
 | `Indicator_Feed_Reputation_Preference` | Stores reputation and confidence threshold of an indicator feed |
-| `FortiguardIntelReportLastPullTime`    | Stores the date and time that reports were last fetched from FortiGuard, and reports are fetched based on the time range from the stored lastPullTime to the current time. The initial value of this variable is set to  `{"pullAllReports":true, "lastPullTime": null}` and therefore when the ''Ingest FortiGuard Threat Reports" playbooks is first run to ingest FortiGuard reports, all reports are fetched. Subsequently, the value of this variable is set to  `{"pullAllReports":false, "lastPullTime": "currentDateTime"}` and FortiGuard reports are fetched based on the time range from the stored lastPullTime to the current time, and the global variable is updated accordingly after each fetch. |
+| `FortiguardIntelReportLastPullTime`    | Stores the date and time that reports were last fetched from FortiGuard. Reports are fetched based on the time range between the `lastPullTime` and the current time. Initially, value of this variable is set to  `{"pullAllReports":true, "lastPullTime": null}`, meaning that all reports are fetched the first time the "Ingest FortiGuard Threat Reports" playbook is run. After the first fetch, the value of this variable is set to  `{"pullAllReports":false, "lastPullTime": "currentDateTime"}` and subsequently only reports within the time range from the `lastPullTime` to the current time are fetched, and the global variable is updated accordingly after each fetch. |
 
 ## Connectors
 
@@ -206,7 +206,7 @@ Following is the module schema of the **Tasks** module
 | Feed Configuration Settings           | Configures feeds to be consumed by modules |
 | Threat Intel Management Configuration | Configures the Threat Intel Management solution pack |
 | TAXII Server Configuration            | Configures the TAXII Server for easy dissemination of information |
-| Picklist as Phases                    | Displays the 'Report Status' picklist values as phases in a flow diagram format in the detail view of a threat intel report. |
+| Picklist as Phases                    | Displays the 'Report Status' picklist values as phases in a flow diagram format within the detail view of a threat intel report. |
 
 
 ## Playbook Collection
@@ -227,9 +227,9 @@ Following is the module schema of the **Tasks** module
 | Extract Unstructured Feeds From Email or File > Create Threat Feeds From Attachments | Creates Threat Feeds Form Attachments    |
 | Configure Threat Feeds Rules             | Configures the Unstructured Threat Feeds, Block High Confidence Threat Feeds rules |
 | Retrieves MITRE ATT&CK Details           | Retrieves MITRE ATT&CK Techniques from the FortiSOAR MITRE ATT&CK Techniques module for the FortiGuard threat Report and correlates them. |
-| Link or Create CVEs                      | Identifies CVEs from the CVE module. If matching CVEs are found, then correlate them. If matching CVEs are not found, search in NIST and create a new CVE record and correlates them. |
-| Ingest FortiGuard Threat Reports         | Ingests `Outbreak Alert`, `Signal Report`, `FortiGuard Blog` and `FortiGuard Events` reports as threat reports in FortiSOAR. A schedule named `Ingestion_fortinet-fortiguard-threat-intelligence_report` is embedded in this playbook, and is set to automatically trigger this playbook to periodically fetch FortiGuard reports everyday at 12:00 am. |
-| Configure Threat Feed Configuration Wizard | Configures the threat feed rules for the threat intel management framework. |
+| Link or Create CVEs                      | Identifies CVEs from the CVE module. If a matching CVE is found, it is correlated. If no matching CVE is found, the system searches NIST and creates a new CVE record, then correlates it. |
+| Ingest FortiGuard Threat Reports         | Ingests `Outbreak Alert`, `Signal Report`, `FortiGuard Blog` and `FortiGuard Events` reports as threat reports into FortiSOAR. A schedule named `Ingestion_fortinet-fortiguard-threat-intelligence_report` is embedded within this playbook and is configured to automatically trigger the playbook to fetch FortiGuard reports daily at 12:00 AM. |
+| Configure Threat Feed Configuration Wizard | Configures the threat feed rules for the threat intelligence management framework. |
 
 
 | 04 - Actions |
