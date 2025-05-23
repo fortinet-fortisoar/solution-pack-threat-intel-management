@@ -304,7 +304,7 @@ The following steps outline the process for ingesting threat reports from FortiG
 1. Install the Threat Intel Management solution pack. For installation instructions, refer to [Installation](./setup.md#installation) section.
 
 2. Configure the CISA Advisory, Exploit Prediction Scoring System (EPSS), and NIST National Vulnerability Database connectors. For information on these connectors, refer to the *Connectors* page in [FortiSOAR Content Hub](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector).
-3. Configure data ingestion for the Fortinet FortiGuard Threat Intelligence connector. For configuration instructions, refer to the *Data Ingestion* section in [Fortinet FortiGuard Threat Intelligence Connector documentation](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector&searchContent=/fortinet-fortiguard-threat-intelligencei).
+3. To ingest FortiGuard Threat Report of types `Outbreak Alert`, `Signal Report`, `FortiGuard Blog` and `FortiGuard Events` reports trigger the  `Ingestion_fortinet-fortiguard-threat-intelligence_report` schedule from the 'Schedules' module. This schedule is configured to automatically triggers  the ingestion of FortiGuard reports daily at '`12:00 AM`'.
 4. To access the threat intel reports ingested through FortiGuard, navigate to the **Threat Intel Management** menu on the left and select the **Threat Reports** tab.
 5. Click to open a report and observe the following:
 
