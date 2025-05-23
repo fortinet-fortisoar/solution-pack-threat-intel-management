@@ -308,7 +308,11 @@ The following steps outline the process for ingesting threat reports from FortiG
 4. To access the threat intel reports ingested through FortiGuard, navigate to the **Threat Intel Management** menu on the left and select the **Threat Reports** tab.
 5. Click to open a report and observe the following:
 
-    - The **Report Status** section displays the report's phase in a flow diagram format, corresponding to the report's status. Phases include: New, Processing, Red Flag, and Read.
+    - The **Report Status**  section displays the current phase of a report using a flow diagram. SOC Analysts can update the status by selecting one of the following buttons: <br />
+      **New**: When a report is ingested, its status is automatically set to New.<br />
+      **Processing**: When SOC Analysts begin working on the report, they click Processing to update the report status. <br />
+      **Red Flag**: When SOC Analysts identify critical CVEs in the report, they click Red Flag to indicate high-priority findings. <br />
+      **Read**: When SOC Analysts complete working on the report, they can click Read to mark the report as finished.
     - The **Report Details** sections includes information about the report such as report's source and type. 
     - **Threat**, **Adversary**, **Industry Tags**, and **Geography** are displayed in JSON format.
     - A **Visual Correlation** section displays how this threat intel report correlates with other threat intel feeds. 
