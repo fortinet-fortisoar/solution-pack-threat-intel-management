@@ -6,6 +6,9 @@
 - **Compatible Version**: FortiSOAR v7.6.1 and later
 - [Release Notes](./release_notes.md)
 
+> [!Important]
+> After an upgrade, you must re-run the **Threat Intel Management** configuration wizard. Before running the wizard, ensure that the NIST NVD connector is configured.
+
 # Overview
 
 Modern cybersecurity challenges are largely about persistent, smart, and well-armed threat actors, an overload of security alerts, false alarms (aka Alert Fatigue), disparate security systems, and a dearth of skilled professionals. A well-designed Threat Intelligence Framework (powering a practice) helps to mitigate these challenges. A lot of organizations are either not able to find time or energy to invest in incorporating one in their processes and some are unsure of the best practices to implement one. Often, we hear of organizations struggling after incorporating multiple threat intelligence data feeds, and later realizing that it just adds salt to misery. Contextual, actionable threat intelligence is the key, and the FortiSOAR threat intelligence solution, fueled by the threat intelligence lifecycle, is built on that premise. It is purpose-built for threat intelligence teams, as it is contextual, collaboration-friendly, and easily understood, it allows for preparing actionable and timely intelligence, and most importantly, it is evolving in nature, such that it eventually meets its requirements.
