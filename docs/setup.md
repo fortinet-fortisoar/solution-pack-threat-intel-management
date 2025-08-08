@@ -12,12 +12,12 @@
 
 Threat Intel Management (TIM) Solution Pack requires the following solution packs to be pre-installed:
 
-| Solution Pack Name                | Version          | Purpose                                                  |
-|:----------------------------------|:-----------------|:---------------------------------------------------------|
-| SOAR Framework                    | v2.1.1 and later | Required for Incident Response modules                   |
-| MITRE ATT&CK Enrichment Framework | v2.2.0 and later | Required for Mitre Att&ck modules                        |
+| Solution Pack Name                | Version          | Purpose                                  |
+| :-------------------------------- | :--------------- | :--------------------------------------- |
+| SOAR Framework                    | v2.1.1 and later | Required for Incident Response modules   |
+| MITRE ATT&CK Enrichment Framework | v2.2.0 and later | Required for Mitre Att&ck modules        |
 | SOC Simulator                     | v1.0.2 and later | Required for scenario module and SOC Simulator Connector |
-| Vulnerability Management          | v2.1.0 and later | Required correlate CVEs in Threat Reports                |
+| Vulnerability Management          | v2.1.0 and later | Required correlate CVEs in Threat Reports |
 
 # Configuration
 
@@ -29,6 +29,9 @@ For optimal performance of **Threat Intel Management** solution pack, you can in
 - The Exchange connector with email ingestion setup to ensure regular ingestion of threat feeds from email attachments.
     - To configure and use the Exchange connector, refer to [Configuring Exchange](https://docs.fortinet.com/fortisoar/connectors/exchange).
 
+> [!Important]
+> You must configure the NIST NVD connector before running the Threat Intel Management configuration wizard.
+
 ## Setup Threat Intel Management on FortiSOAR
 
 To leverage the power of Threat Intel Management solution pack, configuring threat intel feeds, integrations, and feed processing rules is an essential first step. A new configuration wizard streamlines the process.
@@ -38,6 +41,9 @@ You can launch the configuration wizard after installation of the Threat Intel M
 1. Threat Intel Management navigation menu
 
 2. Threat Intel Management's Content Hub Page
+
+> [!Important]
+> After an upgrade, you must run the **Threat Intel Management** configuration wizard again.
 
 ### Navigation Menu
 
@@ -149,15 +155,15 @@ Enable this rule to ingest unstructured threat feeds from file sources and email
 Once enabled, you can further fine-tune the rule by defining the following parameters:
 
 - **Ingest Threat Feeds from Files**: Select to ingest unstructured threat feeds by uploading a file. Supported file formats are `csv`, `txt`, `pdf`, `eml`, `json`, and `xlsx`. Refer to the section [Importing Feeds from Files](./usage.md#importing-feeds-from-files) under *Usage* for more information.
- 
+
 - **Ingest Threat Feeds from Email Attachments**: Select to ingest unstructured threat feeds from email attachments.
     - **Email Server**: Select an email server from which to ingest emails. Currently, only *Exchange* is supported.
     - **Email Folder** : Specify the mailbox folder that contains all emails with feed attachments.
 
 > [!NOTE]
->- Attachments of only unread emails are ingested, hence we recommend that you create a separate folder for emails with feed attachments with mailbox rules in place to redirect all such emails to this folder.
->- The feeds are extracted only from attachments and not from the subject line or email body.
- 
+> - Attachments of only unread emails are ingested, hence we recommend that you create a separate folder for emails with feed attachments with mailbox rules in place to redirect all such emails to this folder.
+> - The feeds are extracted only from attachments and not from the subject line or email body.
+
 - **Ingestion Parameters**
     - **Confidence**: Specify the confidence score to assign to the ingested unstructured threat feeds.
     - **Reputation**: Select the reputation to assign to the ingested unstructured threat feeds.

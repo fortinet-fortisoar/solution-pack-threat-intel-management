@@ -1,10 +1,13 @@
 # Release Information
 
-- **Version**:  2.0.0
+- **Version**:  2.1.0
 - **Certified**: Yes
 - **Publisher**: Fortinet
 - **Compatible Version**: FortiSOAR v7.6.1 and later
 - [Release Notes](./release_notes.md)
+
+> [!Important]
+> After an upgrade, you must re-run the **Threat Intel Management** configuration wizard. Before running the wizard, ensure that the NIST NVD connector is configured.
 
 # Overview
 
@@ -21,8 +24,8 @@ The Threat Intelligence Management Solution Pack gathers raw data about emerging
 Check the following video demonstration of the Threat Intelligence Management solution:
 
 | [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
-|:--------------------------------------------------------------------------------------------------------:|
-|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
+| :--------------------------------------: |
+| [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 
 ## Features
 
