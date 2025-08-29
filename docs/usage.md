@@ -6,8 +6,8 @@
 FortiSOAR's new **Threat Intel Management** Solution Pack brings Security Orchestration and Automated Response (SOAR) and Threat Intel Management (TIM) worlds closer by introducing advanced Threat Intel Management capabilities within the SOAR platform. The following video demonstrates how this integration greatly simplifies investigations by bringing in contextual threat intel.
 
 | [![](./res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
-|:--------------------------------------------------------------------------------------------------------:|
-|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
+| :--------------------------------------: |
+| [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 
 ## Threat Feed Management and FortiGuard Integration
 
@@ -105,11 +105,11 @@ The Feed Configuration tab contains settings for easy feed management and dissem
 
 8. **Feed Expiry**: Specify the number of days after which the ingested unstructured threat feeds are marked as expired for deletion.
 
-8. **Feed Source**: Specify a value to be updated as *Source* for all ingested unstructured threat feeds.
+9. **Feed Source**: Specify a value to be updated as *Source* for all ingested unstructured threat feeds.
 
-9. **Tags**: Specify comma-separated values to be assigned as tags to the ingested unstructured threat feeds.
+10. **Tags**: Specify comma-separated values to be assigned as tags to the ingested unstructured threat feeds.
 
-10. Select the option **Automatic Block IOC** to block threat feeds immediately on ingestion. Leave unchecked to manually block threat feeds later.
+11. Select the option **Automatic Block IOC** to block threat feeds immediately on ingestion. Leave unchecked to manually block threat feeds later.
 
 ## Using Data from a TAXII Server Feed  
 
@@ -209,7 +209,7 @@ FortiGate accepts a list of indicators in CSV format. The CSV file must contain 
     ![](./res/fortigate-threat-feed-domain-name.png)
 
 4. Scroll down to **Threat Feeds** and select **Domain Name**.
-    
+
     >**NOTE**: When [creating a dataset](#create-a-dataset), we specified *Domain* as *Type*. Hence, we choose **Domain Name** in FortiGate.
 
     ![](./res/fortigate-new-external-connector.png)
@@ -275,7 +275,7 @@ Navigate to the demo Threat Intel Report and note the following:
 
 ### Ingesting Threat Intel Reports from FortiRecon ACI
 
-For a seamless data mapping with FortiSOAR&trade;'s modules during the FortiRecon ACI data ingestion process, ensure to install the **Threat Intel Management** solution pack before configuring ingestion of Threat Feeds from FortiRecon ACI.
+For a seamless data mapping with FortiSOAR™'s modules during the FortiRecon ACI data ingestion process, ensure to install the **Threat Intel Management** solution pack before configuring ingestion of Threat Feeds from FortiRecon ACI.
 
 Following steps outline the process to follow when ingesting threat reports from FortiRecon ACI into Threat Intel Management solution pack.
 
@@ -287,23 +287,41 @@ Following steps outline the process to follow when ingesting threat reports from
 
 4. To access the threat intel reports ingested through FortiRecon ACI, open the **Threat Intel Management** menu from the left and click the **Threat Reports** tab.
 
-5. Click open a report and observe the following:
-    
+5. Click to open a report and observe the following:
+
     1. The **Report Details** sections displays reliability and source of this report.
-
     2. **Threat**, **Adversary**, **Industry Tags**, and **Geography** in JSON format.
-
     3. A **Visual Correlation** section depicting the correlation of this threat intel report with threat intel feed.
-
     4. The **Threat Feeds** tab containing indicators and their type.
-
     5. Click to open each indicator and the description contains more information related to that indicator.
 
-### Ingesting Threat Intel Reports from FortiGuard
+## Ingesting Threat Intel Reports from FortiGuard
 
+To ensure seamless data mapping with FortiSOAR™'s modules during the FortiGuard's data ingestion process, the **Threat Intel Management** solution pack must be installed before configuring the ingestion of Threat Feeds from FortiGuard. 
 
+The following steps outline the process for ingesting threat reports from FortiGuard into the Threat Intel Management solution pack.
 
-### Threat Intelligence Workflow
+1. Install the Threat Intel Management solution pack. For installation instructions, refer to [Installation](./setup.md#installation) section.
+
+2. Configure the CISA Advisory, Exploit Prediction Scoring System (EPSS), and NIST National Vulnerability Database connectors. For information on these connectors, refer to the *Connectors* page in [FortiSOAR Content Hub](https://fortisoar.contenthub.fortinet.com//list.html?contentType=connector).
+3. To ingest FortiGuard Threat Report of types `Outbreak Alert`, `Signal Report`, `FortiGuard Blog` and `FortiGuard Events` reports trigger the  `Ingestion_fortinet-fortiguard-threat-intelligence_report` schedule from the 'Schedules' module. This schedule is configured to automatically triggers  the ingestion of FortiGuard reports daily at '`12:00 AM`'.
+4. To access the threat intel reports ingested through FortiGuard, navigate to the **Threat Intel Management** menu on the left and select the **Threat Reports** tab.
+5. Click to open a report and observe the following:
+
+    - The **Report Status**  section displays the current phase of a report using a flow diagram. SOC Analysts can update the status by selecting one of the following buttons: <br />
+      **New**: When a report is ingested, its status is automatically set to New.<br />
+      **Processing**: When SOC Analysts begin working on the report, they click Processing to update the report status. <br />
+      **Red Flag**: When SOC Analysts identify critical CVEs in the report, they click Red Flag to indicate high-priority findings. <br />
+      **Read**: When SOC Analysts complete working on the report, they can click Read to mark the report as finished.
+    - The **Report Details** sections includes information about the report such as report's source and type. 
+    - **Threat**, **Adversary**, **Industry Tags**, and **Geography** are displayed in JSON format.
+    - A **Visual Correlation** section displays how this threat intel report correlates with other threat intel feeds. 
+    - The **Related Records** tab contains details of correlated CVEs. You can click on each CVE to view more information about that CVE.
+
+***Sample Threat Intel Report from FortiGuard***:
+   ![Threat Intel Report from FortiGuard](./res/fortiguard_threat-intel-report.png)
+
+## Threat Intelligence Workflow
 
 The **Threat Intelligence** tab is the cornerstone of the TIM solution, as threat feeds alone can often prove to be a burden on the threat intelligence team and analysts when there is no clear picture of what to consume and what to leave. On the Threat Intelligence tab, you can create and consume actionable and contextual threat intelligence:  
 
