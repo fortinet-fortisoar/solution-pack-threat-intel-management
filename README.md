@@ -7,7 +7,9 @@
 - [Release Notes](./release_notes.md)
 
 > [!Important]
-> After an upgrade, you must re-run the **Threat Intel Management** configuration wizard. Before running the wizard, ensure that the NIST NVD connector is configured.
+> After an upgrade:
+> 1. Ensure that the NIST NVD connector is configured.
+> 2. Re-run the **Threat Intel Management** configuration wizard.
 
 # Overview
 
@@ -24,8 +26,8 @@ The Threat Intelligence Management Solution Pack gathers raw data about emerging
 Check the following video demonstration of the Threat Intelligence Management solution:
 
 | [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
-| :--------------------------------------: |
-| [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+| :------------------------------------------------------------------------------------------------------: |
+|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
 
 ## Features
 
@@ -38,10 +40,12 @@ The Threat Intelligence Management Solution Pack has the following features:
 - **Integration**: TIPs act as an intermediary between information and your existing security solutions, eliminating the need to configure a connection manually. Various systems process these indicators as follows:
     - Firewalls and intrusion detection systems receive indicators for active blocking;
     - SIEMs and endpoint solutions correlate these indicators against available information to prioritize alerts
-    - Orchestration platforms to use these indicators to improve workflows.  
+    - Orchestration platforms to use these indicators to improve workflows.
       The flexibility of these integrations rapidly improves the ability of a security team to identify and counter threats. This holds true whether an organization’s security stack is entirely cloud-based, on-premises, or any combination of the two.
 
 - **Analysis and sharing of threat intelligence**: Securely sharing threat intelligence creates more comprehensive, reliable outputs that help analysts quickly respond to threats. Threat actors reuse many of their techniques, tactics, procedures, and strategies to target similar organizations and infrastructures. Comprehensive information and context around malicious actors make it quicker and easier for your security team to prevent them from doing significant harm.
+
+- **Threat Intel Search** - Get unparalleled visibility into malicious indicators using Threat Intel Search. This innovative feature seamlessly brings the powerful capabilities to FortiSOAR, delivering actionable threat intelligence at your fingertips.
 
 # Next Steps
 
