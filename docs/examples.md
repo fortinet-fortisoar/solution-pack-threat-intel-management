@@ -3,6 +3,8 @@
 
 # Examples
 
+The following example steps explains how to export CSV fields of feeds exported from the TAXII server and imported to FortiGate.
+
 ## Export CSV Fields to FortiGate
 
 FortiGate accepts CSVs containing only the `value` field.

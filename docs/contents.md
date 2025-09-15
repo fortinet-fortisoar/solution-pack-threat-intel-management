@@ -158,6 +158,11 @@ Following is the module schema of the **Tasks** module
 | `tasks   `       | `manyToMany` |
 | `timeCreated`    | `datetime`   |
 
+## Dashboards
+
+| Name                | Description                                                                                                                                   |
+|:--------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| Threat Intel Search | Accepts indicators separated by a line break to get information from FortiGuard Labs                                                          |
 
 ## System View
 
@@ -184,30 +189,36 @@ Following is the module schema of the **Tasks** module
 
 ## Connectors
 
-| Connector                               | Description                              |
-| :-------------------------------------- | :--------------------------------------- |
-| Fortinet FortiGuard Threat Intelligence | It provides threat intelligence to protect them from malicious cyber attacks |
+| Connector                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|:----------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fortinet FortiGuard Threat Intelligence | It provides threat intelligence to protect them from malicious cyber attacks                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Fortinet FortiRecon ACI                 | FortiRecon is a Digital Risk Protection Service(DRPS) that provides an outside-the-network view to the risks posed to your enterprise.The Adversary Centric Intelligence (ACI) module leverages FortiGuard Threat Analysts to provide comprehensive coverage of dark web, open source, and technical threat intelligence, including threat actor insights. This information enables administrators to proactively assess risks, respond faster to incidents, better understand their attackers, and protect assets. This connector facilitates the automated operations related to ACI. |
-| File Content Extraction                 | File Content Extraction is a FortiSOAR™ utility to extract text, artifacts, and metadata from almost any file. |
-| MITRE ATT&CK                            | This MITRE ATT&CK connector helps to import MITRE ATT&CK techniques from the static data available within the connector and adds the data to FortiSOAR in MITRE ATT&CK Techniques module. This import procedure helps in replicating the knowledge base of adversary tactics and techniques based on real-world observations. |
-| CISA Advisory                           | CISA Advisory connector fetches the Advisory and Known Exploited Vulnerability (KEV) CVE published by CISA. |
-| File Content                            | File Content Extraction is a FortiSOAR™ utility to extract text, artifacts, and metadata from almost any file. |
-| MITRE ATT&CK                            | This MITRE ATT&CK connector helps to import MITRE ATT&CK techniques from the static data available within the connector and adds the data to FortiSOAR in MITRE ATT&CK Techniques module. This import procedure helps in replicating the knowledge base of adversary tactics and techniques based on real-world observations. |
-
+| File Content Extraction                 | File Content Extraction is a FortiSOAR™ utility to extract text, artifacts, and metadata from almost any file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| MITRE ATT&CK                            | This MITRE ATT&CK connector helps to import MITRE ATT&CK techniques from the static data available within the connector and adds the data to FortiSOAR in MITRE ATT&CK Techniques module. This import procedure helps in replicating the knowledge base of adversary tactics and techniques based on real-world observations.                                                                                                                                                                                                                                                           |
+| CISA Advisory                           | CISA Advisory connector fetches the Advisory and Known Exploited Vulnerability (KEV) CVE published by CISA.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| File Content                            | File Content Extraction is a FortiSOAR™ utility to extract text, artifacts, and metadata from almost any file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| MITRE ATT&CK                            | This MITRE ATT&CK connector helps to import MITRE ATT&CK techniques from the static data available within the connector and adds the data to FortiSOAR in MITRE ATT&CK Techniques module. This import procedure helps in replicating the knowledge base of adversary tactics and techniques based on real-world observations.                                                                                                                                                                                                                                                           |
+| Fortinet FortiGuard IOC                 | Facilitates finding details about indicators from the FortiGuard Threat Intelligence server.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ## Widgets
 
-| Widgets                               | Description                              |
-| :------------------------------------ | :--------------------------------------- |
-| Card Tiles                            | Shows a list of records in a card tile view |
-| Task Management                       | Allows users to manage tasks and get visibility into the current task board. |
-| Manage Datasets                       | Manage and Create datasets out of threat feeds |
-| Access Control                        | Change which teams or users have access to certain records |
-| Feed Configuration Settings           | Configures feeds to be consumed by modules |
-| Threat Intel Management Configuration | Configures the Threat Intel Management solution pack |
-| TAXII Server Configuration            | Configures the TAXII Server for easy dissemination of information |
-| Picklist as Phases<sup>New</sup>      | Displays the 'Report Status' picklist values as phases in a flow diagram format within the detail view of a threat intel report. |
-
+| Widgets                               | Description                                                                                                                              |
+|:--------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
+| Card Tiles                            | Shows a list of records in a card tile view                                                                                              |
+| Task Management                       | Allows users to manage tasks and get visibility into the current task board.                                                             |
+| Manage Datasets                       | Manage and Create datasets out of threat feeds                                                                                           |
+| Access Control                        | Change which teams or users have access to certain records                                                                               |
+| Feed Configuration Settings           | Configures feeds to be consumed by modules                                                                                               |
+| Threat Intel Management Configuration | Configures the Threat Intel Management solution pack                                                                                     |
+| TAXII Server Configuration            | Configures the TAXII Server for easy dissemination of information                                                                        |
+| Picklist as Phases                    | Displays the 'Report Status' picklist values as phases in a flow diagram format within the detail view of a threat intel report.         |
+| FortiGuard IOC Search                 | Accepts indicators separated by a line break to get information from FortiGuard Labs                                                     |
+| Kill Chain Phases                     | Shows the IOC count present for different stages of cyber attack. It highlights the stage of the selected IOC.                           |
+| Cyber Threat World Map                | A world map that displays top visitor origins to understand global exposure and potential threat spread.                                 |
+| Summary grid                          | Creates a grid and populates it with formatted JSON data.                                                                                |
+| Speedometer                           | Displays the percentage value of selected parameter using a red dial gauge                                                               |
+| Categorical Insights                  | Creates division of data using different color codes.                                                                                    |
+| Custom Tags                           | A series of tags that summarize associated CVE identifiers, named threats and exploits, and mapped outbreaks and exploitation techniques |
 
 ## Playbook Collection
 
@@ -276,6 +287,9 @@ Following is the module schema of the **Tasks** module
 - Report Type
 - Source Category
 - Source Reliability
+- IOC Search Confidence
+- Risk Distribution
+- Risk Level
 
 # Next Steps
 
