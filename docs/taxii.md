@@ -1,7 +1,7 @@
 | [Home](../README.md) |
 |----------------------|
 
-# TAXII Integration
+# TAXII Server Integration
 
 ## Using Data from a TAXII Server Feed
 

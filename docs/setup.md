@@ -45,7 +45,7 @@ You can launch the configuration wizard after installation of the Threat Intel M
 > [!Important]
 > After an upgrade, you must run the **Threat Intel Management** configuration wizard again.
 
-### Navigation Menu
+### Launching the Wizard &ndash; Navigation Menu
 
 1. Navigate to **Threat Intel Management** > **Threat Intel Feeds**.
 
@@ -53,7 +53,7 @@ You can launch the configuration wizard after installation of the Threat Intel M
 
 2. Click the button **Setup Threat Intel Management**.
 
-### Content Hub Page
+### Launching the Wizard &ndash; Content Hub Page
 
 After installation, the configuration wizard launches automatically.
 

@@ -9,9 +9,7 @@ TIM integrates with **FortiRecon ACI** to ingest reports. The following scenario
 
 Refer to [Simulate Scenario documentation](https://github.com/fortinet-fortisoar/solution-pack-soc-simulator/blob/develop/docs/usage.md) to understand how to simulate and reset scenarios.
 
-To understand the process FortiSOAR follows to ingest threat reports from threat intel providers, we have included a scenario &mdash; **Threat Intel Report** with this solution pack. 
-
-1. 
+To understand the process FortiSOAR follows to ingest threat reports from threat intel providers, we have included a scenario &mdash; **Threat Intel Report** with this solution pack. The example threat report from FortiRecon ACI simulation contains the following information:
 
 - Demo report with Technical Intelligence source category.
 - Indicators extracted and correlated with feeds.
