@@ -12,7 +12,7 @@ On the **Threat Intel Search** page:
 
 - Enter up to **10 indicators** separated by line breaks.
 
-- Click the <img src="./res/icon-threat-intel-search.svg" alt="Threat Intel Search icon"> **Search** button to begin.
+- Click the <picture><source media="(prefers-color-scheme: dark)" srcset="res/ioc-search-light.svg"><source media="(prefers-color-scheme: light)" srcset="res/ioc-search-dark.svg"><img alt="Fallback image description" src="res/ioc-search-dark.svg"></picture> **Search** button to begin.
 
     Example input:
 

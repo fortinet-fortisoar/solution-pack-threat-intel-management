@@ -37,14 +37,17 @@ The solution auto-links malicious feeds with indicators, optionally updating ind
 
 ## Sections
 
+- [Dashboard](./tim-overview-and-roi.md) &ndash; provides actionable insights into threat data ingestion efforts.
 - [Threat Intel Search](./threat-intel-search.md) &ndash; Query threat intelligence for domains, IPs, and other indicators of compromise, with CVE context, outbreak ties, confidence scoring, and hosting risk.
 - [Feed Management](./feeds.md) &ndash; configuring, ingesting, filtering, and managing feeds.
   - [Threat Feed Rules](./threat-feed-rules.md) &ndash; specify rules to automate feed ingestion.
-- [TAXII Integration](./taxii.md) &ndash; using TIM as a TAXII server and consuming datasets.
-- [Examples](./examples.md) &ndash; step-by-step tutorial: exporting indicators to FortiGate.
-- [FortiGuard Integration](./fortiguard.md) &ndash; ingesting reports from FortiGuard.
-- [FortiRecon Integration](./fortirecon.md) &ndash; ingesting reports from FortiRecon ACI.
+  - [TAXII Integration](./taxii.md) &ndash; using TIM as a TAXII server and consuming datasets.
+  - [Examples](./examples.md) &ndash; step-by-step tutorial: exporting indicators to FortiGate.
+  - [FortiGuard Integration](./fortiguard.md) &ndash; ingesting reports from FortiGuard.
+  - [FortiRecon Integration](./fortirecon.md) &ndash; ingesting reports from FortiRecon ACI.
 - [Threat Intelligence Workflow](./workflow.md) &ndash; PIR requests, workspaces, lifecycle, and reporting.
+- [Hunts](./threat-hunt.md) &ndash; helps proactively search (*hunt*) for malicious activity in an environment.
+- [Threat Actors](./threat-actor-intel.md) &ndash; an encyclopedia of threat actors providing actionable information.
 
 # Next Steps
 
