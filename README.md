@@ -1,31 +1,33 @@
 # Release Information
 
-- **Version**:  2.1.0
+- **Version**:  3.0.0
 - **Certified**: Yes
 - **Publisher**: Fortinet
-- **Compatible Version**: FortiSOAR v7.6.1 and later
+- **Compatible Version**: FortiSOAR v7.6.4 and later
 - [Release Notes](./release_notes.md)
 
 > [!Important]
-> After an upgrade, you must re-run the **Threat Intel Management** configuration wizard. Before running the wizard, ensure that the NIST NVD connector is configured.
+> After an upgrade:
+> 1. Ensure that the NIST NVD connector is configured.
+> 2. Re-run the **Threat Intel Management** configuration wizard.
 
 # Overview
 
 Modern cybersecurity challenges are largely about persistent, smart, and well-armed threat actors, an overload of security alerts, false alarms (aka Alert Fatigue), disparate security systems, and a dearth of skilled professionals. A well-designed Threat Intelligence Framework (powering a practice) helps to mitigate these challenges. A lot of organizations are either not able to find time or energy to invest in incorporating one in their processes and some are unsure of the best practices to implement one. Often, we hear of organizations struggling after incorporating multiple threat intelligence data feeds, and later realizing that it just adds salt to misery. Contextual, actionable threat intelligence is the key, and the FortiSOAR threat intelligence solution, fueled by the threat intelligence lifecycle, is built on that premise. It is purpose-built for threat intelligence teams, as it is contextual, collaboration-friendly, and easily understood, it allows for preparing actionable and timely intelligence, and most importantly, it is evolving in nature, such that it eventually meets its requirements.
 
->*Threat intelligence is evidence-based knowledge, including context, mechanisms, indicators, implications, and action-oriented advice about an existing or emerging menace or hazard to assets. This intelligence can be used to inform decisions regarding the subject’s response to that menace or hazard.*
+>*Threat intelligence is evidence-based knowledge, including context, mechanisms, indicators, implications, and action-oriented advice about an existing or emerging menace or hazard to assets. This intelligence can be used to inform decisions regarding the subject's response to that menace or hazard.*
 >
 >~ Source, Gartner 
 
-The FortiSOAR Threat Intelligence Solution is delivered as a solution pack through the [FortiSOAR Content Hub](https://fortisoar.contenthub.fortinet.com/), as this allows for quicker updates and a more collaborative canvas for management and pack maintenance. In its first avatar, it ships in the **Preview** mode, and is aimed to collect feedback and understand ways in which threat intelligence teams would like to use it in their day-to-day investigation processes.
+The solution pack is delivered through the Content Hub &ndash; [Threat Intel Management](https://fortisoar.contenthub.fortinet.com//list.html?contentType=solutionpack&searchContent=threat%20intel%20management) &ndash; as this allows for quicker updates and a more collaborative canvas for management and pack maintenance.
 
 The Threat Intelligence Management Solution Pack gathers raw data about emerging or existing threat actors and threats from several sources. The solution pack then analyzes and filters this data to produce threat intelligence feeds and reports that contain information to help automate security control solutions.
 
 Check the following video demonstration of the Threat Intelligence Management solution:
 
 | [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
-| :--------------------------------------: |
-| [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+| :------------------------------------------------------------------------------------------------------: |
+|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
 
 ## Features
 
@@ -38,10 +40,16 @@ The Threat Intelligence Management Solution Pack has the following features:
 - **Integration**: TIPs act as an intermediary between information and your existing security solutions, eliminating the need to configure a connection manually. Various systems process these indicators as follows:
     - Firewalls and intrusion detection systems receive indicators for active blocking;
     - SIEMs and endpoint solutions correlate these indicators against available information to prioritize alerts
-    - Orchestration platforms to use these indicators to improve workflows.  
-      The flexibility of these integrations rapidly improves the ability of a security team to identify and counter threats. This holds true whether an organization’s security stack is entirely cloud-based, on-premises, or any combination of the two.
+    - Orchestration platforms to use these indicators to improve workflows.
+      The flexibility of these integrations rapidly improves the ability of a security team to identify and counter threats. This holds true whether an organization's security stack is entirely cloud-based, on-premises, or any combination of the two.
 
 - **Analysis and sharing of threat intelligence**: Securely sharing threat intelligence creates more comprehensive, reliable outputs that help analysts quickly respond to threats. Threat actors reuse many of their techniques, tactics, procedures, and strategies to target similar organizations and infrastructures. Comprehensive information and context around malicious actors make it quicker and easier for your security team to prevent them from doing significant harm.
+
+- **Threat Intel Search** - Get unparalleled visibility into malicious indicators using Threat Intel Search. This innovative feature seamlessly brings the powerful capabilities to FortiSOAR, delivering actionable threat intelligence at your fingertips.
+
+- **MITRE ATT&CK Framework**: Built on the globally recognized MITRE ATT&CK® framework, this capability transforms cyber threat intelligence into actionable defense. By correlating adversary tactics and techniques from real-world data, it empowers SOC teams to uncover hidden threats, accelerate response, and strengthen resilience—ensuring your operations stay one step ahead of evolving attackers.
+
+- **Threat Actors**: Threat Actor intelligence bridges adversary intent with operational defense. By analyzing attacker motivations, capabilities, and target patterns, and correlating them with MITRE ATT&CK® techniques, CVEs, and outbreak data, analysts can enrich alerts, prioritize investigations, and anticipate adversary behavior with greater accuracy and speed.
 
 # Next Steps
 
