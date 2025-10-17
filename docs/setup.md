@@ -10,14 +10,17 @@
 
 ## Prerequisites
 
-Threat Intel Management (TIM) Solution Pack requires the following solution packs to be pre-installed:
+Threat Intel Management (TIM) solution pack depends on the following solution packs. FortiSOAR automatically installs these dependencies if missing.
 
-| Solution Pack Name                | Version          | Purpose                                  |
-| :-------------------------------- | :--------------- | :--------------------------------------- |
-| SOAR Framework                    | v2.1.1 and later | Required for Incident Response modules   |
-| MITRE ATT&CK Enrichment Framework | v2.2.0 and later | Required for Mitre Att&ck modules        |
+| Solution Pack Name                | Version          | Purpose                                                  |
+|:----------------------------------|:-----------------|:---------------------------------------------------------|
+| SOAR Framework                    | v2.1.1 and later | Required for Incident Response modules                   |
+| MITRE ATT&CK Enrichment Framework | v2.2.0 and later | Required for Mitre Att&ck modules                        |
 | SOC Simulator                     | v1.0.2 and later | Required for scenario module and SOC Simulator Connector |
-| Vulnerability Management          | v2.1.0 and later | Required correlate CVEs in Threat Reports |
+| Vulnerability Management          | v2.2.0 and later | Required for correlating CVEs in Threat Reports          |
+
+> [!IMPORTANT]
+> Each of these solution packs has to be upgraded before upgrading the Threat Intel Management solution pack.
 
 # Configuration
 
@@ -30,7 +33,7 @@ For optimal performance of **Threat Intel Management** solution pack, you can in
     - To configure and use the Exchange connector, refer to [Configuring Exchange](https://docs.fortinet.com/fortisoar/connectors/exchange).
 
 > [!Important]
-> You must configure the NIST NVD connector before running the Threat Intel Management configuration wizard.
+> You must configure the **NIST NVD** connector before running the Threat Intel Management configuration wizard.
 
 ## Setup Threat Intel Management on FortiSOAR
 
@@ -45,7 +48,7 @@ You can launch the configuration wizard after installation of the Threat Intel M
 > [!Important]
 > After an upgrade, you must run the **Threat Intel Management** configuration wizard again.
 
-### Navigation Menu
+### Launching the Wizard &ndash; Navigation Menu
 
 1. Navigate to **Threat Intel Management** > **Threat Intel Feeds**.
 
@@ -53,7 +56,7 @@ You can launch the configuration wizard after installation of the Threat Intel M
 
 2. Click the button **Setup Threat Intel Management**.
 
-### Content Hub Page
+### Launching the Wizard &ndash; Content Hub Page
 
 After installation, the configuration wizard launches automatically.
 
@@ -154,7 +157,7 @@ Enable this rule to ingest unstructured threat feeds from file sources and email
 
 Once enabled, you can further fine-tune the rule by defining the following parameters:
 
-- **Ingest Threat Feeds from Files**: Select to ingest unstructured threat feeds by uploading a file. Supported file formats are `csv`, `txt`, `pdf`, `eml`, `json`, and `xlsx`. Refer to the section [Importing Feeds from Files](./usage.md#importing-feeds-from-files) under *Usage* for more information.
+- **Ingest Threat Feeds from Files**: Select to ingest unstructured threat feeds by uploading a file. Supported file formats are `csv`, `txt`, `pdf`, `eml`, `json`, and `xlsx`. Refer to the section [Importing Feeds from Files](./threat-feeds.md#importing-feeds-from-files) under *Usage* for more information.
 
 - **Ingest Threat Feeds from Email Attachments**: Select to ingest unstructured threat feeds from email attachments.
     - **Email Server**: Select an email server from which to ingest emails. Currently, only *Exchange* is supported.
@@ -197,6 +200,10 @@ This page, apart from summarizing the configuration changes, also set in motion 
     - Block List (Domain)
     - Block List (IP Address)
     - Block List (URL)
+
+- Known Exploited Vulnerabilities (KEVs) ingestion is triggered to ingest KEVs from CISA and NIST.
+
+- Everyday ingestion of Threat Reports and Threat Actors, with the help of a schedule that runs daily, are created to fetch those intelligence from FortiGuard.
 
 These data-sets can be viewed and managed from **Threat Intel Management** > **Threat Intel Feed**.
 
