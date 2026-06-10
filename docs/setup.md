@@ -32,43 +32,37 @@ For optimal performance of **Threat Intel Management** solution pack, you can in
 - The Exchange connector with email ingestion setup to ensure regular ingestion of threat feeds from email attachments.
     - To configure and use the Exchange connector, refer to [Configuring Exchange](https://docs.fortinet.com/fortisoar/connectors/exchange).
 
-> [!Important]
-> You must configure the **NIST NVD** connector before running the Threat Intel Management configuration wizard.
+- The NIST NVD connector to search for CVEs and get their details.
+    - To configure and use the NIST NVD connector, refer to [Configuring NIST NVD](https://docs.fortinet.com/fortisoar/connectors/nist-nvd).
 
 ## Setup Threat Intel Management on FortiSOAR
 
-To leverage the power of Threat Intel Management solution pack, configuring threat intel feeds, integrations, and feed processing rules is an essential first step. A new configuration wizard streamlines the process.
+To leverage the power of Threat Intel Management solution pack, configuring threat intel feeds, integrations, and feed processing rules is an essential first step. The new configuration wizard streamlines the process.
 
 You can launch the configuration wizard after installation of the Threat Intel Management solution pack by any of the following methods:
 
-1. Threat Intel Management navigation menu
+- **Threat Intel Management's Content Hub Page**: After installation, the configuration wizard launches automatically.
 
-2. Threat Intel Management's Content Hub Page
+    ![Threat Intel Management solution pack's content hub page](./res/content-hub-page.png)
 
-> [!Important]
-> After an upgrade, you must run the **Threat Intel Management** configuration wizard again.
+    If you chose to skip the configuration wizard after installation, you can re-launch the configuration wizard as follows:
 
-### Launching the Wizard &ndash; Navigation Menu
+    1. Launch **Content Hub** and search for **Threat Intel Management** on Content Hub.
+    2. Click the **Threat Intel Management** solution pack card.
+    3. Click the **Configure** button to view the wizard welcome screen.
 
-1. Navigate to **Threat Intel Management** > **Threat Intel Feeds**.
+        ![TIM Wizard's Welcome screen](./res/tim-config-wizard-welcome.png)
+
+- **Threat Intel Management navigation menu**
+
+    1. Navigate to **Threat Intel Management** > **Intelligence**.
 
     ![First time setup landing page](./res/landing-page-first-time.png)
 
-2. Click the button **Setup Threat Intel Management**.
+    2. Click the button **Setup Threat Intel Management**.
 
-### Launching the Wizard &ndash; Content Hub Page
-
-After installation, the configuration wizard launches automatically.
-
-![Threat Intel Management solution pack's content hub page](./res/content-hub-page.png)
-
-If you chose to skip the configuration wizard after installation, you can re-launch the configuration wizard as follows:
-
-1. Launch **Content Hub** and search for **Threat Intel Management** on Content Hub.
-2. Click the **Threat Intel Management** solution pack card.
-3. Click the **Configure** button to view the wizard welcome screen.
-
-    ![TIM Wizard's Welcome screen](./res/tim-config-wizard-welcome.png)
+> [!IMPORTANT]
+> After an upgrade, you must run the **Threat Intel Management** configuration wizard again.
 
 ### Selecting Feed Sources
 
@@ -80,7 +74,7 @@ This page of the Threat Intel Management configuration wizard helps select integ
 
 - Other installed connectors, capable of fetching threat intel feeds, are listed under **Additional Feed Sources**.
 
-    - Additional connectors, if installed, are marked as **![icon green](./res/icon-check-green.png) Installed**. Scroll the pane to view other connectors capable of fetching threat feeds.
+    - Additional connectors, if installed, are marked as **![icon green](./res/icon-green-check.svg) Installed**. Scroll the pane to view other connectors capable of fetching threat feeds.
     - Expand each listed connector to view its *Version*, *Publisher*, and if the connector is *Certified* by Fortinet.
     - To add more feed sources, you can choose from the pre-populated list or use the search bar to search for specific feeds.
     - Select the connectors to mark them for installation.
@@ -99,11 +93,15 @@ Click the **Configure Connectors** button to proceed.
 This page of the Threat Intel Management configuration wizard helps configure feed integrations selected in *Select Feed Integrations* page and installed in *Install Feed Integrations* page.
 
 > [!NOTE]
-> **Fortinet FortiGuard Threat Intelligence** is already configured for use out-of-the-box.
+> 1. NIST NVD Connector is already installed, but not configured, with Threat Intel Management solution pack
+> 2. The **Fortinet FortiGuard Threat Intelligence** connector is already configured for use out-of-the-box.
 
-- You need to configure all integrations selected for installation. The integration can be configured on the target either as **Self** or **Agent**.
+- You need to configure all feed sources selected for installation. The integration can be configured on the target either as **Self** or **Agent**.
+
     - Completion of the integration health check triggers a new system playbook collection for each integration. This collection includes data ingestion playbooks copied and activated from the corresponding integration playbook sample collection
+
     - A new schedule for the ingestion playbook, based on the corresponding data ingestion playbook collection, ensures automatic execution of the associated playbooks based on a **Cron** expression set to **`Hourly`**. So the feeds are ingested and fetched from the relevant integrations every hour.
+
     - You can click to close any integration's tab that you do not prefer to configure:
 
         ![Configure Feed Sources screen](./res/tim-config-wizard-configure-feed-sources.png)
@@ -111,16 +109,23 @@ This page of the Threat Intel Management configuration wizard helps configure fe
 >[!NOTE]
 > For each configured integration, mark at least one configuration as **Default**.
 
--  **Ingestion Parameters**: The ingestion parameters are retrieved from the configuration schema within the fetch playbook located in the data ingestion playbook collection. The ingestion parameters for each integration varies.
+### Ingestion Parameters
 
-    The following parameters help adjust and save the fetch playbook configurations for use while creating the threat feeds, for **Fortinet FortiGuard Threat Intelligence**:
-    - **Confidence**: Specify the confidence score to assign to the ingested feeds.
-    - **Reputation**: Select the reputation to assign to the ingested feeds.
-    - **TLP**: Select the TLP to assign to the ingested feeds.
-    - **Expiry**: Specify the age of the feeds in days.
+The ingestion parameters are retrieved from the configuration schema within the fetch playbook located in the data ingestion playbook collection. The ingestion parameters for each integration varies.
 
-- **Ingestion Schedule**
-    - By default, the schedule is set to **Hourly**. To change the schedule, specify a `Cron` expression for the schedule or select some other frequency (*Daily*, ).
+The following parameters help adjust and save the fetch playbook configurations for use while creating the threat feeds, for **Fortinet FortiGuard Threat Intelligence**:
+
+- **Confidence**: Specify the confidence score to assign to the ingested feed records which do not have a confidence score.
+
+- **Reputation**: Select the reputation to assign to the ingested feeds.
+
+- **TLP**: Select the TLP to assign to the ingested feeds.
+
+- **Expiry**: Specify the age of the feeds in days.
+
+### Ingestion Schedule
+
+- By default, the schedule is set to **Hourly**. To change the schedule, specify a `Cron` expression for the schedule or select some other frequency (*Daily*, ).
 
 - Similarly, configure and specify parameters for each *installed* feed integration by clicking their respective tabs.
 
@@ -131,14 +136,9 @@ This page of the Threat Intel Management configuration wizard helps configure fe
 
 ## Configuring Feed Rules
 
-We have introduced **Threat Feed Rules** to better leverage ingested feeds. These rules offer a structured framework for processing and analyzing threat feeds, thereby improving the overall functionality of the **Threat Intelligence Management** solution pack.
+**Threat Feed Rules** help manage ingested feeds and how they are linked to indicators. You can configure linking of threat feeds to indicators and ingesting feeds from uploaded files and email attachments.
 
-You can configure the following feed rules to manage threat intelligence feeds from various sources:
-
-- Linking Threat Feeds to Indicators
-- Ingesting Unstructured Threat Feeds
-
-### Linking Threat Feeds to Indicators
+### Linking Threat Feed to Indicators
 
 Enable this rule and specify a feed confidence threshold to automatically update the matching indicator record reputation.
 
@@ -147,9 +147,9 @@ Enable this rule and specify a feed confidence threshold to automatically update
 For example, if you set this value to 70, all feeds with a confidence level equal to or greater than 70 link to the indicator and update its reputation as per the feed.
 
 > [!NOTE]
-> Reputation for indicators created after the feeds ingestion are updated.
+> Indicator reputation is updated from the linked feeds in real-time. This reputation update applies to only those indicators which were created after the corresponding feed was ingested.
 
-![Feed Configurations - Threat Feed Rules tab](./res/tim-config-wizard-configure-feed-rules.png)
+![Feed Configurations - Threat Feed Rules section](./res/tim-config-wizard-configure-feed-rules.png)
 
 ### Ingesting Unstructured Threat Feeds
 
@@ -188,7 +188,7 @@ For more information, refer to the [Threat Feed Rules](./threat-feed-rules.md) d
 
 ## Finish
 
-This page, apart from summarizing the configuration changes, also set in motion the following:
+This page, apart from summarizing the configuration changes, also sets in motion the following:
 
 - MITRE&reg; integration's data ingestion is triggered resulting in MITRE&reg;'s records like Techniques, Subtechniques, etc. to be ingested into FortiSOAR&trade;
 
@@ -203,9 +203,9 @@ This page, apart from summarizing the configuration changes, also set in motion 
 
 - Known Exploited Vulnerabilities (KEVs) ingestion is triggered to ingest KEVs from CISA and NIST.
 
-- Everyday ingestion of Threat Reports and Threat Actors, with the help of a schedule that runs daily, are created to fetch those intelligence from FortiGuard.
+- Everyday ingestion of Threat Reports, Threat Actors, and Cybersecurity News, with the help of a schedule that runs daily, are created to fetch those intelligence from FortiGuard.
 
-These data-sets can be viewed and managed from **Threat Intel Management** > **Threat Intel Feed**.
+These data-sets can be viewed and managed from <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intel-management-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intel-management-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intel-management-dark.svg"></picture> **Threat Intel Management** > **Threat Intel Feed**.
 
 # Next Steps
 

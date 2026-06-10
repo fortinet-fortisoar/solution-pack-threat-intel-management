@@ -8,6 +8,8 @@ The **Threat Intel Search** feature allows SOC analysts to query FortiGuard Labs
 
 ## Performing a Search
 
+Navigate to <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intel-management-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intel-management-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intel-management-dark.svg"></picture> **Threat Intelligence** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intel-search-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intel-search-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intel-search-dark.svg"></picture> **Search**.
+
 On the **Threat Intel Search** page:
 
 - Enter up to **10 indicators** separated by line breaks.
@@ -83,7 +85,7 @@ Example (`1433.eu.org`):
   `Reconnaissance → Weaponization → Delivery → Exploitation → Installation → Command & Control → Actions`
 - Current IOC phase is highlighted.
 
-> [!Note]
+> [!NOTE]
 > Phase highlighting is not displayed in Mozilla Firefox.
 
 ### 30-Day Hosting Risk Profile

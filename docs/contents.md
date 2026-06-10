@@ -12,37 +12,37 @@ This section lists the various contents of the **Threat Intel Management** Solut
 Following is the module schema of the **Tasks** module
 
 | Field              | Field Type   |
-| ------------------ | ------------ |
-| `submittedBy`      | `lookup`     |
-| `name`             | `text`       |
-| `description`      | `richtext`   |
-| `type`             | `picklist`   |
-| `dueBy`            | `datetime`   |
-| `assignedOnDate`   | `datetime`   |
-| `startDate`        | `datetime`   |
-| `completedOnDate`  | `datetime`   |
+|--------------------|--------------|
 | `actualMinutes`    | `integer`    |
-| `priority`         | `picklist`   |
-| `status`           | `picklist`   |
+| `alerts`           | `manyToMany` |
+| `approvalhost`     | `text`       |
+| `assets`           | `manyToMany` |
+| `assignedOnDate`   | `datetime`   |
 | `assignedToPerson` | `lookup`     |
-| `companies`        | `manyToMany` |
-| `persons`          | `manyToMany` |
 | `attachments`      | `manyToMany` |
 | `comments`         | `manyToMany` |
-| `uuid`             | `null`       |
-| `approvalhost`     | `text`       |
-| `workflowid`       | `text`       |
+| `companies`        | `manyToMany` |
+| `completedOnDate`  | `datetime`   |
+| `description`      | `richtext`   |
+| `dueBy`            | `datetime`   |
+| `hunt`             | `manyToMany` |
+| `incidents`        | `manyToMany` |
+| `indicators`       | `manyToMany` |
+| `name`             | `text`       |
+| `persons`          | `manyToMany` |
+| `priority`         | `picklist`   |
+| `startDate`        | `datetime`   |
+| `status`           | `picklist`   |
+| `stepid`           | `integer`    |
+| `submittedBy`      | `lookup`     |
 | `taskdata`         | `richtext`   |
 | `tasktype`         | `text`       |
-| `stepid`           | `integer`    |
-| `alerts`           | `manyToMany` |
-| `hunt`             | `manyToMany` |
-| `warrooms`         | `manyToMany` |
 | `threatIntelFeeds` | `manyToMany` |
+| `type`             | `picklist`   |
+| `uuid`             | `null`       |
+| `warrooms`         | `manyToMany` |
+| `workflowid`       | `text`       |
 | `workspaces`       | `manyToMany` |
-| `incidents`        | `manyToMany` |
-| `assets`           | `manyToMany` |
-| `indicators`       | `manyToMany` |
 
 
 ### Workspaces
@@ -50,167 +50,198 @@ Following is the module schema of the **Tasks** module
 Following is the module schema of the **Workspaces** module
 
 | Field                | Field Type   |
-| -------------------- | ------------ |
+|----------------------|--------------|
 | `actorGroupAnalysis` | `html`       |
-| `keyFindings`        | `html`       |
-| `relatedWorkspaces`  | `manyToMany` |
-| `description`        | `html`       |
-| `status`             | `picklist`   |
-| `setupBy`            | `lookup`     |
-| `comments`           | `manyToMany` |
-| `nextSteps`          | `html`       |
-| `name`               | `text`       |
-| `files`              | `manyToMany` |
-| `indicators`         | `manyToMany` |
-| `threatFeeds`        | `manyToMany` |
-| `tasks`              | `manyToMany` |
-| `tools`              | `manyToMany` |
-| `subTechniques`      | `manyToMany` |
 | `actorGroups`        | `manyToMany` |
-| `techniques`         | `manyToMany` |
-| `tactics`            | `manyToMany` |
+| `comments`           | `manyToMany` |
+| `description`        | `html`       |
+| `files`              | `manyToMany` |
 | `impactAnalysis`     | `richtext`   |
+| `indicators`         | `manyToMany` |
+| `keyFindings`        | `html`       |
+| `name`               | `text`       |
+| `nextSteps`          | `html`       |
+| `relatedWorkspaces`  | `manyToMany` |
+| `setupBy`            | `lookup`     |
+| `status`             | `picklist`   |
+| `subTechniques`      | `manyToMany` |
+| `tactics`            | `manyToMany` |
+| `tasks`              | `manyToMany` |
+| `techniques`         | `manyToMany` |
+| `threatFeeds`        | `manyToMany` |
+| `tools`              | `manyToMany` |
 
 ### Threat Intel Feeds
 
 Following is the module schema of the **Threat Intel Feeds** module
 
 | Field                       | Field Type            |
-| --------------------------- | --------------------- |
+|-----------------------------|-----------------------|
 | `confidence`                | `integer`             |
-| `validFrom`                 | `datetime`            |
-| `validUntil`                | `datetime`            |
-| `expiresOn`                 | `datetime`            |
 | `created`                   | `datetime`            |
-| `source`                    | `text`                |
-| `lastSeen`                  | `datetime`            |
-| `value`                     | `text`                |
-| `reputation`                | `picklist`            |
-| `sourceData`                | `object`              |
-| `workspaces`                | `manyToMany`          |
-| `tasks`                     | `manyToMany`          |
-| `typeOfFeed`                | `picklist`            |
-| `tLP`                       | `picklist`            |
-| `indicators`                | `manyToMany`          |
-| `relatedThreatActors`       | `manyToMany`          |
-| `modified`                  | `datetime`            |
-| `relatedATTCKTechniques`    | `manyToMany`          |
-| `relatedThreatIntelFeeds`   | `manyToMany`          |
-| `sourceId`                  | `text`                |
-| `relatedATTCKSubTechniques` | `manyToMany`          |
-| `relatedMalware`            | `manyToMany`          |
-| `pattern`                   | `text`                |
-| `label`                     | `object`              |
 | `description`               | `html`                |
-| `threatTypes`               | `multiselectpicklist` |
+| `expiresOn`                 | `datetime`            |
+| `Indicator Type`            | `json`                |
+| `indicators`                | `manyToMany`          |
 | `killChainPhases`           | `multiselectpicklist` |
+| `label`                     | `object`              |
+| `lastSeen`                  | `datetime`            |
+| `modified`                  | `datetime`            |
+| `Name`                      | `text`                |
 | `Pattern Type`              | `text`                |
 | `Pattern Version`           | `text`                |
-| `Name`                      | `text`                |
-| `Indicator Type`            | `json`                |
+| `pattern`                   | `text`                |
+| `relatedATTCKSubTechniques` | `manyToMany`          |
+| `relatedATTCKTechniques`    | `manyToMany`          |
+| `relatedMalware`            | `manyToMany`          |
+| `relatedThreatActors`       | `manyToMany`          |
+| `relatedThreatIntelFeeds`   | `manyToMany`          |
+| `reputation`                | `picklist`            |
+| `source`                    | `text`                |
+| `sourceData`                | `object`              |
+| `sourceId`                  | `text`                |
+| `tasks`                     | `manyToMany`          |
+| `threatTypes`               | `multiselectpicklist` |
+| `tLP`                       | `picklist`            |
+| `typeOfFeed`                | `picklist`            |
+| `validFrom`                 | `datetime`            |
+| `validUntil`                | `datetime`            |
+| `value`                     | `text`                |
+| `workspaces`                | `manyToMany`          |
 
 ### Threat Intel Reports
 
 Following is the module schema of the **Threat Intel Reports** module
 
-| Field                        | Field Type   |
-| ---------------------------- | ------------ |
-| `industryTags`               | `object`     |
-| `geography`                  | `object`     |
-| `threat    `                 | `object`     |
-| `reportTitle`                | `text`       |
-| `reportID`                   | `text`       |
-| `reportStatus` | `picklist`   |
-| `status`                     | `text`       |
-| `summary`                    | `html`       |
-| `motivation`                 | `text`       |
-| `sourceName`                 | `text`       |
-| `sourceData`                 | `object`     |
-| `relevanceRating`            | `picklist`   |
-| `informationReliability`     | `picklist`   |
-| `reportType`                 | `picklist`   |
-| `sourceCategory`             | `picklist`   |
-| `sourceReliabiobjectlity`    | `picklist`   |
-| `reportLink`                 | `url`        |
-| `adversary`                  | `object`     |
-| `tLP`                        | `picklist`   |
-| `workspaces`                 | `manyToMany` |
-| `Comments`                   | `manyToMany` |
-| `relatedThreatActors`        | `manyToMany` |
-| `publishDate`                | `datetime`   |
-| `informationDate`            | `datetime`   |
-| `relatedATTCKTechniques`     | `manyToMany` |
-| `relatedThreatIntelFeeds`    | `manyToMany` |
-| `threatIntelFeed`            | `manyToMany` |
-| `source`                     | `text`       |
-| `relatedATTCKSubTechniques`  | `manyToMany` |
-| `relatedMalware`             | `manyToMany` |
-
-### Threat Actor
-
-| Field                                  | Field Type         |
-|:---------------------------------------|:-------------------|
-| `Affected Regions`                     | `Rich Text`        |
-| `Affected Regions Filter`              | `Text Field`       |
-| `Aliases`                              | `Rich Text`        |
-| `Attacker Regions`                     | `Rich Text`        |
-| `Attacker Regions Filter`              | `Text Field`       |
-| `Comments`                             | `Many-to-Many`     |
-| `Common Vulnerabilities and Exposures` | `Rich Text (HTML)` |
-| `CVEs`                                 | `Many-to-Many`     |
-| `Date Added`                           | `Date/Time Field`  |
-| `Date Updated`                         | `Date/Time Field`  |
-| `Description`                          | `Rich Text`        |
-| `Groups`                               | `Many-to-Many`     |
-| `Image URL`                            | `Text Field`       |
-| `Known Infection Vectors`              | `Rich Text`        |
-| `Known Tools Used`                     | `Rich Text`        |
-| `Objectives`                           | `Rich Text`        |
-| `Published`                            | `Date/Time Field`  |
-| `References`                           | `Rich Text (HTML)` |
-| `Source`                               | `Text Field`       |
-| `Source Data`                          | `Text Area`        |
-| `Sub Techniques`                       | `Many-to-Many`     |
-| `Tactics`                              | `Many-to-Many`     |
-| `Target Systems`                       | `Rich Text`        |
-| `Target Systems Filter`                | `Text Field`       |
-| `Targeted Industries`                  | `Rich Text`        |
-| `Targeted Industries Filter`           | `Text Field`       |
-| `Techniques`                           | `Many-to-Many`     |
-| `Threat Actor ID`                      | `Text Field`       |
-| `Threat Actor Image`                   | `Rich Text (HTML)` |
-| `Threat Actor Type`                    | `Text Field`       |
-| `Threat Intel Reports`                 | `Many-to-Many`     |
-| `Threat Signal`                        | `Rich Text`        |
-| `Title`                                | `Text Field`       |
+| Field                       | Field Type   |
+|-----------------------------|--------------|
+| `adversary`                 | `object`     |
+| `Comments`                  | `manyToMany` |
+| `geography`                 | `object`     |
+| `imageURL`                  | `text`       |
+| `industryTags`              | `object`     |
+| `informationDate`           | `datetime`   |
+| `informationReliability`    | `picklist`   |
+| `motivation`                | `text`       |
+| `publishDate`               | `datetime`   |
+| `relatedATTCKSubTechniques` | `manyToMany` |
+| `relatedATTCKTechniques`    | `manyToMany` |
+| `relatedMalware`            | `manyToMany` |
+| `relatedThreatActors`       | `manyToMany` |
+| `relatedThreatIntelFeeds`   | `manyToMany` |
+| `relevanceRating`           | `picklist`   |
+| `reportID`                  | `text`       |
+| `reportLink`                | `url`        |
+| `reportStatus`              | `picklist`   |
+| `reportTitle`               | `text`       |
+| `reportType`                | `picklist`   |
+| `source`                    | `text`       |
+| `sourceCategory`            | `picklist`   |
+| `sourceData`                | `object`     |
+| `sourceName`                | `text`       |
+| `sourceReliabiobjectlity`   | `picklist`   |
+| `status`                    | `text`       |
+| `summary`                   | `html`       |
+| `threat    `                | `object`     |
+| `threatIntelFeed`           | `manyToMany` |
+| `threatReportImage`         | `html`       |
+| `tLP`                       | `picklist`   |
+| `workspaces`                | `manyToMany` |
 
 ### Hunts
 
 Following is the module schema of the **Hunts** module
 
 | Field            | Field Type   |
-| ---------------- | ------------ |
+|------------------|--------------|
 | `alerts`         | `manyToMany` |
+| `cases`          | `manyToMany` |
 | `comments`       | `manyToMany` |
 | `communications` | `manyToMany` |
 | `huntEnd`        | `datetime`   |
+| `huntEventData`  | `text`       |
 | `huntStart `     | `datetime`   |
+| `Indicator`      | `text`       |
 | `indicators`     | `manyToMany` |
+| `indicatorType`  | `picklist`   |
 | `name`           | `text`       |
-| `siems`          | `picklist`   |
+| `sIEMSources`    | `text`       |
 | `tasks   `       | `manyToMany` |
 | `timeCreated`    | `datetime`   |
 
+### Threat Actor
+
+| Field                                  | Field Type   |
+|:---------------------------------------|:-------------|
+| `Affected Regions Filter`              | `text`       |
+| `Affected Regions`                     | `text`       |
+| `Aliases`                              | `text`       |
+| `Attacker Regions Filter`              | `text`       |
+| `Attacker Regions`                     | `text`       |
+| `Comments`                             | `manyToMany` |
+| `Common Vulnerabilities and Exposures` | `text`       |
+| `CVEs`                                 | `manyToMany` |
+| `Date Added`                           | `datetime`   |
+| `Date Updated`                         | `datetime`   |
+| `Description`                          | `text`       |
+| `Groups`                               | `manyToMany` |
+| `Image URL`                            | `text`       |
+| `Known Infection Vectors`              | `text`       |
+| `Known Tools Used`                     | `text`       |
+| `Objectives`                           | `text`       |
+| `Published`                            | `datetime`   |
+| `References`                           | `text`       |
+| `Source Data`                          | `Text Area`  |
+| `Source`                               | `text`       |
+| `Sub Techniques`                       | `manyToMany` |
+| `Tactics`                              | `manyToMany` |
+| `Target Systems Filter`                | `text`       |
+| `Target Systems`                       | `text`       |
+| `Targeted Industries Filter`           | `text`       |
+| `Targeted Industries`                  | `text`       |
+| `Techniques`                           | `manyToMany` |
+| `Threat Actor ID`                      | `text`       |
+| `Threat Actor Image`                   | `text`       |
+| `Threat Actor Type`                    | `text`       |
+| `Threat Intel Reports`                 | `manyToMany` |
+| `Threat Signal`                        | `text`       |
+| `threatActorURL`                       | `url`        |
+| `Title`                                | `text`       |
+
+### Cybersecurity News
+
+| Field                | Field Type   |
+|:---------------------|:-------------|
+| `affectedProducts`   | `text`       |
+| `affectedVendors`    | `text`       |
+| `country`            | `text`       |
+| `cVEList`            | `text`       |
+| `cVEs`               | `manyToMany` |
+| `cybersecurityImage` | `text`       |
+| `description`        | `text`       |
+| `imageURL`           | `text`       |
+| `industrySector`     | `text`       |
+| `mitigation`         | `text`       |
+| `newsStatus`         | `picklist`   |
+| `publicationDate`    | `datetime`   |
+| `region`             | `text`       |
+| `secNewsImage`       | `text`       |
+| `source`             | `text`       |
+| `sourceURL`          | `text`       |
+| `title`              | `text`       |
+
 ## Dashboards
 
-| Name                | Description                                                                                                                                   |
-|:--------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| Threat Intel Search | Accepts indicators separated by a line break to get information from FortiGuard Labs                                                          |
+| Name                          | Description                                                                          |
+|:------------------------------|:-------------------------------------------------------------------------------------|
+| TIM OVerview and ROI          | Summarizes threat intelligence ingestion and activity over time.                     |
+| Threat Intel Search           | Accepts indicators separated by a line break to get information from FortiGuard Labs |
+| Threat Intelligence Dashboard | Presents intelligence through charts, statistics, and geographic visualizations.     |
 
 ## System View
 
-| System View          | Description                              |
-| :------------------- | :--------------------------------------- |
+| System View          | Description                                                                                                    |
+|:---------------------|:---------------------------------------------------------------------------------------------------------------|
 | Navigation menu item | A navigation menu item by the name of Threat Intel Management appears after installation of this solution pack |
 
 ## Module Views
@@ -222,6 +253,7 @@ Following is the module schema of the **Hunts** module
 | Threat Intel Reports | A module that contains in-depth analysis of the threat intelligence research conducted by FortiRecon ACI.                                                                                                                                                   |
 | Threat Actor         | An encyclopedia of threat actors compiled by Fortinet FortiGuard                                                                                                                                                                                            |
 | Hunt                 | The Hunts module is a place to store and organize your hunts. The hunt you create here will be the central repository where all Alerts, Assets, Users, and other modules' records that become associated with your hunting activity will be linked together |
+| CyberSecurity News   | Delivers malware reverse-engineering, threat actor profiles, zero-day breakdowns, and ransomware campaign news tracking by FortiGuard Labs.                                                                                                                 |
 
 
 ## Global Variables
@@ -248,22 +280,25 @@ Following is the module schema of the **Hunts** module
 
 | Widgets                               | Description                                                                                                                              |
 |:--------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| Card Tiles                            | Shows a list of records in a card tile view                                                                                              |
-| Task Management                       | Allows users to manage tasks and get visibility into the current task board.                                                             |
-| Manage Datasets                       | Manage and Create datasets out of threat feeds                                                                                           |
 | Access Control                        | Change which teams or users have access to certain records                                                                               |
-| Feed Configuration Settings           | Configures feeds to be consumed by modules                                                                                               |
-| Threat Intel Management Configuration | Configures the Threat Intel Management solution pack                                                                                     |
-| TAXII Server Configuration            | Configures the TAXII Server for easy dissemination of information                                                                        |
-| Picklist as Phases                    | Displays the 'Report Status' picklist values as phases in a flow diagram format within the detail view of a threat intel report          |
-| FortiGuard IOC Search                 | Accepts indicators separated by a line break to get information from FortiGuard Labs                                                     |
-| Kill Chain Phases                     | Shows the IOC count present for different stages of cyber attack. It highlights the stage of the selected IOC                            |
-| Cyber Threat World Map                | A world map that displays top visitor origins to understand global exposure and potential threat spread                                  |
-| Summary grid                          | Creates a grid and populates it with formatted JSON data                                                                                 |
-| Speedometer                           | Displays the percentage value of selected parameter using a red dial gauge                                                               |
+| Card Tiles                            | Shows a list of records in a card tile view                                                                                              |
+| Card View                             | Reads JSON data and dynamically generates a responsive card listing.                                                                     |
 | Categorical Insights                  | Creates division of data using different color codes                                                                                     |
 | Custom Tags                           | A series of tags that summarize associated CVE identifiers, named threats and exploits, and mapped outbreaks and exploitation techniques |
-| Card View                             | Reads JSON data and dynamically generates a responsive card listing. Each card adapts to the available properties, offering a clean, structured preview of information.|
+| Cyber Threat World Map                | A world map that displays top visitor origins to understand global exposure and potential threat spread                                  |
+| Feed Configuration Settings           | Configures feeds to be consumed by modules                                                                                               |
+| FortiGuard IOC Search                 | Accepts indicators separated by a line break to get information from FortiGuard Labs                                                     |
+| Kill Chain Phases                     | Shows the IOC count present for different stages of cyber attack. It highlights the stage of the selected IOC                            |
+| Manage Datasets                       | Manage and Create datasets out of threat feeds                                                                                           |
+| Picklist as Phases                    | Displays the 'Report Status' picklist values as phases in a flow diagram format within the detail view of a threat intel report          |
+| Speedometer                           | Displays the percentage value of selected parameter using a red dial gauge                                                               |
+| Summary grid                          | Creates a grid and populates it with formatted JSON data                                                                                 |
+| Task Management                       | Allows users to manage tasks and get visibility into the current task board.                                                             |
+| TAXII Server Configuration            | Configures the TAXII Server for easy dissemination of information                                                                        |
+| Threat Analytics                      | Delivers real-time insights by continuously monitoring, analyzing, and mapping the worldwide attack surface                              |
+| Threat Intel Management Configuration | Configures the Threat Intel Management solution pack                                                                                     |
+| Threat Landscape View                 | Gives an overview of intrusion, malware, and botnet activity                                                                             |
+| Threat Map                            | Displays live attack activity with source-target mapping and severity insights                                                           |
 
 ## Playbook Collection
 
@@ -291,27 +326,28 @@ Following is the module schema of the **Hunts** module
 | Ingest FortiGuard Threat Actors                                                      | Ingests threat actors from FortiGuard                                                                                                                                                                                                                                                                                                              |
 | Threat Actor CVE Mapping                                                             | This playbook fetches and links CVE records associated with a Threat Actor. If no associated CVEs are found, it queries NIST, creates a new CVE record, it to the Threat Actor for enrichment and tracking.                                                                                                                                        |
 | Threat Intel Report CVE Mapping                                                      | This playbook fetches and links CVE records associated with a Threat Intel Report. If no associated CVEs are found, it queries NIST, creates a new CVE record, and links it to the report for enrichment and tracking.                                                                                                                             |
-
+| Ingest Cybersecurity News                                                            | Ingest structured cybersecurity news data enriched and analyzed using artificial intelligence to identify vulnerabilities, threats, affected products, industries, and mitigation insights.                                                                                                                                                        |
+| > Create Cybersecurity News                                                          | Creates structured cybersecurity news records.                                                                                                                                                                                                                                                                                                     |
 
 | 04 - Actions |
 |:-------------|
 
 
-| Playbook                                 | Description                              |
-| :--------------------------------------- | :--------------------------------------- |
-| Action - Mac Addresses - Block Threat Feeds | Launch TIM Workspace from Tasks &ndash; Priority Intelligence Requirements(PIR) |
-| Action - URL - Block Threat Feeds        | Blocks indicators of type 'URLs' on the firewall. |
-| Action - IPv4 Addresses - Block Threat Feeds | Blocks indicators of type 'IP Addresses on the firewall |
-| Action - Domains - Block Threat Feeds    | Blocks indicators of type 'Domains' on the firewall |
-| Action - IPv6 Addresses - Block Threat Feeds | Blocks indicators of type 'IP Addresses on the firewall |
-| Action - Filehashes - Block Threat Feeds | Blocks indicators of type 'Email Addresses' on the firewall |
-| Action - Block Threat Feeds (Type All)   | Blocks all types of feeds on the firewall |
+| Playbook                                     | Description                                                                     |
+|:---------------------------------------------|:--------------------------------------------------------------------------------|
+| Action - Mac Addresses - Block Threat Feeds  | Launch TIM Workspace from Tasks &ndash; Priority Intelligence Requirements(PIR) |
+| Action - URL - Block Threat Feeds            | Blocks indicators of type 'URLs' on the firewall.                               |
+| Action - IPv4 Addresses - Block Threat Feeds | Blocks indicators of type 'IP Addresses on the firewall                         |
+| Action - Domains - Block Threat Feeds        | Blocks indicators of type 'Domains' on the firewall                             |
+| Action - IPv6 Addresses - Block Threat Feeds | Blocks indicators of type 'IP Addresses on the firewall                         |
+| Action - Filehashes - Block Threat Feeds     | Blocks indicators of type 'Email Addresses' on the firewall                     |
+| Action - Block Threat Feeds (Type All)       | Blocks all types of feeds on the firewall                                       |
 
 
 ## Report
 
-| Report                      | Description                              |
-| :-------------------------- | :--------------------------------------- |
+| Report                      | Description                                       |
+| :-------------------------- | :------------------------------------------------ |
 | Threat Intel Summary Report | Display threat intel summary for an easy analysis |
 
 ## Roles

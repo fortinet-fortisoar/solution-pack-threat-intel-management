@@ -7,18 +7,11 @@ A **threat intelligence report** provides critical insights into emerging or ong
 
 With its comprehensive integration with Fortinet FortiGuard, Fortinet's flagship threat intelligence source, as part of the FortiSOAR's TIM Solution, you get multiple lookups! into the rich FortiGuard threat intelligence database and the ability to ingest its valuable daily threat intelligence feed.
 
-Key elements of the report include:
+1. In the left navigation pane, go to <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intel-management-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intel-management-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intel-management-dark.svg"></picture> **Threat Intelligence** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intelligence-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intelligence-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intelligence-dark.svg"></picture> **Hub**.
 
-1. **Executive Summary**: A concise overview of the threat, its impact, and actionable insights.
-2. **Threat Context**: Detailed information on the attack techniques, tactics, and procedures (TTPs) used by adversaries.
-3. **Indicators of Compromise (IOCs)**: Specific data points (e.g., IP addresses, file hashes) tied to the malicious activity.
-4. **Adversary Attribution**: Identification of the threat actor behind the attack, including their motivations.
-5. **Impact Assessment**: Analysis of potential damage, such as financial loss or data breaches.
-6. **Defensive Recommendations**: Advice on how to mitigate the threat and strengthen security.
-7. **Visual Correlation**: Diagrams and graphs linking IOCs and attack techniques.
-8. **Historical Context**: Information on how the current threat compares to past incidents.
+2. Select the tab **Threat Reports**.
 
-These reports are essential for helping organizations detect, assess, and respond to cyber threats proactively.
+    ![Threat Reports](./res/threat-reports.png)
 
 ## FortiGuard Threat Reports Ingestion
 
