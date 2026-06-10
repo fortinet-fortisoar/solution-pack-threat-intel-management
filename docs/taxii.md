@@ -1,11 +1,14 @@
 | [Home](../README.md) |
 |----------------------|
 
-## Using Data from a TAXII Server Feed
+## Setting up a TAXII Server
 
-This section explains how to use data from a TAXII server's feed to retrieve threat intelligence.
+You can configure a TAXII Server to generate an outgoing feed based on the threat intelligence you wish to share externally.
 
-Enable the TAXII server from **Threat Intel Management** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> **Threat Indicators** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> **Feed Configurations** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> **TAXII Server** tab.
+Once set up, TAXII clients can subscribe to the collection and receive the shared feeds in real-time.
+
+1. Enable the TAXII server from <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intel-management-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intel-management-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intel-management-dark.svg"></picture> **Threat Intelligence** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intelligence-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intelligence-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intelligence-dark.svg"></picture> **Hub**. 
+2. Click **Feed Configurations** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> **TAXII Server** tab.
 
 ![Enable TAXII Server](./res/feed-config.png)
 
@@ -23,7 +26,8 @@ The following details appear after you enable the TAXII server:
   Use one of the following methods to authenticate your API requests:
 
   1. **API Key Authentication (Recommended)**
-     Use the API Key as described in the *Authentication API Guide*.
+
+      Refer to the section [Using API Key for TAXII Server Authentication](#using-api-key-for-taxii-server-authentication) for more information.
 
   2. **Custom Headers**
      If the tool does not support custom headers, use the following credentials:
@@ -36,8 +40,8 @@ The following details appear after you enable the TAXII server:
 
 For more information on authentication and data usage, refer to the [*Authentication API Guide*](https://docs.fortinet.com/document/fortisoar/7.6.1/api-guide/846127/overview#Authentication).
 
-> [!Note]
-> The basic authentication URL cannot be used directly in a browser. It must be used in a tool or script that supports such authentication methods.
+> [!NOTE]
+> The basic authentication URL cannot be used directly in a browser. It must be used in a tool or script, such as Postman, that supports these authentication methods.
 
 ### Available Endpoints
 
@@ -55,16 +59,24 @@ The TAXII server provides the following endpoints to access datasets and feeds:
 - **Get details of a specific feed object**
   Endpoint: `/api/taxii/1/collections/<datasetId>/objects/<objectId>`
 
-### Consuming Data from Datasets
-
-To access and consume data from multiple datasets:
-1. Authenticate with the TAXII server using the recommended API Key authentication.
-2. Use the `/collections` endpoint to list all available datasets.
-3. Retrieve dataset details and list objects in a dataset using the appropriate endpoints.
-4. Evaluate and consume threat intelligence data according to your organization's requirements.
-
 > [!TIP]
 > Refer to this [example](./example.md) that helps export CSV fields to FortiGate using Threat Intel Management's TAXII server.
+
+## Using API Key for TAXII Server Authentication
+
+This section uses Postman as a tool to view available endpoints of a TAXII server using API Key authentication.
+
+In Postman, use the following settings to view a collection.
+
+| Parameter | Value            |
+|-----------|------------------|
+| Method    | `GET`            |
+| Auth Type | API Key          |
+| Key       | Authorization    |
+| Value     | *`your-api-key`* |
+| Add to    | Header           |
+
+For more information, refer to the section [Test a created API key](https://docs.fortinet.com/document/fortisoar/7.6.5/api-guide/797122/access-keys#Test_a_created_API_key) in FortiSOAR API documentation.
 
 # Next Steps
 

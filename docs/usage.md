@@ -9,45 +9,44 @@ Welcome to the **Threat Intel Management (TIM)** Solution Pack usage guide. To m
 
 FortiSOAR's **Threat Intel Management** Solution Pack brings Security Orchestration and Automated Response (SOAR) and Threat Intel Management (TIM) together by introducing advanced TIM capabilities within the SOAR platform.
 
-| [![](./res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+<!-- | [![](./res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
 |:---------------------------------------------------------------------------------------------------:|
-|          [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)           |
-
-### Threat Feed Management and FortiGuard Integration
-
-Using ingestion-friendly integrations for multiple paid and open-source feeds, threat intelligence teams can manage data in a normalized, single pane of glass with the **Threat Feeds** module. Filters by confidence, TLP, severity, expiry, and datasets allow efficient control.
-
-The solution also integrates FortiGuard intelligence with unlimited lookups and daily ingestion feeds (100 max in preview mode).
-
-### Collaborative Framework
-
-SOC members and stakeholders can raise **Priority Intelligence Requirement (PIR)** requests. Workspaces are created to align with the threat intelligence lifecycle: direction, collection, processing, analysis, dissemination, feedback.
-
-Feeds, MITRE ATT&CK data, and automation combine to support in-depth contextual investigations.
-
-### Sharing Threat Intelligence
-
-- Generate and share reports with stakeholders.
-- Provide feedback loops for PIRs.
-- Share datasets via **STIX/TAXII** to external products such as FortiSIEM.
-
-### Feed Relationship Indicators
-
-The solution auto-links malicious feeds with indicators, optionally updating indicator reputation. Configurations exist for confidence, sightings, similarities, and more.
+|          [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)           | -->
 
 ## Sections
 
-- [Dashboard](./tim-overview-and-roi.md) &ndash; provides actionable insights into threat data ingestion efforts.
-- [Threat Intel Search](./threat-intel-search.md) &ndash; Query threat intelligence for domains, IPs, and other indicators of compromise, with CVE context, outbreak ties, confidence scoring, and hosting risk.
-- **Intelligence** &ndash; access threat reports, threat feeds, threat actor information, and workspaces:
+- [Dashboard](./threat-intel-dashboard.md) &ndash; provides actionable insights into threat data ingestion efforts
+
+- [Threat Intel Search](./threat-intel-search.md) &ndash; Query threat intelligence for domains, IPs, and other indicators of compromise, with CVE context, outbreak ties, confidence scoring, and hosting risk
+
+- **Hub** &ndash; access threat reports, threat feeds, threat actor information, and workspaces:
+
   - [Threat Reports](./threat-reports.md) &ndash; ingest threat reports from FortiRecon and other threat report providers
+
   - [Threat Feeds](./threat-feeds.md) &ndash; configuring, ingesting, filtering, and managing feeds.
+
   - [Threat Actors](./threat-actor-intel.md) &ndash; an encyclopedia of threat actors providing actionable information
+
+  - [CyberSecurity News](./cyber-news.md) &mdash; Stay updated on the latest cybersecurity news around the world
+
   - Threat Intelligence Workflow via [Workspaces](./threat-intel-workflow.md) &ndash; PIR requests, workspaces, lifecycle, and reporting
+
   - **Feed Configurations** &ndash; manage inbound and outbound feed settings:
-    - [TAXII Server](./taxii.md) &ndash; using TIM as a TAXII server and disseminating datasets. Refer to an [example](./example.md) for directions on exporting indicators to FortiGate 
-    - [Threat Feed Rules](./threat-feed-rules.md) &ndash; specify rules to automate feed ingestion
-- [MITRE ATT&CK](./mitre-attck.md) &ndash; 
+
+    - Manage Inbound Feed settings
+
+        - [Ingestion Parameters](./setup.md#ingestion-parameters)
+
+        - [Ingestion Schedule](./setup.md#ingestion-schedule)
+
+        - [Threat Feed Rules](./threat-feed-rules.md) &ndash; specify rules to automate feed ingestion
+
+    - Manage Outbound Feed settings
+
+        - [TAXII Server](./taxii.md) &ndash; using TIM as a TAXII server and disseminating datasets. Refer to this [example](./example.md) for directions on exporting indicators to FortiGate 
+
+- [MITRE ATT&CK](./mitre-attck.md) &ndash; Map threat feeds and indicators to MITRE ATT&CK tactics and techniques
+
 - [Hunts](./threat-hunt.md) &ndash; helps proactively search (*hunt*) for malicious activity in an environment
 
 # Next Steps

@@ -1,55 +1,107 @@
 # Release Information
 
-- **Version**:  3.0.0
+- **Version**:  4.0.0
 - **Certified**: Yes
 - **Publisher**: Fortinet
-- **Compatible Version**: FortiSOAR v7.6.4 and later
+- **Compatible Version**: FortiSOAR v8.0.0 and later
 - [Release Notes](./release_notes.md)
 
-> [!Important]
-> After an upgrade:
-> 1. Ensure that the NIST NVD connector is configured.
-> 2. Re-run the **Threat Intel Management** configuration wizard.
+> [!IMPORTANT]
+> 
+> After an upgrade re-run the **Threat Intel Management** configuration wizard.
+> 
 
-# Overview
+## Overview
 
-Modern cybersecurity challenges are largely about persistent, smart, and well-armed threat actors, an overload of security alerts, false alarms (aka Alert Fatigue), disparate security systems, and a dearth of skilled professionals. A well-designed Threat Intelligence Framework (powering a practice) helps to mitigate these challenges. A lot of organizations are either not able to find time or energy to invest in incorporating one in their processes and some are unsure of the best practices to implement one. Often, we hear of organizations struggling after incorporating multiple threat intelligence data feeds, and later realizing that it just adds salt to misery. Contextual, actionable threat intelligence is the key, and the FortiSOAR threat intelligence solution, fueled by the threat intelligence lifecycle, is built on that premise. It is purpose-built for threat intelligence teams, as it is contextual, collaboration-friendly, and easily understood, it allows for preparing actionable and timely intelligence, and most importantly, it is evolving in nature, such that it eventually meets its requirements.
+Threat Intelligence Management provides a centralized way to ingest, organize, and explore threat intelligence inside FortiSOAR.
 
->*Threat intelligence is evidence-based knowledge, including context, mechanisms, indicators, implications, and action-oriented advice about an existing or emerging menace or hazard to assets. This intelligence can be used to inform decisions regarding the subject's response to that menace or hazard.*
->
->~ Source, Gartner 
+It collects threat feeds from multiple sources and stores them in a searchable repository called feeds. Analysts can manage feeds, review indicators, investigate known threat actors, and explore adversary techniques mapped to the MITRE ATT&CK framework.
 
-The solution pack is delivered through the Content Hub &ndash; [Threat Intel Management](https://fortisoar.contenthub.fortinet.com//list.html?contentType=solutionpack&searchContent=threat%20intel%20management) &ndash; as this allows for quicker updates and a more collaborative canvas for management and pack maintenance.
+Threat Intelligence Management also provides workspaces that support threat hunting and investigation workflows. Intelligence can be shared with other systems and teams using standards such as TAXII.
 
-The Threat Intelligence Management Solution Pack gathers raw data about emerging or existing threat actors and threats from several sources. The solution pack then analyzes and filters this data to produce threat intelligence feeds and reports that contain information to help automate security control solutions.
+## Getting Started with Threat Intel Management
 
-Check the following video demonstration of the Threat Intelligence Management solution:
+- **Configure**: Configuring threat intel feeds, integrations, and feed processing rules is an essential first step. Refer to the section [Setup Threat Intel Management on FortiSOAR](./docs/setup.md#setup-threat-intel-management-on-fortisoar)
 
-| [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
-| :------------------------------------------------------------------------------------------------------: |
-|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             |
+- **Ingest feed**: After configuring the Threat Intel Management wizard, the feed ingestion triggers automatically.
+
+- **Manage Feeds**: You can manage incoming threat feeds by:
+
+  - [Modifying ingestion parameters](./docs/setup.md#ingestion-parameters)
+
+  - [Modifying ingestion schedule](./docs/setup.md#ingestion-schedule)
+
+  - [Uploading unstructured feeds](./docs/threat-feeds.md)
+
+> [!Note]
+> 
+> The [ingestion parameters](./docs/setup.md#ingestion-parameters) and [schedule](./docs/setup.md#ingestion-schedule) can only be modified via Threat Intel Management Configuration Wizard as these settings are unique to each feed connector.
+> 
+
+- **Setup Taxii Server**: The TAXII Server helps generate outgoing feed based on the datasets that you wish to share externally. Refer to the following sections to understand how.
+
+  - [Setting up a TAXII Server](./docs/taxii.md#setting-up-a-taxii-server)
+
+  - [Example: Export CSV Fields to FortiGate](./docs/example.md#export-csv-fields-to-fortigate)
 
 ## Features
 
-The Threat Intelligence Management Solution Pack has the following features:
+- **Threat feed management and filtering**
 
-- **Aggregation of intelligence from multiple sources** - A mature threat intelligence platform consumes and correlates data from external and internal sources, providing threat intelligence analysts with more comprehensive insights into known or suspected threats. The feeds can be structured (STIX, CSV) or unstructured (PDF threat reports).
+  - [Configuring Feed Rules](./docs/setup.md#configuring-feed-rules)
 
-- **Curation, normalization, enrichment, and risk scoring of data**: Many of the inputs to a threat intelligence platform can be duplicate, no longer malicious, or not enough of a threat to merit action. Threat Intelligence Platforms (TIP) have machine-learning algorithms to sort the information and weigh the individual indicators of compromise (IOCs) based on a multitude of factors that are relevant to cyber threats. Curated indicators appear in an easy-to-read format with a risk score and associated intelligence.
+  - [Working with Datasets](./docs/datasets.md)
 
-- **Integration**: TIPs act as an intermediary between information and your existing security solutions, eliminating the need to configure a connection manually. Various systems process these indicators as follows:
-    - Firewalls and intrusion detection systems receive indicators for active blocking;
-    - SIEMs and endpoint solutions correlate these indicators against available information to prioritize alerts
-    - Orchestration platforms to use these indicators to improve workflows.
-      The flexibility of these integrations rapidly improves the ability of a security team to identify and counter threats. This holds true whether an organization's security stack is entirely cloud-based, on-premises, or any combination of the two.
+- **Threat intelligence search**: Search and investigate indicators such as IP addresses, domains, file hashes, or URLs from a centralized intelligence database.
 
-- **Analysis and sharing of threat intelligence**: Securely sharing threat intelligence creates more comprehensive, reliable outputs that help analysts quickly respond to threats. Threat actors reuse many of their techniques, tactics, procedures, and strategies to target similar organizations and infrastructures. Comprehensive information and context around malicious actors make it quicker and easier for your security team to prevent them from doing significant harm.
+  - [Performing a Threat Intel Search](./docs/threat-intel-search.md#performing-a-search)
 
-- **Threat Intel Search** - Get unparalleled visibility into malicious indicators using Threat Intel Search. This innovative feature seamlessly brings the powerful capabilities to FortiSOAR, delivering actionable threat intelligence at your fingertips.
+- **Threat actor intelligence**
 
-- **MITRE ATT&CK Framework**: Built on the globally recognized MITRE ATT&CK® framework, this capability transforms cyber threat intelligence into actionable defense. By correlating adversary tactics and techniques from real-world data, it empowers SOC teams to uncover hidden threats, accelerate response, and strengthen resilience—ensuring your operations stay one step ahead of evolving attackers.
+  Track known threat actors along with associated indicators, campaigns, vulnerabilities, and attack techniques to support investigation and threat hunting.
 
-- **Threat Actors**: Threat Actor intelligence bridges adversary intent with operational defense. By analyzing attacker motivations, capabilities, and target patterns, and correlating them with MITRE ATT&CK® techniques, CVEs, and outbreak data, analysts can enrich alerts, prioritize investigations, and anticipate adversary behavior with greater accuracy and speed.
+  - [Using Threat Actor Data in TIM](./docs/threat-actor-intel.md#launching-threat-actor-intelligence)
+
+- **MITRE ATT&CK Mapping**
+
+  Map threats and indicators to MITRE ATT&CK tactics and techniques to understand attacker behavior and improve investigations.
+
+  - [Using MITRE ATT&CK Data in TIM](./docs/mitre-attck.md#using-mitre-attck-data-in-tim)
+
+- **Threat hunting workspace**
+
+  - [Threat Hunt](./docs/threat-hunt.md)
+
+  - [Threat Intelligence Workflow](./docs/threat-intel-workflow.md)
+
+- **Intelligence sharing via TAXII**
+
+  - [Setting up a TAXII Server](./docs/taxii.md#setting-up-a-taxii-server)
+
+  - [Example: Export CSV Fields to FortiGate](./docs/example.md#export-csv-fields-to-fortigate)
+
+- **Dashboards**: provides actionable insights into threat data ingestion efforts.
+
+  - [Dashboard](./docs/threat-intel-dashboard.md)
+
+- **Cybersecurity News**
+
+  The Cybersecurity News tab surfaces FortiGuard Labs threat intelligence as filterable news cards, each flaggable by review status — New, Processing, Red Flag, or Read.
+
+  - [Cybersecurity news from FortiGuard Labs](./docs/cyber-news.md)
+
+- **FortiGuard Reports**
+
+  The FortiGuard Reports tabs provides critical insights into emerging or ongoing cyber threats, helping organizations understand the risks they face and how to defend against them.
+
+  - [FortiGuard Threat reports from FortiGuard Labs](./docs/threat-reports.md)
+
+<!-- Check the following video demonstration of the Threat Intelligence Management solution:
+
+| [![](./docs/res/threat-intelligence-youtube-thumbnail.png)](https://www.youtube.com/watch?v=vTvtHQxniVU) |
+|:--------------------------------------------------------------------------------------------------------:|
+|             [FortiSOAR Threat Intel Management](https://www.youtube.com/watch?v=vTvtHQxniVU)             | -->
+
 
 # Next Steps
 

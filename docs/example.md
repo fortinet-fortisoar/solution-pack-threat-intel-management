@@ -3,31 +3,33 @@
 
 # Examples
 
-The following example steps explains how to export CSV fields of feeds exported from the TAXII server and imported to FortiGate.
+The following example explains how to export CSV fields from the TAXII server and import using FortiGate.
 
 ## Export CSV Fields to FortiGate
 
 FortiGate accepts CSVs containing only the `value` field.
 
-### Create a Dataset
+1. Create a dataset. For information on how to create a dataset, refer to the section [Adding a Dataset](./datasets.md#adding-a-dataset).
 
-Steps to add a dataset: [Create a Dataset](./threat-feeds.md#threat-intel-feed).
+2. Under <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intel-management-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intel-management-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intel-management-dark.svg"></picture> **Threat Intelligence** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-chevron-dark.svg"><img alt="Fallback image description" src="./res/icon-chevron-dark.svg"></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-threat-intelligence-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-threat-intelligence-dark.svg"><img alt="Fallback image description" src="./res/icon-threat-intelligence-dark.svg"></picture> **Hub**, click the **Feed Configurations** tab.
 
-![Add Dataset](./res/threat-feeds-add-dataset.png)
+2. Under the **Feed Configurations** tab, click **TAXII Server**. Ensure that it is enabled.
 
-### Configure Feeds
+3. Scroll down to the section **Available Datasets**.
 
-Enable **Outgoing Feed** under **Feed Configurations**.
+4. Click <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-csv-light.svg"><source media="(prefers-color-scheme: light)" srcset="./res/icon-csv-dark.svg"><img alt="Fallback image description" src="./res/icon-csv-dark.svg"></picture> against your dataset to copy the dataset CSV endpoint URL.
 
-- Copy dataset CSV endpoint URL.
-- Append `$__selectFields=value` to restrict fields.
+5. Append `$__selectFields=value` to get only values.
+
+>[!Tip]
+>Refer to the section [Using API Key for TAXII Server Authentication](#using-api-key-for-taxii-server-authentication) for information on using API key for authentication via Postman.
 
 ### Import in FortiGate
 
 1. Log in to FortiGate.
 2. Go to **Security Fabric > External Connectors**.
 3. Create new Threat Feed connector.
-4. Use CSV endpoint URL with FortiSOAR credentials.
+4. Use CSV endpoint URL (containing only values) with FortiSOAR credentials.
 5. Set refresh rate and enable.
 
 ![FortiGate config](./res/fortigate-new-external-connector.png)
